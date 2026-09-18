@@ -1,0 +1,32 @@
+/* Deck runtime styles — plumbing only, no case design. */
+*, *::before, *::after { box-sizing: border-box; }
+html, body { margin: 0; background: #111; }
+body { -webkit-font-smoothing: antialiased; text-rendering: geometricPrecision; }
+
+.slide-frame { position: relative; overflow: hidden; margin: 0 auto; }
+.slide {
+  position: absolute; left: 0; top: 0;
+  width: calc(var(--w) * 1px); height: calc(var(--h) * 1px);
+  transform-origin: 0 0; overflow: hidden;
+}
+/* Absolute-position helpers: design in canvas px like the reference. */
+.slide .abs { position: absolute; }
+
+/* Compare mode */
+.ref-layer { position: absolute; left: 0; top: 0; width: 100%; height: 100%; pointer-events: none; }
+[data-cmp="overlay"] .ref-layer { opacity: var(--op, .5); }
+[data-cmp="diff"] .ref-layer { mix-blend-mode: difference; }
+[data-cmp="ref"] .ref-layer { opacity: 1; }
+[data-cmp="side"] body { display: flex; align-items: center; justify-content: center; min-height: 100vh; }
+[data-cmp="side"] .slide-frame { overflow: visible; margin: 0; }
+[data-cmp="side"] .ref-layer { left: 100%; }
+[data-cmp]:not([data-cmp="off"]) body { overflow: hidden; }
+
+/* 10×10 measuring grid (G) */
+.show-grid .slide::after {
+  content: ""; position: absolute; inset: 0; pointer-events: none; z-index: 99;
+  background-image:
+    linear-gradient(to right, rgba(0,255,255,.35) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0,255,255,.35) 1px, transparent 1px);
+  background-size: 10% 10%;
+}
