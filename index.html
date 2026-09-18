@@ -11,7 +11,13 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;700&family=Roboto+Flex:opsz,wdth,wght,XOPQ,XTRA,YOPQ,YTDE,YTUC@8..144,25..151,100..1000,27..175,323..603,25..135,-305..-98,528..760&display=swap">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wdth,wght,XOPQ,XTRA,YOPQ,YTDE,YTUC@8..144,25..151,100..1000,27..175,323..603,25..135,-305..-98,528..760&family=Inter:wght@100..900&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,slnt,wdth,wght,XOPQ,XTRA,YOPQ,YTAS,YTDE,YTUC@8..144,-10..0,25..151,100..1000,27..175,323..603,25..135,649..854,-305..-98,528..760&family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wght@8..144,100..900&family=Roboto+Flex:opsz,wdth,wght,XOPQ,XTRA,YOPQ,YTDE,YTUC@8..144,25..151,100..1000,27..175,323..603,25..135,-305..-98,528..760&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@100..900&display=swap">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wdth,wght,XOPQ,XTRA,YOPQ,YTDE,YTUC@8..144,25..151,100..1000,27..175,323..603,25..135,-305..-98,528..760&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wdth,wght,XOPQ,XTRA,YOPQ,YTDE,YTUC@8..144,25..151,100..1000,27..175,323..603,25..135,-305..-98,528..760&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@100..900&family=Inter:wght@100..900&display=swap">
 <link rel="stylesheet" href="deck.css">
 <style>
@@ -116,165 +122,182 @@
   .s02 { --sh: 24; --wdth: 151; --lsb: 29; }
 
 /* ── s03.html ── */
-/* s03 · APPROACH — SECTION template (pin d76; pilot s06 holds the full measurement table and the mapping).
-     Heading: one word, no qualifier → the pin's «9» slot stays empty (logo-num zone removed from the spec).
-     Text: frame 3, 468 chars in 2 paragraphs (Figma line break) — word for word, «–» set as «—».
-       Length tier would be m (34 px), set at l (30 px, lh 1.2; still ≥ 30 = user rule): at 34 px the card is 1270 × 338
-       (top 696) and covers the pressed lips — the picture's subject; at 30 px it is 1140 × 304 (top 730), 7 lines.
-     GIF f03-g1: 540×540 SQUARE, no letterbox (cropdetect on the loop 540:540:0:0) → k = 1920 / 540 = 3.556, element
-       1920 × 1920, 840 px to choose vertically. --pos-y .595 (top −499.8): brows ≈ y 120, eyes ≈ 229, nose ≈ 442, pressed lips
-       ≈ 513–727 — all above the card (top 730); the chin and stubble (≈ 940) go under the card. The 1227-px face cannot fit
-       in the 730 px above the card, so the lips' bottom edge sets the offset.
-     Contrast (white #fafafa, poster, median per 50-px cell): 4.5–5.6 : 1 on «APPR», ≈ 3.1 : 1 where «OA» crosses the top of
-       the white chair back (x ≈ 380–430); single shot, the loop matches. Higher offsets push the chair into the heading
-       (2.5 : 1 at −541), lower ones cover the lips; black would fail on the left half (2.9–3.0 : 1). */
-  .sec { background: #1c1c1c; color: #fafafa; }
-  .sec .cap { text-box: trim-both cap alphabetic; line-height: 1; white-space: nowrap; margin: 0; }
+/* s03 · APPROACH (Figma frame 3) — pin d65 «(fractum)Ordo»: a face full-bleed, one giant word split by crescent brackets
+     (soft serif inside, condensed sans after), a micro row of four spread words under it (regular · bold · regular · oblique).
+     Reference = /boards/golomazova-danya/design-refs/crops/d65-169.png (3147×1770), canvas = crop × 0.61010. The crop's side
+     bands x 0–373 / 2773–3147 are smear padding, not design: the GIF runs full-bleed over the whole canvas.
+     Measured on the pin (crop px → canvas px), re-checked 2026-09-18:
+       «(»   blue crescent #89b3c5, ink x 412–481, y 648–1128 → 251.4–293.5 × 394.7–689.4, ≈ 13 px thick mid, tapered
+       serif «fractum»: ink left 513 → 313.0 · x-height top 802 → 489.3 · feet 1129 → 689.4 · stems 43 → 26 · curves ≈ 29
+             (low-contrast soft serif, tight) → Roboto Serif opsz 8 (low contrast), wght 470, tracking −0.02 em
+       «)»   crescent blue → white, x 1845–1905 → 37 px wide; gaps m→) 22.7, )→O 31.9
+       sans «Ordo»: right edge 2731 → 1666.2 · x-height 805–1131 → 491.1–690.0 · stems ≈ 40 → 24 · ascender = bracket top
+             → Roboto Flex wght 400, YTAS 712 (the h ascender meets the bracket top like the pin's d)
+       micro #f0f0f0, condensed grotesk, cap top 1154 → 704.1, cap 20.7 (≈ 29 px font): Красота ink left 415 → 253.2 ·
+             bold в 805 → 491.1 · разбитом 1407 → 858.4 · oblique порядке right 2731 → 1666.2
+       (HOME) nav, two badge icons, «(ПОГРУЖЕНИЕ)» button → UI debris, dropped (waived in _qa/s03.json)
+     Mapping (Victor's frame 3: heading APPROACH + 468 characters):
+       word  «(App)roach» — «App» inside the brackets (the IT pun), «roach» condensed; x-height, baseline, left bracket and
+             right edge on the pin's. «App» is 3 letters vs 7, so the serif letters run wider (wdth 77) and the sans a bit
+             wider (wdth 65.6) to keep the pin's measure; the p descenders drop through the micro row between its words
+             (p1 stem 580–615 · p2 805–840, feet to 766) — «адепт» sits left of p1, «крафтового» right of p2.
+       micro sentence 1 spread over the four slots at the pin's anchors (30 px ≈ the pin's own size): «Я абсолютный» ·
+             bold «адепт» · «крафтового» · oblique «подхода.»; the rest hangs below slots 3 and 4 as two 30-px columns on
+             the row's grid (pitch 34.5, first cap 773.1 — the line after the p feet): regular left from 858.4 (sentences 2–3),
+             oblique right-flush to 1666.2 (paragraph 2). 8 lines each, last baseline ≈ 1036 (the pin's button band).
+             Template: the two columns hold ≈ 430 characters at 30 px (8 lines each); longer text needs another pin — the
+             column cannot grow left over the lit edge of the face (contrast < 3 : 1) or below 1040.
+     GIF f03-g1 (540×540 square, no bars — cropdetect 540:540:0:0): full-bleed at 3.556×, --pos-y .512 puts the eyes at
+       y ≈ 300 above the word like the pin's, the pressed nose and cheek under the brackets. Ungraded, no scrim.
+       Contrast (white text; poster and worst 8-px cell over all 45 frames): «Я абсолютный» on the grey bokeh median 5.1 : 1
+       (p10 4.1); other micro words and both columns median 11–18 : 1 (p10 ≥ 6.8); the word (#f7f0f0, big type) median 3.9 : 1
+       on «App» (the lit cheek edge dips to 2.8) and 12.8 : 1 on «roach» — the pin's own word sits on skin at ≈ 3–4 : 1. */
+  .s03 { background: #1a1512; color: #ffffff; }
+  .s03 .cap { text-box: trim-both cap alphabetic; line-height: 1; white-space: nowrap; margin: 0; }
+  .s03 .lh { line-height: 1; white-space: nowrap; margin: 0; }
 
-  /* full-bleed GIF: scale k fills the canvas with the ACTIVE picture; pos-x/pos-y place it (object-position) */
-  .sec .bleed { left: 0; top: 0; width: 1920px; height: 1080px; overflow: hidden; }
-  .sec .bleed video { --k: max(1920 / var(--act-w), 1080 / var(--act-h)); display: block; object-fit: cover;
+  .s03 .bleed { left: 0; top: 0; width: 1920px; height: 1080px; overflow: hidden; }
+  .s03 .bleed video { --k: max(1920 / var(--act-w), 1080 / var(--act-h)); display: block; object-fit: cover;
     width: calc(var(--src-w) * var(--k) * 1px); height: calc(var(--src-h) * var(--k) * 1px);
     left: calc(var(--act-x) * var(--k) * -1px + (1920px - var(--act-w) * var(--k) * 1px) * var(--pos-x));
     top:  calc(var(--act-y) * var(--k) * -1px + (1080px - var(--act-h) * var(--k) * 1px) * var(--pos-y)); }
 
-  .sec .band { left: 0; top: 1071.8px; width: 1920px; height: 8.2px; background: #7596d2; }
+  .s03 .rs { font-family: 'Roboto Serif', serif; }
+  .s03 .rf { font-family: 'Roboto Flex', sans-serif; }
+  .s03 .word { color: #f7f0f0; }
+  .s03 .w1 { left: 306px; top: 395px; font-size: 349.7px; font-weight: 470; letter-spacing: -0.02em; font-variation-settings: "wdth" 77, "opsz" 8, "wght" 470; }
+  .s03 .w2 { left: 1052.5px; top: 322px; font-size: 437px; font-weight: 400; font-variation-settings: "wdth" 65.6, "opsz" 144, "wght" 400, "YTAS" 712; }
+  .s03 .par { top: 394.7px; height: 294.7px; overflow: visible; }
+  .s03 .pl { left: 251.4px; width: 41.5px; } .s03 .pr { left: 1001.7px; width: 37px; }
 
-  /* wordmark = heading */
-  .sec .mark { left: 132.9px; top: 32.4px; width: 27.5px; height: 25.8px; border-radius: 4px; background: #fafafa; }
-  .sec .head { left: 164.8px; top: 31px; font-family: 'Roboto Flex', sans-serif; font-size: 37.4px; font-weight: 900;
-               color: #fafafa; text-transform: uppercase; letter-spacing: .01em;
-               font-variation-settings: "wdth" 151, "wght" 900, "opsz" 37; }
-  .sec .head .q { margin-left: 30px; }
-
-  /* card: bottom-left anchor of the pin, grows up and right with the text */
-  .sec .card { left: 131.3px; bottom: 46px; width: var(--card-w); padding: 25px 24px 23.2px 23.9px; background: #eeeeee; }
-  .sec .body { margin: 0; font-family: 'Roboto Flex', sans-serif; font-size: var(--fs); line-height: var(--lh);
-               font-weight: 420; color: #1a1a1a; font-variation-settings: "wdth" 110, "wght" 420, "opsz" var(--opsz);
-               text-box: trim-both cap alphabetic; }
-  /* several paragraphs (e.g. VO): baseline-to-baseline gap = 1.5 lines (cap = .711 em in Roboto Flex) */
-  .sec .body + .body { margin-top: calc(var(--fs) * (var(--lh) * 1.5 - .711)); }
-  .sec[data-len="s"] { --fs: 40px; --lh: 1.15; --opsz: 40; }   /* ≤ 250 chars */
-  .sec[data-len="m"] { --fs: 34px; --lh: 1.2;  --opsz: 34; }   /* 251–600 chars */
-  .sec[data-len="l"] { --fs: 30px; --lh: 1.2;  --opsz: 30; }   /* > 600 chars */
-  .s03 { --card-w: 1140px; }   /* fit: 468 chars in 2 paragraphs → tier m by length, set at tier l (30 px) — see the header; 1140 × 304, 7 lines (3.76 : 1) */
-  .s03 .head { left: 166.1px; }   /* A ink left → 165.9 (pin 60.4) */
+  .s03 .mi { font-size: 30px; font-weight: 400; font-variation-settings: "wdth" 75, "wght" 400, "opsz" 30; }
+  .s03 .row { top: 704.1px; }
+  .s03 .m1 { left: 252.2px; } .s03 .m2 { left: 490.1px; font-weight: 700; font-variation-settings: "wdth" 75, "wght" 700, "opsz" 30; }
+  .s03 .m3 { left: 856.4px; } .s03 .m4 { right: 250.6px; font-style: oblique 10deg; font-variation-settings: "wdth" 75, "wght" 400, "opsz" 30, "slnt" -10; }
+  .s03 .col { top: 773.1px; width: 394px; margin: 0; line-height: 34.5px; white-space: normal; text-box: trim-both cap alphabetic; }
+  .s03 .c3 { left: 857.4px; }
+  .s03 .c4 { right: 251.8px; text-align: right; font-style: oblique 10deg; font-variation-settings: "wdth" 75, "wght" 400, "opsz" 30, "slnt" -10; }
 
 /* ── s04.html ── */
-/* TEXT+MEDIA template · pin d57 (MOSAIQUE: a row of photos, a giant grotesk word, a footer of text columns).
-     Reference = /boards/golomazova-danya/design-refs/crops/d57-169.png (1508×848), k = 1920 / 1508 = 1.27321.
-     Re-measured on the pin 2026-09-18 (edge = antialiased column/row fraction; Oblako s13's row was 0.6–0.75 pin px off):
-       photos      x 50.61–511.15 · 523.60–984.40 · 996.85–1457.40, y 17.74–330.28, gutter 12.45
-                   → canvas row x 64.44–1855.58, top 22.59, height 397.9, gutter 15.85, radius 3.5
-       wordmark    MOSAIQUE cap 402–591 (190 rows → 241.9), ink x 65–1446 → cap top 511.83, ink 82.76–1842.3
-                   face: heavy neo-grotesk; in Roboto Flex the pin's stems and widths are wght 730 / wdth 110 / tracking 0
-                   (I stem 64 vs 63.7, M 290 vs 286.5, MOSAIQUE 1748 vs 1759.5 canvas px)
-       footer      heads cap top 660 (antialiased edge 660.4 → 840.8), bold caps; items cap top 688 / 709 / 730 / 751 / 771, regular caps;
-                   ink-lefts 51 / 406 / 761 / 1115 → 64.9 / 516.9 / 968.9 / 1419.6 = the pin's 4-column grid (pitch 451.75)
-       micro row   #b4b4b4 cap top 833.5 (→ 1061.9) — «MOSAIQUE© 2024 · TERMS & PRIVACY · MADE BY ENA»: UI debris, dropped
-     Row → N GIFs: the pin's row (same outer edges, top, bottom, gutter) cut into N equal boxes (waiver: content).
-     Footer → the frame's whole text at ≥ 30 px (waiver: legibility), sentence case (600+ characters in caps would not
-     read), columns 420 px wide on the pin's grid (gutter 31.75 ≈ 1 em; the pin's full 435.9 would leave 16 px between
-     columns). Paragraph gap = one line (keeps the lines of all four columns on one grid).
-     --sh: when the columns need more than the band down to the pin's lowest ink (last baseline 1064), the photo row
-     loses --sh px at the bottom and the word + footer move up by --sh (the pin's gaps kept: 91.3 row→cap, 86.6 baseline→footer). */
-  .tm { --sh: 0; --fs: 30; --lh: 1.25; --cw: 420; background: #fff; color: #030303; }
-  .tm[data-len="s"] { --fs: 40; --lh: 1.25; }
-  .tm .cap { text-box: trim-both cap alphabetic; line-height: 1; white-space: nowrap; margin: 0; }
+/* s04 · LOOK & FEEL (Figma frame 4) — pin d42 «PD … PAOLA», reference = crops/d42-169.png (1095×616), k = 1.7534.
+     Geometry source Oblako deck-v2/s15, every value re-measured on the crop (2026-09-18):
+       field #a4a39b · ink #000 (big) / #050505 (quote)
+       card    paper x 304–555, y 226.6–606.0 crop → w 440.1, top 397.3, bottom 1062.6; paper #e4e2dc…#ebeae4, darker
+               left edge (paper curl), 1-px shadow line #898880 on the right and bottom edges
+       photo   x 321.65–538.4, y 271.65–542.6 → card-left + 31.0, top 476.3, 380.1 × 475.1
+       quote   6 justified bold caps lines, ink x 525–693, cap 8.6 (→ 15.1, font ≈ 21.2 px), pitch 11 (→ 19.3), first cap
+               top 196 (→ 343.7), last baseline 259.5 (→ 455.0 = photo top − 21.3); left edge = card right − 30 crop
+               (−52.6): the block hangs over the card's top-right corner. Two words in a light serif (EXPRESSION, UNIQUE).
+               Face ≈ Roboto Flex wdth 60–75 bold (Oblako's wdth 60 confirmed: «ENABLE EACH INDIVIDUAL TO» ≤ 294.6 px).
+       big     condensed grotesk, cap 455–609.5 (→ cap top 797.8, baseline 1069.6, cap 271); PD ink left 27 (→ 47.3),
+               PAOLA ink right 1070 (→ 1877.9). Stems 26–27 crop = 0.17 cap — Oblako's wght 800 was far too heavy
+               (0.24 cap); lab sweep on PAOLA: wdth 56 / wght 615 gives width 0.998 and stem 1.0 of the pin.
+       nav     JEWERLY (239) · STORES · tagline · SEARCH · CART (001) — UI debris, dropped (brief rule 4), zone ignored.
+     Content mapping (brief v2: 4 GIFs 2×2 in the card, giant word split round the card, ~560 chars in the caps block):
+       • Giant word «LOOK» … «& FEEL», not «LOOK &» … «FEEL»: at any size «LOOK &» is the long half (854 vs 462 px at the
+         pin's size) — the card would sit right of centre and leave no room for the quote. «LOOK» | «& FEEL» keeps the
+         pin's short-left / long-right rhythm. 10 glyphs vs PD+PAOLA's 7 do not fit round a 440-px card at the pin's size
+         (gaps would be 33 px), so the words are set at 0.88 (336 px, cap 239): baseline and outer ink edges are the
+         pin's, gaps 109/109 px; the card keeps its size, top and bottom and moves to x 689.5 (+156.5) between them.
+       • Quote = Victor's two paragraphs, word for word (578 chars), same caps + justified + 2 serif words
+         («ПАНИКУ», «ВДОХ» — the panic → breath arc). Legibility: 21.2 → 30 px. Anchored on the pin's bottom-left
+         relation (last baseline 455.0, left = card right − 52.6), grown up and right to the big word's right edge
+         (1878): 13 lines, pitch 32 (the pin's 0.91-em leading makes Cyrillic Й breves touch Д/Щ descenders; 1.07 em
+         clears them). Serif words in Roboto Serif 500 (Noto Serif Display's hairlines vanished at 640 px).
+       • Photo area → 4 cells 185.05 × 232.55, gutter 10 (the pin has one photo, no gutter), paper shows between.
+     Contrast: #050505 on the field #a4a39b = 8.0 : 1, on the card paper ≈ 16 : 1.
+     GIF crops (cover, cropdetect on each .mp4): f02-g2 960×540 clean · f04-g2 960×540 clean ·
+       f04-g3 960×540 pillarbox 94 px each side (symmetric) → --act-x 94 --act-w 772 · f04-g4 786×540 clean. */
+  .s04 { --cx: 689.5px; background: #a4a39b; color: #050505; }
+  .s04 .cap { text-box: trim-both cap alphabetic; line-height: 1; white-space: nowrap; margin: 0; }
 
-  /* photo row: N boxes; video sized so the ACTIVE picture covers the box, placed by --pos-x/--pos-y */
-  .tm .ph { --bh: calc(397.9 - var(--sh)); top: 22.59px; width: calc(var(--bw) * 1px); height: calc(var(--bh) * 1px);
-            overflow: hidden; border-radius: 3.5px; background: #000; }
-  .tm.n2 .ph { --bw: 887.65; } .tm.n2 .p1 { left: 64.44px; } .tm.n2 .p2 { left: 967.94px; }
-  .tm.n3 .ph { --bw: 586.43; } .tm.n3 .p1 { left: 64.44px; } .tm.n3 .p2 { left: 666.72px; } .tm.n3 .p3 { left: 1269.15px; }
-  .tm.n4 .ph { --bw: 435.9; }  .tm.n4 .p1 { left: 64.44px; } .tm.n4 .p2 { left: 516.19px; } .tm.n4 .p3 { left: 967.94px; } .tm.n4 .p4 { left: 1419.69px; }
-  .tm .ph video { --act-x: 0; --act-y: 0; --act-w: var(--src-w); --act-h: var(--src-h); --pos-x: .5; --pos-y: .5;
+  .s04 .card { left: var(--cx); top: 397.3px; width: 440.1px; height: 665.3px;
+               background: linear-gradient(90deg, #d6d3cc 0, #e2dfd8 5px, #e7e5df 12px, #eae8e2 60%, #e8e6e0);
+               box-shadow: 1.6px 1.6px 0 #898880, 3px 3px 3px rgba(0,0,0,.10); }
+
+  /* photo area = N cells (here 2×2); video sized so the ACTIVE picture covers the cell, placed by --pos-x/--pos-y */
+  .s04 .ph { --g: 10; --bw: calc((380.1 - var(--g)) / 2); --bh: calc((475.1 - var(--g)) / 2);
+             width: calc(var(--bw) * 1px); height: calc(var(--bh) * 1px); overflow: hidden; }
+  .s04 .p1, .s04 .p3 { left: calc(var(--cx) + 31px); }
+  .s04 .p2, .s04 .p4 { left: calc(var(--cx) + 31px + (var(--bw) + var(--g)) * 1px); }
+  .s04 .p1, .s04 .p2 { top: 476.3px; }
+  .s04 .p3, .s04 .p4 { top: calc(476.3px + (var(--bh) + var(--g)) * 1px); }
+  .s04 .ph video { --act-x: 0; --act-y: 0; --act-w: var(--src-w); --act-h: var(--src-h); --pos-x: .5; --pos-y: .5;
     --k: max(var(--bw) / var(--act-w), var(--bh) / var(--act-h));
-    position: absolute; display: block; object-fit: cover;
+    position: absolute; display: block; max-width: none; object-fit: fill;
     width: calc(var(--src-w) * var(--k) * 1px); height: calc(var(--src-h) * var(--k) * 1px);
     left: calc((var(--bw) - var(--act-w) * var(--k)) * var(--pos-x) * 1px - var(--act-x) * var(--k) * 1px);
     top:  calc((var(--bh) - var(--act-h) * var(--k)) * var(--pos-y) * 1px - var(--act-y) * var(--k) * 1px); }
 
-  /* giant word: pin cap top 511.83 − --sh; left = ink-left 82.76 − the first letter's side bearing (--lsb) */
-  .tm .word { left: calc((82.76 - var(--lsb)) * 1px); top: calc((511.83 - var(--sh)) * 1px);
-              font-family: 'Roboto Flex', sans-serif; font-size: 340.2px; font-weight: 730; letter-spacing: 0;
-              font-variation-settings: "wdth" var(--wdth), "wght" 730, "opsz" 144; }
+  /* quote block: bottom-left anchored (last baseline 455.0 = photo top − 21.3; left = card right − 52.6), grows up/right */
+  .s04 .q { left: calc(var(--cx) + 387.5px); right: 42px; bottom: 625px; margin: 0;
+            font-family: 'Roboto Flex', sans-serif; font-size: 30px; line-height: 32px; font-variation-settings: 'wdth' 60, 'wght' 700, 'opsz' 30;
+            text-transform: uppercase; text-align: justify; hyphens: manual; text-box: trim-both cap alphabetic; }
+  .s04 .q p { margin: 0; }
+  .s04 .q .sf { font-family: 'Roboto Serif', serif; font-weight: 500; font-variation-settings: 'opsz' 30; }
 
-  /* footer: 4 columns on the pin's grid; first cap edge = 840.8 − --sh (841.3 in the formula: Chrome snaps the baseline up ~0.5 px) (Inter: ascent .96875, descent .24121, cap .72754 em) */
-  .tm .foot { left: 64.44px; width: calc((var(--cw) * 4 + (451.75 - var(--cw)) * 3) * 1px);
-              top: calc((841.3 - var(--sh)) * 1px - var(--fs) * ((var(--lh) - 1.20996) / 2 + .24121) * 1px);
-              column-count: 4; column-gap: calc((451.75 - var(--cw)) * 1px); column-fill: balance;
-              font-family: 'Inter', sans-serif; font-size: calc(var(--fs) * 1px); line-height: var(--lh); font-weight: 450;
-              letter-spacing: -.01em; }
-  .tm .foot p { margin: 0; text-wrap: pretty; }
-  .tm .foot .nw { white-space: nowrap; }
-  .tm .foot p + p:not(.hd + p) { margin-top: calc(var(--fs) * var(--lh) * 1px); }
-  .tm .foot .hd { font-weight: 700; text-transform: uppercase; letter-spacing: -.01em; column-span: all; white-space: nowrap;
-                    margin-bottom: calc(var(--fs) * var(--lh) * .35px); }   /* the pin: head → first item = 1.35 item pitches */
-  /* s04 · LOOK & FEEL — Figma frame 4: 4 GIFs, 576 characters of text, set at 30 px.
-     Row: 4 boxes 435.9 × 373.9 (--sh 24: the columns need 24 px more than the pin's band). Word: wdth 89.81 — ink fitted to MOSAIQUE's span, first-letter side bearing 12 px.
-     p1 f04-g1 (stored as f02-g2) 960×540 · no bars · object-position 50% 50% — Вид сверху: рука героя на тачпаде ноутбука, рядом телефон и мышь
-     p2 f04-g2 960×540 · no bars · object-position 35% 50% — Экран ноутбука с таблицей Deal Management
-     p3 f04-g3 960×540 · bars cropped (cropdetect, symmetric) → active 772×540 at 94,0 · object-position 55% 50% — Рука с часами над чертежом — камера следит за движением руки
-     p4 f04-g4 786×540 · no bars · object-position 50% 50% — Просторное лобби офиса: розовые колонны, лестница, люди на диванах */
-  .s04 { --sh: 24; --wdth: 89.81; --lsb: 12; }
+  .s04 .big { top: 830.7px; font-family: 'Roboto Flex', sans-serif; font-size: 336px; color: #000;
+              font-variation-settings: "wdth" 56, "wght" 615, "opsz" 144; }
+  .s04 .w1 { left: 37.6px; }
+  .s04 .w2 { right: 40px; }
 
 /* ── s05.html ── */
-/* TEXT+MEDIA template · pin d57 (MOSAIQUE: a row of photos, a giant grotesk word, a footer of text columns).
-     Reference = /boards/golomazova-danya/design-refs/crops/d57-169.png (1508×848), k = 1920 / 1508 = 1.27321.
-     Re-measured on the pin 2026-09-18 (edge = antialiased column/row fraction; Oblako s13's row was 0.6–0.75 pin px off):
-       photos      x 50.61–511.15 · 523.60–984.40 · 996.85–1457.40, y 17.74–330.28, gutter 12.45
-                   → canvas row x 64.44–1855.58, top 22.59, height 397.9, gutter 15.85, radius 3.5
-       wordmark    MOSAIQUE cap 402–591 (190 rows → 241.9), ink x 65–1446 → cap top 511.83, ink 82.76–1842.3
-                   face: heavy neo-grotesk; in Roboto Flex the pin's stems and widths are wght 730 / wdth 110 / tracking 0
-                   (I stem 64 vs 63.7, M 290 vs 286.5, MOSAIQUE 1748 vs 1759.5 canvas px)
-       footer      heads cap top 660 (antialiased edge 660.4 → 840.8), bold caps; items cap top 688 / 709 / 730 / 751 / 771, regular caps;
-                   ink-lefts 51 / 406 / 761 / 1115 → 64.9 / 516.9 / 968.9 / 1419.6 = the pin's 4-column grid (pitch 451.75)
-       micro row   #b4b4b4 cap top 833.5 (→ 1061.9) — «MOSAIQUE© 2024 · TERMS & PRIVACY · MADE BY ENA»: UI debris, dropped
-     Row → N GIFs: the pin's row (same outer edges, top, bottom, gutter) cut into N equal boxes (waiver: content).
-     Footer → the frame's whole text at ≥ 30 px (waiver: legibility), sentence case (600+ characters in caps would not
-     read), columns 420 px wide on the pin's grid (gutter 31.75 ≈ 1 em; the pin's full 435.9 would leave 16 px between
-     columns). Paragraph gap = one line (keeps the lines of all four columns on one grid).
-     --sh: when the columns need more than the band down to the pin's lowest ink (last baseline 1064), the photo row
-     loses --sh px at the bottom and the word + footer move up by --sh (the pin's gaps kept: 91.3 row→cap, 86.6 baseline→footer). */
-  .tm { --sh: 0; --fs: 30; --lh: 1.25; --cw: 420; background: #fff; color: #030303; }
-  .tm[data-len="s"] { --fs: 40; --lh: 1.25; }
-  .tm .cap { text-box: trim-both cap alphabetic; line-height: 1; white-space: nowrap; margin: 0; }
+/* s05 · HUMOR (Figma frame 6) — 1:1 on pin d19 (album page: header pairs · tracklist · label · two close-ups).
+     Reference = crops/d19-169.png (1920×1080 = pin 1440×1080 padded 240 px each side with its own #f4f4f4 field),
+     canvas = crop × 1. Re-measured on the crop 2026-09-18 (ink bands):
+       field #f4f4f4 · ink #030303 · grey rows #c4c4c4
+       type     one size everywhere: tight bold grotesk caps, cap 14, pitch 17.
+                Oblako had Inter Tight 740; the pin's stems match 620–660 (zoom vs «GUNS AND CIGARETTES») → 640.
+       header   cap tops 19 / 36 · ARTISTS ink 261 · value 372 · ALBUM 869 · values right-aligned, ink right 1658
+       table    head row 133 (NO right 848 · TITLE 870 · PRODUCER 1388 · LENGTH right 1659)
+                16 rows, cap tops 170 + 17·n, grey; row 04 black
+       label    rows 408 / 425 at 262, last baseline 438 (= photo top − 23)
+       photos   x 261–849 / 869–1659, y 461–1061 (589 × 601, 791 × 601), gutter 19
+     Mapping of Victor's frame (all its text, word for word, in the pin's typographic system):
+       header left  (ARTISTS slot) → «HUMOR», Victor's heading, black
+       header right (album value: right-aligned, long row + short row) → the lead sentence, black
+       text rows → the three layers + the closing sentence, set as the pin's rows (one size, one pitch, no gaps
+         between paragraphs). Each layer opens with Victor's own lead phrase in black (the pin's black row), the rest
+         of the layer in the pin's grey, darkened #c4c4c4 → #6b6b6b so it reads (4.8 : 1 on the field); the closing
+         sentence is black and ends the rows on the pin's last baseline (438).
+       photos → the frame's two GIFs in the pin's two boxes (left f06-g2, a face close-up like the pin's face;
+         right f06-g1, the wide archive room).
+     Legibility (user rule): 18.6 → 30 px, pitch 17 → 31 (Cyrillic caps: Д/Ц/Щ feet 5 px below the baseline,
+       Й breve 6 px above the cap line; at the pin's 1.21 × cap the lines fused). 690 chars of caps at 30 px need
+       ~22 rows of 790 px, the pin's TITLE column holds 11 → the rows run in TWO columns over the two photos:
+       left column = the left photo's width (261–849), right column = the pin's TITLE → LENGTH span (869–1659); both
+       end on the pin's last baseline 438, so the photos keep the pin's boxes exactly. The top-left field and the
+       LABEL block are filled by the left column (waived: content). Dropped (no content, no filler): NO column
+       (numbers would be decorative), PRODUCER / LENGTH columns and column heads, GENRE / ALBUM / RELEASED labels.
+       Column break: after «а также» in layer 2 — the fullest last line in the left column with 11 / 11 rows.
+     GIFs (cropdetect: no bars in either loop): box --bw × --bh, cover scale by the active picture, --pos-x/--pos-y
+       = object-position of the active picture. f06-g2 (960×540) pos-x .65: the face (x 440–720) and the hair stay in
+       the box. f06-g1 (1280×720) centred: the hero at his desk under the strip lights, shelves on both sides. */
+  .s05 { background: #f4f4f4; color: #030303; --pitch: 31px; }
+  .s05 .t { font-family: 'Inter Tight', sans-serif; font-weight: 640; font-size: 30px; line-height: var(--pitch);
+            letter-spacing: -0.04em; text-transform: uppercase; margin: 0; text-box: trim-both cap alphabetic; }
+  .s05 .one { white-space: nowrap; }
 
-  /* photo row: N boxes; video sized so the ACTIVE picture covers the box, placed by --pos-x/--pos-y */
-  .tm .ph { --bh: calc(397.9 - var(--sh)); top: 22.59px; width: calc(var(--bw) * 1px); height: calc(var(--bh) * 1px);
-            overflow: hidden; border-radius: 3.5px; background: #000; }
-  .tm.n2 .ph { --bw: 887.65; } .tm.n2 .p1 { left: 64.44px; } .tm.n2 .p2 { left: 967.94px; }
-  .tm.n3 .ph { --bw: 586.43; } .tm.n3 .p1 { left: 64.44px; } .tm.n3 .p2 { left: 666.72px; } .tm.n3 .p3 { left: 1269.15px; }
-  .tm.n4 .ph { --bw: 435.9; }  .tm.n4 .p1 { left: 64.44px; } .tm.n4 .p2 { left: 516.19px; } .tm.n4 .p3 { left: 967.94px; } .tm.n4 .p4 { left: 1419.69px; }
-  .tm .ph video { --act-x: 0; --act-y: 0; --act-w: var(--src-w); --act-h: var(--src-h); --pos-x: .5; --pos-y: .5;
+  /* header (cap tops 19 / 19 + pitch) */
+  .s05 .hl  { left: 260px; top: 19px; }
+  .s05 .hr  { right: 261.2px; top: 19px; text-align: right; }
+
+  /* text rows: two columns, bottom = the pin's last baseline 438 (11 rows: first cap top 438 − 21.8 − 10 × 31 = 106) */
+  .s05 .col { bottom: calc(1080px - 439px); }
+  .s05 .col p { margin: 0; color: #6b6b6b; }
+  .s05 .col b, .s05 .col .k { font-weight: inherit; color: #030303; }
+  .s05 .c1 { left: 261.4px; width: 590px; }
+  .s05 .c2 { left: 868.6px; width: 792px; }
+
+  /* photos: the pin's boxes */
+  .s05 .gif { top: 461px; height: 601px; overflow: hidden; --bh: 601; }
+  .s05 .g-l { left: 261px; width: 589px; --bw: 589; }
+  .s05 .g-r { left: 869px; width: 791px; --bw: 791; }
+  .s05 .gif video { position: absolute; display: block; max-width: none; object-fit: fill;
     --k: max(var(--bw) / var(--act-w), var(--bh) / var(--act-h));
-    position: absolute; display: block; object-fit: cover;
     width: calc(var(--src-w) * var(--k) * 1px); height: calc(var(--src-h) * var(--k) * 1px);
-    left: calc((var(--bw) - var(--act-w) * var(--k)) * var(--pos-x) * 1px - var(--act-x) * var(--k) * 1px);
-    top:  calc((var(--bh) - var(--act-h) * var(--k)) * var(--pos-y) * 1px - var(--act-y) * var(--k) * 1px); }
-
-  /* giant word: pin cap top 511.83 − --sh; left = ink-left 82.76 − the first letter's side bearing (--lsb) */
-  .tm .word { left: calc((82.76 - var(--lsb)) * 1px); top: calc((511.83 - var(--sh)) * 1px);
-              font-family: 'Roboto Flex', sans-serif; font-size: 340.2px; font-weight: 730; letter-spacing: 0;
-              font-variation-settings: "wdth" var(--wdth), "wght" 730, "opsz" 144; }
-
-  /* footer: 4 columns on the pin's grid; first cap edge = 840.8 − --sh (841.3 in the formula: Chrome snaps the baseline up ~0.5 px) (Inter: ascent .96875, descent .24121, cap .72754 em) */
-  .tm .foot { left: 64.44px; width: calc((var(--cw) * 4 + (451.75 - var(--cw)) * 3) * 1px);
-              top: calc((841.3 - var(--sh)) * 1px - var(--fs) * ((var(--lh) - 1.20996) / 2 + .24121) * 1px);
-              column-count: 4; column-gap: calc((451.75 - var(--cw)) * 1px); column-fill: balance;
-              font-family: 'Inter', sans-serif; font-size: calc(var(--fs) * 1px); line-height: var(--lh); font-weight: 450;
-              letter-spacing: -.01em; }
-  .tm .foot p { margin: 0; text-wrap: pretty; }
-  .tm .foot .nw { white-space: nowrap; }
-  .tm .foot p + p:not(.hd + p) { margin-top: calc(var(--fs) * var(--lh) * 1px); }
-  .tm .foot .hd { font-weight: 700; text-transform: uppercase; letter-spacing: -.01em; column-span: all; white-space: nowrap;
-                    margin-bottom: calc(var(--fs) * var(--lh) * .35px); }   /* the pin: head → first item = 1.35 item pitches */
-  /* s05 · HUMOR — Figma frame 6: 2 GIFs, 743 characters of text, set at 30 px.
-     Row: 2 boxes 887.65 × 335.9 (--sh 62: the columns need 62 px more than the pin's band). Word: wdth 151 (axis max) — shorter than MOSAIQUE, left edge and cap kept, first-letter side bearing 30 px.
-     p1 f06-g1 1280×720 · no bars · object-position 50% 50% — Тёмный кабинет-архив: сотрудник один за столом под лампами
-     p2 f06-g2 960×540 · no bars · object-position 50% 60% — Кудрявая девушка в очках напряжённо вглядывается в экран */
-  .s05 { --sh: 62; --wdth: 151; --lsb: 30; }
+    left: calc(var(--act-x) * var(--k) * -1px + (var(--bw) - var(--act-w) * var(--k)) * var(--pos-x) * 1px);
+    top:  calc(var(--act-y) * var(--k) * -1px + (var(--bh) - var(--act-h) * var(--k)) * var(--pos-y) * 1px); }
 
 /* ── s06.html ── */
 /* s06 · SETTING ( OFFICE ) — pilot of the SECTION template (pin d76, MIKOS: full-bleed close-up + wordmark + light card).
@@ -347,289 +370,333 @@
   .s06 { --card-w: 1250px; }   /* _qa/s06-fit.mjs: 562 chars → tier m, 1250 × 358, 8 lines (3.49 : 1) */
 
 /* ── s07.html ── */
-/* s07 · SETTING ( PRODUCTION FACTORY ) — SECTION template (pilot s075; the full measurement table and mapping are in
-     s075.html — this slide only changes content, the GIF framing and the card width).
-     Text: frame 71, 182 chars → tier s (40 px, lh 1.15); card 860 px → 5 lines, 860 × 261 (3.30 : 1, the pin card is 3.36 : 1).
-     Heading: Figma «( PRODUCTION FACTORY» — the closing bracket restored as in the plan («SETTING ( PRODUCTION FACTORY )»).
-     GIF f71-g1: 1280×720 with a letterbox — active picture rows 121–598 (cropdetect 1280:480:0:120 on the loop, row means
-       on the poster: 120 = 26, 121 = 82 … 598 = 64, 599 = 14) → --act-y 121, --act-h 478, k = 1080 / 478 = 2.2594
-       (element 2892 × 1627 at top −273.4). 2.68 : 1 picture in a 16:9 canvas: 972 px to choose horizontally.
-       --pos-x .23 (left −223.6): the aisle between the machines (vanishing point ≈ x 1188) and the worker who later walks up it
-       sit right of the card; the card (x 131–991, y ≥ 773) covers only the lower left machines. Crop only, no grade.
-     Contrast (poster, white #fafafa): SETTING ≈ 8.3 : 1, «( PRODUCTION» ≈ 7.0 : 1, «FACTORY )» ≈ 6.1 : 1 (median per cell). */
-  .sec { background: #1c1c1c; color: #fafafa; }
-  .sec .cap { text-box: trim-both cap alphabetic; line-height: 1; white-space: nowrap; margin: 0; }
+/* s07 · SETTING ( PRODUCTION FACTORY ) — Figma frame 71 — 1:1 on pin d39 «SATELLITE» (a band-shaped photo at eye
+     level, a giant grotesk word under it filling the band's width, a centred two-line blurb, a nav row, a mark).
+     Reference = /boards/golomazova-danya/design-refs/crops/d39-169.png (1138×640), k = 1920 / 1138 = 1.68717.
+     Re-measured on the pin 2026-09-18 (antialiased edge fractions; Oblako deck-v2/s04 had the word 1 px low, its cap 1.7 px short):
+       field #efeee9 · ink #1b1b1b (eyedropped)
+       mark     7-arm asterisk x 93–151, y 22–92, centre 120.3,63.5, arms 5.8 wide, hub ⌀ 16 → drawn from the pin: 7 butt-ended strokes
+                from the centre to the measured tips (SVG units = pin px); the ® is a trademark sign, dropped
+       nav      caps, cap 30–35, ink x 699–955.5       → cap top 50.6, ink left 1179.3, right 1612
+       button   #1b1b1b x 979–1039, y 22–44            → 1651.7–1753 × 37.1–74.2
+       blurb    2 centred lines, centre x 568.5, baselines 136 / 147 (pitch 11) → centre 959.2, last baseline 248.0
+       band     x 97.8–1040.15, y 164.8–464.3          → left 165.0, top 278.0, 1590 × 505.3
+       word     SATELLITE flat cap 481.4–618.45 (137.05 → 231.2), ink x 98–1038.3, stems 30 (→ 50.6)
+                → cap top 812.2, baseline 1043.4, ink 165.3–1751.8; Roboto Flex 325.2 px (cap .711 em), wght 645
+                (F / T stems 49 px on the render), wdth 132 so FACTORY spans SATELLITE's ink (7 letters vs 9, tracking 0).
+     The heading run is 30 px Inter 560 caps; the blurb is 34 px Inter 500, 3 lines of ≤ 63 chars (--bw 1240 + balance).
+     Mapping (Figma frame 71 → pin):
+       giant word   = «FACTORY» (the brief's word; the pin's SATELLITE slot, same cap, both ink edges)
+       nav row      = Victor's heading «SETTING ( PRODUCTION FACTORY )», one caps run from the pin's first nav item
+                      (ink left 1179.3, cap top 50.6); 30 px (user rule: legibility; pin cap 8.4 px). At 30 px the run
+                      needs the row's full extent, so the JOIN button (UI, no content in this frame) is dropped — waived.
+       blurb        = the frame's whole paragraph (183 chars), 34 px, centred on the pin's centre x; the last baseline
+                      stays on the pin's (248.0) and the block grows up (3 lines instead of 2; waived: legibility).
+       band         = the frame's only GIF f71-g1 (1280×720, letterbox 120 px top and bottom — cropdetect on the .mp4
+                      gives 1280:480:0:120 on all 60 frames, symmetric → active 1280×480 at 0,120). The active picture
+                      covers the band (×1.2422, 90.9 px of height to lose); --pos-y .6 keeps the aisle's vanishing
+                      point in the upper third and the floor with the two conveyor lines down to the workers.
+     Nothing sits on the footage (no contrast issue); the GIF is not graded. */
+  .s07 { background: #efeee9; color: #1b1b1b; }
+  .s07 .cap { text-box: trim-both cap alphabetic; line-height: 1; white-space: nowrap; margin: 0; }
+  .s07 .mark { left: 143.4px; top: 27px; width: 135px; height: 135px; overflow: visible; }
 
-  /* full-bleed GIF: scale k fills the canvas with the ACTIVE picture; pos-x/pos-y place it (object-position) */
-  .sec .bleed { left: 0; top: 0; width: 1920px; height: 1080px; overflow: hidden; }
-  .sec .bleed video { --k: max(1920 / var(--act-w), 1080 / var(--act-h)); display: block; object-fit: cover;
+  /* heading = the pin's nav row */
+  .s07 .head { left: 1177.6px; top: 50.6px; font-family: 'Inter', sans-serif; font-weight: 560; font-size: 30px;
+               letter-spacing: .01em; text-transform: uppercase; }
+
+  /* blurb: centred on the pin's centre x, last baseline on the pin's, grows up */
+  .s07 .blurb { left: calc(959.2px - var(--bw) / 2); width: var(--bw); bottom: 832px; margin: 0; text-align: center;
+                font-family: 'Inter', sans-serif; font-weight: 500; font-size: 34px; line-height: 44px; letter-spacing: -.005em;
+                text-wrap: balance; text-box: trim-both cap alphabetic; }
+
+  /* band: the GIF's ACTIVE picture (--act-*, source px) covers the box; --pos-x/--pos-y place it (object-position) */
+  .s07 .band { left: 165px; top: 278px; width: 1590px; height: 505.3px; overflow: hidden; }
+  .s07 .band video { --bw: 1590; --bh: 505.3; --k: max(var(--bw) / var(--act-w), var(--bh) / var(--act-h));
+    position: absolute; display: block; object-fit: cover;
     width: calc(var(--src-w) * var(--k) * 1px); height: calc(var(--src-h) * var(--k) * 1px);
-    left: calc(var(--act-x) * var(--k) * -1px + (1920px - var(--act-w) * var(--k) * 1px) * var(--pos-x));
-    top:  calc(var(--act-y) * var(--k) * -1px + (1080px - var(--act-h) * var(--k) * 1px) * var(--pos-y)); }
+    left: calc((var(--bw) - var(--act-w) * var(--k)) * var(--pos-x) * 1px - var(--act-x) * var(--k) * 1px);
+    top:  calc((var(--bh) - var(--act-h) * var(--k)) * var(--pos-y) * 1px - var(--act-y) * var(--k) * 1px); }
 
-  .sec .band { left: 0; top: 1071.8px; width: 1920px; height: 8.2px; background: #7596d2; }
-
-  /* wordmark = heading */
-  .sec .mark { left: 132.9px; top: 32.4px; width: 27.5px; height: 25.8px; border-radius: 4px; background: #fafafa; }
-  .sec .head { left: 164.8px; top: 31px; font-family: 'Roboto Flex', sans-serif; font-size: 37.4px; font-weight: 900;
-               color: #fafafa; text-transform: uppercase; letter-spacing: .01em;
-               font-variation-settings: "wdth" 151, "wght" 900, "opsz" 37; }
-  .sec .head .q { margin-left: 30px; }
-
-  /* card: bottom-left anchor of the pin, grows up and right with the text */
-  .sec .card { left: 131.3px; bottom: 46px; width: var(--card-w); padding: 25px 24px 23.2px 23.9px; background: #eeeeee; }
-  .sec .body { margin: 0; font-family: 'Roboto Flex', sans-serif; font-size: var(--fs); line-height: var(--lh);
-               font-weight: 420; color: #1a1a1a; font-variation-settings: "wdth" 110, "wght" 420, "opsz" var(--opsz);
-               text-box: trim-both cap alphabetic; }
-  /* several paragraphs (e.g. VO): baseline-to-baseline gap = 1.5 lines (cap = .711 em in Roboto Flex) */
-  .sec .body + .body { margin-top: calc(var(--fs) * (var(--lh) * 1.5 - .711)); }
-  .sec[data-len="s"] { --fs: 40px; --lh: 1.15; --opsz: 40; }   /* ≤ 250 chars */
-  .sec[data-len="m"] { --fs: 34px; --lh: 1.2;  --opsz: 34; }   /* 251–600 chars */
-  .sec[data-len="l"] { --fs: 30px; --lh: 1.2;  --opsz: 30; }   /* > 600 chars */
-  .s07 { --card-w: 860px; }    /* _qa/s075-fit.mjs: 182 chars → tier s, 860 × 261, 5 lines (3.30 : 1) */
+  .s07 .word { left: 140.3px; top: 812.2px; font-family: 'Roboto Flex', sans-serif; font-size: 325.2px; font-weight: 645;
+               letter-spacing: 0; font-variation-settings: "wdth" 132, "wght" 645, "opsz" 144; }
 
 /* ── s08.html ── */
-/* TEXT+MEDIA template · pin d57 (MOSAIQUE: a row of photos, a giant grotesk word, a footer of text columns).
-     Reference = /boards/golomazova-danya/design-refs/crops/d57-169.png (1508×848), k = 1920 / 1508 = 1.27321.
-     Re-measured on the pin 2026-09-18 (edge = antialiased column/row fraction; Oblako s13's row was 0.6–0.75 pin px off):
-       photos      x 50.61–511.15 · 523.60–984.40 · 996.85–1457.40, y 17.74–330.28, gutter 12.45
-                   → canvas row x 64.44–1855.58, top 22.59, height 397.9, gutter 15.85, radius 3.5
-       wordmark    MOSAIQUE cap 402–591 (190 rows → 241.9), ink x 65–1446 → cap top 511.83, ink 82.76–1842.3
-                   face: heavy neo-grotesk; in Roboto Flex the pin's stems and widths are wght 730 / wdth 110 / tracking 0
-                   (I stem 64 vs 63.7, M 290 vs 286.5, MOSAIQUE 1748 vs 1759.5 canvas px)
-       footer      heads cap top 660 (antialiased edge 660.4 → 840.8), bold caps; items cap top 688 / 709 / 730 / 751 / 771, regular caps;
-                   ink-lefts 51 / 406 / 761 / 1115 → 64.9 / 516.9 / 968.9 / 1419.6 = the pin's 4-column grid (pitch 451.75)
-       micro row   #b4b4b4 cap top 833.5 (→ 1061.9) — «MOSAIQUE© 2024 · TERMS & PRIVACY · MADE BY ENA»: UI debris, dropped
-     Row → N GIFs: the pin's row (same outer edges, top, bottom, gutter) cut into N equal boxes (waiver: content).
-     Footer → the frame's whole text at ≥ 30 px (waiver: legibility), sentence case (600+ characters in caps would not
-     read), columns 420 px wide on the pin's grid (gutter 31.75 ≈ 1 em; the pin's full 435.9 would leave 16 px between
-     columns). Paragraph gap = one line (keeps the lines of all four columns on one grid).
-     --sh: when the columns need more than the band down to the pin's lowest ink (last baseline 1064), the photo row
-     loses --sh px at the bottom and the word + footer move up by --sh (the pin's gaps kept: 91.3 row→cap, 86.6 baseline→footer). */
-  .tm { --sh: 0; --fs: 30; --lh: 1.25; --cw: 420; background: #fff; color: #030303; }
-  .tm[data-len="s"] { --fs: 40; --lh: 1.25; }
-  .tm .cap { text-box: trim-both cap alphabetic; line-height: 1; white-space: nowrap; margin: 0; }
+/* s08 · CAST (Figma frame 72) — pin d21 SIGNATURE, reference = crops/d21-169.png (832×468), k = 1920 / 832 = 2.30769.
+     Geometry source Oblako deck-v2/s20, re-measured on the crop (2026-09-18):
+       photo   x 0–423.4 (the crop's left 41 px are a smear pad of the photo → photo to the canvas edge) → 0–977.1
+       field   #fe2e01 · ink #070205
+       title   3 lines condensed bold caps, centred on the page axis 607.5 (→ 1401.9–1403.1); line 1 cap top 38 → 87.7,
+               baseline 98 → 226.2 (cap 138.5), pitch 66 → 152.3. SIGNATURE ink 483–732, INSPIRED 506–711, I-stem 11 crop.
+               Oblako's wdth 25 / wght 620 was 18 % too narrow; lab sweep at cap 138.5: wdth 42 / wght 640 gives SIGNATURE
+               569–583, INSPIRED 469–479 (pin 577 / 475) and I-stem 25 (pin 25.4).
+       kicker  «FEW WORDS» micro mono at y 16–20, centred — no real content → dropped (no filler), zone ignored
+       byline  «BY / PHARRELL WILLIAMS» micro mono, 2 lines centred, y 289–300 (→ 667–692)
+       columns 2 typewriter mono caps columns, left edges 493 / 614 (→ 1137.7 / 1417), 8 lines, pitch 8.57 (→ 19.8),
+               ≈ 22 characters per line, first cap top 360 (→ 830.8), last baseline 426 (→ 983)
+     Content mapping (brief v2):
+       • title line 1 = «CAST» (Victor's English heading): same face, cap, top and axis; lines 2–3 have no text (waived).
+       • byline slot = the subtitle «( НИКАКИХ / ЗАЕЗЖЕННЫХ ЛИЦ )», broken where Victor broke it; 30 px (legibility).
+       • columns = the frame's full text, 740 chars, word for word. Legibility: 18.9 → 30 px IBM Plex Mono 400 caps
+         (the pin's measure of ≈ 21–22 characters per line is kept: 378-px columns), pitch 31.5 (the pin's 1.05 em).
+         The block is centred on the page axis (1015–1789, gap 18) and grows up from a bottom anchor (last baseline
+         ≈ 1035; the pin's 983 left no room above for 20 lines): 20 + 19 lines, first cap top ≈ 416. The byline sits
+         centred in the gap between the title baseline and the columns (cap top 300).
+       • photo half = 4 GIFs in 2×2 cells 482.55 × 534, gutter 12 in the field red (the pin has one photo, no gutter).
+     GIF crops (cover; cropdetect on every .mp4 found no bars): f72-g1 776×540 pos-x .37 (actor in the office) ·
+       f72-g2 1280×880 pos-x .42 (face + hands with the pen) · f72-g3 800×550 pos-x .63 (the dancing guy + the girl
+       rolling away in her chair) · f72-g4 960×540 pos-x .31 (face + tie).
+     Contrast: #070205 on #fe2e01 = 5.4 : 1 (title, byline, columns). */
+  .s08 { --ax: 1401.9px; background: #fe2e01; color: #070205; }
+  .s08 .cap { text-box: trim-both cap alphabetic; line-height: 1; white-space: nowrap; margin: 0; }
 
-  /* photo row: N boxes; video sized so the ACTIVE picture covers the box, placed by --pos-x/--pos-y */
-  .tm .ph { --bh: calc(397.9 - var(--sh)); top: 22.59px; width: calc(var(--bw) * 1px); height: calc(var(--bh) * 1px);
-            overflow: hidden; border-radius: 3.5px; background: #000; }
-  .tm.n2 .ph { --bw: 887.65; } .tm.n2 .p1 { left: 64.44px; } .tm.n2 .p2 { left: 967.94px; }
-  .tm.n3 .ph { --bw: 586.43; } .tm.n3 .p1 { left: 64.44px; } .tm.n3 .p2 { left: 666.72px; } .tm.n3 .p3 { left: 1269.15px; }
-  .tm.n4 .ph { --bw: 435.9; }  .tm.n4 .p1 { left: 64.44px; } .tm.n4 .p2 { left: 516.19px; } .tm.n4 .p3 { left: 967.94px; } .tm.n4 .p4 { left: 1419.69px; }
-  .tm .ph video { --act-x: 0; --act-y: 0; --act-w: var(--src-w); --act-h: var(--src-h); --pos-x: .5; --pos-y: .5;
+  .s08 .ph { --g: 12; --bw: calc((977.1 - var(--g)) / 2); --bh: calc((1080 - var(--g)) / 2);
+             width: calc(var(--bw) * 1px); height: calc(var(--bh) * 1px); overflow: hidden; }
+  .s08 .p1, .s08 .p3 { left: 0; }
+  .s08 .p2, .s08 .p4 { left: calc((var(--bw) + var(--g)) * 1px); }
+  .s08 .p1, .s08 .p2 { top: 0; }
+  .s08 .p3, .s08 .p4 { top: calc((var(--bh) + var(--g)) * 1px); }
+  .s08 .ph video { --act-x: 0; --act-y: 0; --act-w: var(--src-w); --act-h: var(--src-h); --pos-x: .5; --pos-y: .5;
     --k: max(var(--bw) / var(--act-w), var(--bh) / var(--act-h));
-    position: absolute; display: block; object-fit: cover;
+    position: absolute; display: block; max-width: none; object-fit: fill;
     width: calc(var(--src-w) * var(--k) * 1px); height: calc(var(--src-h) * var(--k) * 1px);
     left: calc((var(--bw) - var(--act-w) * var(--k)) * var(--pos-x) * 1px - var(--act-x) * var(--k) * 1px);
     top:  calc((var(--bh) - var(--act-h) * var(--k)) * var(--pos-y) * 1px - var(--act-y) * var(--k) * 1px); }
 
-  /* giant word: pin cap top 511.83 − --sh; left = ink-left 82.76 − the first letter's side bearing (--lsb) */
-  .tm .word { left: calc((82.76 - var(--lsb)) * 1px); top: calc((511.83 - var(--sh)) * 1px);
-              font-family: 'Roboto Flex', sans-serif; font-size: 340.2px; font-weight: 730; letter-spacing: 0;
-              font-variation-settings: "wdth" var(--wdth), "wght" 730, "opsz" 144; }
-
-  /* footer: 4 columns on the pin's grid; first cap edge = 840.8 − --sh (841.3 in the formula: Chrome snaps the baseline up ~0.5 px) (Inter: ascent .96875, descent .24121, cap .72754 em) */
-  .tm .foot { left: 64.44px; width: calc((var(--cw) * 4 + (451.75 - var(--cw)) * 3) * 1px);
-              top: calc((841.3 - var(--sh)) * 1px - var(--fs) * ((var(--lh) - 1.20996) / 2 + .24121) * 1px);
-              column-count: 4; column-gap: calc((451.75 - var(--cw)) * 1px); column-fill: balance;
-              font-family: 'Inter', sans-serif; font-size: calc(var(--fs) * 1px); line-height: var(--lh); font-weight: 450;
-              letter-spacing: -.01em; }
-  .tm .foot p { margin: 0; text-wrap: pretty; }
-  .tm .foot .nw { white-space: nowrap; }
-  .tm .foot p + p:not(.hd + p) { margin-top: calc(var(--fs) * var(--lh) * 1px); }
-  .tm .foot .hd { font-weight: 700; text-transform: uppercase; letter-spacing: -.01em; column-span: all; white-space: nowrap;
-                    margin-bottom: calc(var(--fs) * var(--lh) * .35px); }   /* the pin: head → first item = 1.35 item pitches */
-  /* s08 · CAST ( НИКАКИХ ЗАЕЗЖЕННЫХ ЛИЦ ) — Figma frame 72: 4 GIFs, 740 characters of text, set at 30 px.
-     Row: 4 boxes 435.9 × 285.9 (--sh 112: the columns need 112 px more than the pin's band). Word: wdth 151 (axis max) — shorter than MOSAIQUE, left edge and cap kept, first-letter side bearing 9 px.
-     p1 f72-g1 776×540 · no bars · object-position 40% 50% — Молодой мужчина в чёрном пиджаке в кабинете, на стене портреты
-     p2 f72-g2 1280×880 · no bars · object-position 50% 30% — Девушка с ручкой в руках эмоционально говорит в камеру
-     p3 f72-g3 800×550 · no bars · object-position 50% 50% — Кудрявый парень в синем свитере идёт по офису у панорамных окон
-     p4 f72-g4 960×540 · no bars · object-position 30% 50% — Улыбающийся сотрудник индийской внешности в галстуке, за ним карта мира */
-  .s08 { --sh: 112; --wdth: 151; --lsb: 9; }
+  .s08 .ctr { left: calc(var(--ax) - 450px); width: 900px; text-align: center; }
+  .s08 .ttl { top: 87.7px; font-family: 'Roboto Flex', sans-serif; font-size: 194.8px; text-transform: uppercase;
+              font-variation-settings: "wdth" 42, "wght" 640, "opsz" 144; }
+  .s08 .mono { font-family: 'IBM Plex Mono', monospace; font-weight: 400; font-size: 30px; text-transform: uppercase; }
+  .s08 .by { top: 300px; line-height: 31.5px; text-box: trim-both cap alphabetic; white-space: nowrap; margin: 0; }
+  .s08 .cols { left: calc(var(--ax) - 387px); width: 774px; bottom: 40px; margin: 0; line-height: 31.5px;
+               column-count: 2; column-gap: 18px; column-fill: balance; hyphens: manual; }
 
 /* ── s09.html ── */
-/* TEXT+MEDIA template · pin d57 (MOSAIQUE: a row of photos, a giant grotesk word, a footer of text columns).
-     Reference = /boards/golomazova-danya/design-refs/crops/d57-169.png (1508×848), k = 1920 / 1508 = 1.27321.
-     Re-measured on the pin 2026-09-18 (edge = antialiased column/row fraction; Oblako s13's row was 0.6–0.75 pin px off):
-       photos      x 50.61–511.15 · 523.60–984.40 · 996.85–1457.40, y 17.74–330.28, gutter 12.45
-                   → canvas row x 64.44–1855.58, top 22.59, height 397.9, gutter 15.85, radius 3.5
-       wordmark    MOSAIQUE cap 402–591 (190 rows → 241.9), ink x 65–1446 → cap top 511.83, ink 82.76–1842.3
-                   face: heavy neo-grotesk; in Roboto Flex the pin's stems and widths are wght 730 / wdth 110 / tracking 0
-                   (I stem 64 vs 63.7, M 290 vs 286.5, MOSAIQUE 1748 vs 1759.5 canvas px)
-       footer      heads cap top 660 (antialiased edge 660.4 → 840.8), bold caps; items cap top 688 / 709 / 730 / 751 / 771, regular caps;
-                   ink-lefts 51 / 406 / 761 / 1115 → 64.9 / 516.9 / 968.9 / 1419.6 = the pin's 4-column grid (pitch 451.75)
-       micro row   #b4b4b4 cap top 833.5 (→ 1061.9) — «MOSAIQUE© 2024 · TERMS & PRIVACY · MADE BY ENA»: UI debris, dropped
-     Row → N GIFs: the pin's row (same outer edges, top, bottom, gutter) cut into N equal boxes (waiver: content).
-     Footer → the frame's whole text at ≥ 30 px (waiver: legibility), sentence case (600+ characters in caps would not
-     read), columns 420 px wide on the pin's grid (gutter 31.75 ≈ 1 em; the pin's full 435.9 would leave 16 px between
-     columns). Paragraph gap = one line (keeps the lines of all four columns on one grid).
-     --sh: when the columns need more than the band down to the pin's lowest ink (last baseline 1064), the photo row
-     loses --sh px at the bottom and the word + footer move up by --sh (the pin's gaps kept: 91.3 row→cap, 86.6 baseline→footer). */
-  .tm { --sh: 0; --fs: 30; --lh: 1.25; --cw: 420; background: #fff; color: #030303; }
-  .tm[data-len="s"] { --fs: 40; --lh: 1.25; }
-  .tm .cap { text-box: trim-both cap alphabetic; line-height: 1; white-space: nowrap; margin: 0; }
+/* s09 · LIGHT — Figma frame 77 — 1:1 on pin d11 «Work» (black field, one big light-grey word right of centre,
+     a wide-grotesk line at the left, a full-width hairline, a strip of photos).
+     Reference = /boards/golomazova-danya/design-refs/crops/d11-169.png (1010×568), k = 1920 / 1010 = 1.90099.
+     Re-measured on the pin 2026-09-18 (antialiased edge fractions):
+       field #101010 · word #cccccc · subtitle #e6e6e6 · hairline #c7c7c7 (eyedropped)
+       big word  «Work» cap top 125.5, baseline 219.8 (cap 94.3 → 179.3), ink left 443.3, stems 16.7–17.3
+                 → cap top 238.6, baseline 417.9, ink left 842.6; Roboto Flex 252.2 px (cap .711 em), wght 590 (stem 32),
+                 wdth 120 (on a render «Work» spans 636 px vs the pin's 638 — the pin's face width)
+       subtitle  «Recent Projects» cap 238.6–256.7 (→ 453.6–488.0), ink left 86.3 (→ 164.0); wide grotesk = Roboto Flex
+                 wdth 151 wght 400 («Recent Projects» 378 px vs the pin's 384 at the same cap). Oblako s09 had it at
+                 44.9 px (cap 31.9); the pin's cap is 34.4 → 48.4 px.
+       hairline  rows 277–278 (1-px line), x 85–925 → top 528.5, 1.9 high, 161.6–1758.4
+       photos    L x 85–498, R x 512–925, y 299–492 → 161.6–946.7 and 973.3–1758.4, top 568.4, height 366.9, gutter 26.6
+       nav row   «Alexander Krivitskiy · Work (underlined) · About · Shop · Contact» and the captions under the photos
+                 (Dreams / Portraits …) → site UI and captions: no content in this frame, dropped (brief rule 4), waived.
+     Mapping (Figma frame 77 → pin):
+       big word   = «Light» (Victor's heading LIGHT, in the pin's sentence case), same cap, baseline and ink left as «Work».
+       subtitle   = the frame's whole paragraph (250 chars) in the subtitle's face: a left block whose last baseline and
+                    ink left are the pin's «Recent Projects»; it grows up (user rule: ≥ 30 px — 34 px here, 9 lines,
+                    column 610 px (longest line ends ≈ 90 px before the big word)). Waived: legibility / content.
+       photos     = the frame's 4 GIFs in the frame's order. The pin's 2 boxes → 4 cells: the strip's outer edges, top,
+                    height and the pin's 26.6-px gutter kept; each cell 379.25 × 366.9 (waived: content, 4 GIFs in the frame).
+                    The middle gutter falls exactly on the pin's gutter (cell 3 starts at the pin's right photo, 973.3).
+     Letterbox (cropdetect 24:2:0 on each .mp4, symmetric bars only; --act-* = the active picture in source px):
+       f77-g1 960×540  no bars                      → pos .55 .5  heroine at her desk, her face just right of the cell centre
+       f77-g2 960×540  bars 122 | 122 → 716×540 @122,0 → pos .5 .5   the heroine walks down the glass corridor
+       f77-g3 960×540  bars 172|170, 14|12 → 618×514 @172,14 → pos .4 .5  she turns with a sheaf of papers at her desk
+       f77-g4 540×540  no bars                      → pos .5 .5  open office from above, a colleague lying on the floor
+     No type sits on footage. Nothing graded or tinted. */
+  .s09 { background: #101010; color: #e6e6e6; }
+  .s09 .cap { text-box: trim-both cap alphabetic; line-height: 1; white-space: nowrap; margin: 0; }
 
-  /* photo row: N boxes; video sized so the ACTIVE picture covers the box, placed by --pos-x/--pos-y */
-  .tm .ph { --bh: calc(397.9 - var(--sh)); top: 22.59px; width: calc(var(--bw) * 1px); height: calc(var(--bh) * 1px);
-            overflow: hidden; border-radius: 3.5px; background: #000; }
-  .tm.n2 .ph { --bw: 887.65; } .tm.n2 .p1 { left: 64.44px; } .tm.n2 .p2 { left: 967.94px; }
-  .tm.n3 .ph { --bw: 586.43; } .tm.n3 .p1 { left: 64.44px; } .tm.n3 .p2 { left: 666.72px; } .tm.n3 .p3 { left: 1269.15px; }
-  .tm.n4 .ph { --bw: 435.9; }  .tm.n4 .p1 { left: 64.44px; } .tm.n4 .p2 { left: 516.19px; } .tm.n4 .p3 { left: 967.94px; } .tm.n4 .p4 { left: 1419.69px; }
-  .tm .ph video { --act-x: 0; --act-y: 0; --act-w: var(--src-w); --act-h: var(--src-h); --pos-x: .5; --pos-y: .5;
+  .s09 .big { left: 825.6px; top: 238.6px; font-family: 'Roboto Flex', sans-serif; font-size: 252.2px; font-weight: 590;
+              color: #cccccc; font-variation-settings: "wdth" 120, "wght" 590, "opsz" 144; }
+
+  /* text block = the pin's «Recent Projects» line: ink left + last baseline kept, grows up */
+  .s09 .body { left: 162px; bottom: 592px; width: 610px; margin: 0; font-family: 'Roboto Flex', sans-serif;
+               font-size: 34px; line-height: 42.5px; font-weight: 400; color: #e6e6e6;
+               font-variation-settings: "wdth" 151, "wght" 400, "opsz" 34; text-wrap: pretty; text-box: trim-both cap alphabetic; }
+
+  .s09 .rule { left: 161.6px; top: 528.5px; width: 1596.8px; height: 1.9px; background: #c7c7c7; }
+
+  /* photo strip: N cells between the pin's outer edges (161.6–1758.4), gutter 26.6; video sized so the ACTIVE
+     picture covers the cell, placed by --pos-x/--pos-y */
+  .s09 .ph { --bh: 366.9; top: 568.4px; width: calc(var(--bw) * 1px); height: calc(var(--bh) * 1px); overflow: hidden; background: #000; }
+  .s09.n4 .ph { --bw: 379.25; } .s09.n4 .p1 { left: 161.6px; } .s09.n4 .p2 { left: 567.45px; } .s09.n4 .p3 { left: 973.3px; } .s09.n4 .p4 { left: 1379.15px; }
+  .s09 .ph video { --act-x: 0; --act-y: 0; --act-w: var(--src-w); --act-h: var(--src-h); --pos-x: .5; --pos-y: .5;
     --k: max(var(--bw) / var(--act-w), var(--bh) / var(--act-h));
     position: absolute; display: block; object-fit: cover;
     width: calc(var(--src-w) * var(--k) * 1px); height: calc(var(--src-h) * var(--k) * 1px);
     left: calc((var(--bw) - var(--act-w) * var(--k)) * var(--pos-x) * 1px - var(--act-x) * var(--k) * 1px);
     top:  calc((var(--bh) - var(--act-h) * var(--k)) * var(--pos-y) * 1px - var(--act-y) * var(--k) * 1px); }
 
-  /* giant word: pin cap top 511.83 − --sh; left = ink-left 82.76 − the first letter's side bearing (--lsb) */
-  .tm .word { left: calc((82.76 - var(--lsb)) * 1px); top: calc((511.83 - var(--sh)) * 1px);
-              font-family: 'Roboto Flex', sans-serif; font-size: 340.2px; font-weight: 730; letter-spacing: 0;
-              font-variation-settings: "wdth" var(--wdth), "wght" 730, "opsz" 144; }
-
-  /* footer: 4 columns on the pin's grid; first cap edge = 840.8 − --sh (841.3 in the formula: Chrome snaps the baseline up ~0.5 px) (Inter: ascent .96875, descent .24121, cap .72754 em) */
-  .tm .foot { left: 64.44px; width: calc((var(--cw) * 4 + (451.75 - var(--cw)) * 3) * 1px);
-              top: calc((841.3 - var(--sh)) * 1px - var(--fs) * ((var(--lh) - 1.20996) / 2 + .24121) * 1px);
-              column-count: 4; column-gap: calc((451.75 - var(--cw)) * 1px); column-fill: balance;
-              font-family: 'Inter', sans-serif; font-size: calc(var(--fs) * 1px); line-height: var(--lh); font-weight: 450;
-              letter-spacing: -.01em; }
-  .tm .foot p { margin: 0; text-wrap: pretty; }
-  .tm .foot .nw { white-space: nowrap; }
-  .tm .foot p + p:not(.hd + p) { margin-top: calc(var(--fs) * var(--lh) * 1px); }
-  .tm .foot .hd { font-weight: 700; text-transform: uppercase; letter-spacing: -.01em; column-span: all; white-space: nowrap;
-                    margin-bottom: calc(var(--fs) * var(--lh) * .35px); }   /* the pin: head → first item = 1.35 item pitches */
-  /* s09 · LIGHT — Figma frame 77: 4 GIFs, 246 characters of text, set at 40 px.
-     Row: 4 boxes 435.9 × 397.9 (the pin's height). Word: wdth 151 (axis max) — shorter than MOSAIQUE, left edge and cap kept, first-letter side bearing 30 px.
-     p1 f77-g1 960×540 · no bars · object-position 50% 50% — Девушка в опенспейсе, мягкий свет из окон
-     p2 f77-g2 960×540 · bars cropped (cropdetect, symmetric) → active 716×540 at 122,0 · object-position 50% 50% — Длинный коридор со стеклянными стенами, люди идут навстречу
-     p3 f77-g3 960×540 · bars cropped (cropdetect, symmetric) → active 614×510 at 174,16 · object-position 60% 50% — Девушка за рабочим столом передаёт бумаги, свет из окна
-     p4 f77-g4 540×540 · no bars · object-position 50% 50% — Опенспейс сверху: сотрудники за столами, один лежит на полу */
-  .s09 { --sh: 0; --wdth: 151; --lsb: 30; }
-
 /* ── s10.html ── */
-/* s10 · COLOR — SECTION template (pin d76; pilot s075 → s13 holds the full measurement table and the mapping;
-     this slide only changes the heading, the text, the card width and the GIF framing).
-     Heading: one word, no qualifier → the pin's «9» slot stays empty (no filler).
-     Text: frame 78, 239 chars, 1 paragraph → tier s (40 px, lh 1.15); card 1020 → 6 lines, 1020 × 307 (3.33 : 1), top 727.
-     GIF f78-g1: 960×540, no letterbox (cropdetect on the loop 960:540:0:0) → full-bleed at 2×, nothing to re-frame. The
-       card covers the front desk edge and papers; the man at the desk (face ≈ x 720–870, y 480–600), the lamps and the
-       ceiling tubes — the colour the text is about — stay free.
-     Contrast (white #fafafa): poster 16 : 1 median (dark ceiling), loop 16–19 : 1. */
-  .sec { background: #1c1c1c; color: #fafafa; }
-  .sec .cap { text-box: trim-both cap alphabetic; line-height: 1; white-space: nowrap; margin: 0; }
+/* s10 · COLOR (Figma frame 78) — pin d47: one full-bleed portrait, four giant corner characters (T · 2 / mark · 7),
+     a thin row of bold micro lines at mid-height (left pair · centre line · right pair). Nothing else.
+     Reference = /boards/golomazova-danya/design-refs/crops/d47-169.png (1918×1079), k = 1920 / 1918 = 1.001.
+     Measured on the pin 2026-09-18 (ink, crop px ≈ canvas px):
+       T   x 25–142, y 23–168 (cap 146, flat) · 2  x 1794–1890, y 22–168 · 7  x 1795–1892, y 914–1059
+       mark (bottom-left) x 63–77, y 965–1053 (89 tall) · white, regular neo-grotesk → Inter Tight 400
+       micro, white bold caps, cap ≈ 9–10: LA / TYO x 352, cap tops 523 / 540 · THINKING… x 663–874, 522 ·
+             ENTER / TERMINAL™ x 1287–1351, 521 / 533 → lower micro baseline ≈ 549
+     Mapping (Victor's frame 78: heading COLOR + 236 characters):
+       corners  the heading's letters in Z reading order, C · O / L · OR, each on the pin glyph's outer edges, cap top and
+                baseline (round C / O set ≈ 1.5 % smaller so the overshoots land on the pin's flat 146; OR grows inward from
+                the 7's right edge; L at the mark's 89 px). Brief: the pin's device is characters → the heading's letters.
+       micro    all 236 characters at 30 px Inter Tight 600, sentence case (caps: 8 heavy lines, see _qa). Left pair =
+                sentence 1 (2 lines, like LA / TYO) · right pair = sentences 2–3 (6 lines, left edge on the pin's 1287).
+                Both end on one baseline 500 and grow upward (the pin's lower micro baseline is 549): lower down the GIF's
+                desk lamps sit under the text. The left pair moves from x 352 to the corner column x 25 and the centre
+                line is dropped — both slots fall on the desk lamps / the hero's head (contrast, waived in _qa/s10.json).
+                Template: the right pair holds ≈ 200 characters in 6 lines between cap top 293 and baseline 500.
+     GIF f78-g1 (960×540, 16:9, no bars — cropdetect 960:540:0:0; two shots, the poster is the brighter first one):
+       full-bleed, --zoom 1.04 + --pos-y 1 (picture up 43 px, 4 % upscale) so the end of the ceiling tube clears the TR O.
+       Ungraded. Contrast, white on the poster and on the worst 8-px cell over all 66 frames: micro p10 ≥ 9.9 : 1 (median
+       16–18); corner letters p10 ≥ 7 : 1. The pin's red is the portrait's own wall → no red field here (the GIF covers). */
+  .s10 { background: #14181a; color: #ffffff; }
+  .s10 .cap { text-box: trim-both cap alphabetic; line-height: 1; white-space: nowrap; margin: 0; }
 
-  /* full-bleed GIF: scale k fills the canvas with the ACTIVE picture; pos-x/pos-y place it (object-position) */
-  .sec .bleed { left: 0; top: 0; width: 1920px; height: 1080px; overflow: hidden; }
-  .sec .bleed video { --k: max(1920 / var(--act-w), 1080 / var(--act-h)); display: block; object-fit: cover;
+  .s10 .bleed { left: 0; top: 0; width: 1920px; height: 1080px; overflow: hidden; }
+  .s10 .bleed video { --k: calc(max(1920 / var(--act-w), 1080 / var(--act-h)) * var(--zoom)); display: block; object-fit: cover;
     width: calc(var(--src-w) * var(--k) * 1px); height: calc(var(--src-h) * var(--k) * 1px);
     left: calc(var(--act-x) * var(--k) * -1px + (1920px - var(--act-w) * var(--k) * 1px) * var(--pos-x));
     top:  calc(var(--act-y) * var(--k) * -1px + (1080px - var(--act-h) * var(--k) * 1px) * var(--pos-y)); }
 
-  .sec .band { left: 0; top: 1071.8px; width: 1920px; height: 8.2px; background: #7596d2; }
+  .s10 .idx  { font-family: 'Inter Tight', sans-serif; font-weight: 400; font-size: 198.5px; }
+  .s10 .mark { font-family: 'Inter Tight', sans-serif; font-weight: 400; font-size: 122.4px; }
+  .s10 .i1 { left: 18px; top: 24.8px; font-size: 197.3px; }
+  .s10 .i2 { right: 20px; top: 23.6px; font-size: 197.8px; }
+  .s10 .i3 { right: 24px; top: 916.9px; font-size: 195.3px; }
+  .s10 .i4 { left: 55px; top: 965px; font-size: 122.4px; }
 
-  /* wordmark = heading */
-  .sec .mark { left: 132.9px; top: 32.4px; width: 27.5px; height: 25.8px; border-radius: 4px; background: #fafafa; }
-  .sec .head { left: 164.8px; top: 31px; font-family: 'Roboto Flex', sans-serif; font-size: 37.4px; font-weight: 900;
-               color: #fafafa; text-transform: uppercase; letter-spacing: .01em;
-               font-variation-settings: "wdth" 151, "wght" 900, "opsz" 37; }
-  .sec .head .q { margin-left: 30px; }
-
-  /* card: bottom-left anchor of the pin, grows up and right with the text */
-  .sec .card { left: 131.3px; bottom: 46px; width: var(--card-w); padding: 25px 24px 23.2px 23.9px; background: #eeeeee; }
-  .sec .body { margin: 0; font-family: 'Roboto Flex', sans-serif; font-size: var(--fs); line-height: var(--lh);
-               font-weight: 420; color: #1a1a1a; font-variation-settings: "wdth" 110, "wght" 420, "opsz" var(--opsz);
-               text-box: trim-both cap alphabetic; }
-  /* several paragraphs (e.g. VO): baseline-to-baseline gap = 1.5 lines (cap = .711 em in Roboto Flex) */
-  .sec .body + .body { margin-top: calc(var(--fs) * (var(--lh) * 1.5 - .711)); }
-  .sec[data-len="s"] { --fs: 40px; --lh: 1.15; --opsz: 40; }   /* ≤ 250 chars */
-  .sec[data-len="m"] { --fs: 34px; --lh: 1.2;  --opsz: 34; }   /* 251–600 chars */
-  .sec[data-len="l"] { --fs: 30px; --lh: 1.2;  --opsz: 30; }   /* > 600 chars */
-  .s10 { --card-w: 1020px; }   /* fit: 239 chars → tier s (40 px), 1020 × 307, 6 lines (3.33 : 1) */
-  .s10 .head { left: 164.8px; }   /* C ink left 166 ≈ 165.9 (pin 60.4) */
+  .s10 .mic { font-family: 'Inter Tight', sans-serif; font-weight: 600; font-size: 30px; line-height: 37px; margin: 0;
+              text-box: trim-both cap alphabetic; }
+  .s10 .g1 { left: 25px; bottom: 580px; width: 300px; }
+  .s10 .g2 { left: 1287px; bottom: 580px; width: 603px; }
 
 /* ── s11.html ── */
-/* s11 · EDIT — SECTION template (pin d76; pilot s075 → s13 holds the full measurement table and the mapping).
-     Heading: one word, no qualifier → the pin's «9» slot stays empty.
-     Text: frame 80, 547 chars, 1 paragraph → tier m (34 px, lh 1.2); card 1280 → 8 lines, 1280 × 358 (3.58 : 1), top 676.
-     GIF f80-g1 (file f02-g4): 960×540 PILLARBOXED — active columns 122–837 (cropdetect on the loop 716:540:122:0;
-       column means on the poster 120 = 2, 121 = 24 … 838 = 43, 839 = 5) → --act-x 122, --act-w 716, k = 1920 / 716 = 2.6816
-       (element 2574 × 1448 at left −327.2). The 1.33 : 1 picture leaves 368 px to choose vertically: --pos-y 1 (top −368)
-       lifts the group's faces on the poster to y ≈ 217–498 and the close-up girl's eyes to ≈ 544, clear of the card (y ≥ 676).
-     Contrast (white #fafafa): poster 14 : 1 median. The loop is a montage: the signing-hands and ceiling close-up shots are
-       light (≈ 2–5 : 1 and ≈ 1.2–2 : 1 for ~2.5 s of 6.3 s) — no framing fixes those, the pin's white is kept for the poster. */
-  .sec { background: #1c1c1c; color: #fafafa; }
-  .sec .cap { text-box: trim-both cap alphabetic; line-height: 1; white-space: nowrap; margin: 0; }
+/* s11 · EDIT — 1:1 on pin d70 (three posters on a grey backdrop), reference = crops/d70-169.png (1600×900), k = 1.2.
+     Geometry source: Oblako deck-v2/s25 (same pin), re-measured on the crop 2026-09-18 (ink bands, eyedropper).
+     Measurements (crop px → canvas px):
+       backdrop: out-of-focus grey photo — #35363a top-left, #6a6b72 top-centre, #6e7173 right, #575b63 left, #4a4e56 /
+         #63636b bottom corners, a dark reflection under the photo card; painted as eyedropped (s25's gradient)
+       left card  x 90–536, y 125–775 → 108–643.2 × 150–930, field #eaeaea, ink #000
+         big caps, Helvetica-class regular, cap 46 → 55.2 (ink width / cap: BOUNDARIES 8.35, BETWEEN 6.33 — Inter 400
+           −0.02em gives 8.41 / 6.24, the same width class), cap tops 142 / 195 / 246 / 300 · 386 / 437 / 490 · 605 / 656 / 709
+           → 170.4 / 234 / 295.2 / 360 · 463.2 / 524.4 / 588 · 726 / 787.2 / 850.8
+         ink lefts 103 (lines 1–2, 5–7) → 123.6 · 263 / 259 (indent, lines 3–4) → 315.6 / 310.8 · 101 (line 8 left part) → 121.2
+         bottom block right-aligned, ink right 520 → 624
+         micro «Curated by / Chroma Studio», «Author / Emily Harper» — credits, no content → dropped
+       photo card x 568.5–1030.5, y 125–775 → 682.2–1236.6 × 150–930 → the frame's GIF
+         light numeral «*72» (right 998 → 1197.6, cap top 641 → 769.2) — a decorative number, the frame has none → dropped
+         micro header rows, bracket lists, names, four filler paragraphs → dropped
+       grey card  x 1062–1509, y 125–775 → 1274.4–1810.8 × 150–930, field #a9aeb7, ink #f0f0f0
+         justified wall of caps, cap 27.5 → 33, pitch 33 → 39.6, first cap top 138 → 165.6, ink left 1070–1073 → 1284–1287.6,
+           ink right 1499.5 → 1799.4; lines 5, 9, 12 ragged (single word / last line)
+         footer micro (3 columns) — no content → dropped
+     Copy (Figma frame 80, all of it): «EDIT» + one paragraph of 545 characters.
+       Left card = the heading and the start of the paragraph in the pin's big caps, one word per pin line slot:
+         EDIT / МОНТАЖ / БУДЕТ (indent) / ОЧЕНЬ (indent) · ДИНАМИЧНЫМ, / КАК / АМЕРИКАНСКИЕ · ГОРКИ, / РВАНЫМ,
+         (right-aligned, the pin's lines 9–10 so the block still sits on the card foot; the line-8 slot stays empty —
+         «И ЗАКРУЧИВАТЬСЯ» is 12.6 × cap and fits no line). EDIT = Монтаж: the English heading stands on top of its own
+         Russian word, where the pin's statement begins.
+         Size: АМЕРИКАНСКИЕ (ink 11.16 × cap) cannot fit the card's 500-px measure at the pin's cap 55.2 (616 px), so the
+         whole stack is set at cap 44.8 (font 61.4, 0.81×) — every cap top, left edge and the bottom block's right edge stay
+         on the pin's, and the pin's pitch is kept (it also clears the Д descenders: at a tighter pitch Д touched the line below).
+       Grey card = the rest of the paragraph («и закручиваться по спирали…» → end, 484 characters), the pin's justified caps
+         wall grown down from its anchor (first cap top 165.6, ink edges 1285.2 / 1799.4): 31 px caps, 34-px pitch
+         (1.1 × font: clears Д descenders and Й breves), 22 lines, last cap bottom 901 (card foot 930).
+     Generator notes (template «d70 three cards»): the left stack takes ≤ 9 words, each word ≤ 11.16 × cap (500 px at
+       cap 44.8; indented slots ≤ 6.9 × cap = 309 px); the wall at 31/34 holds ~480 characters (≈ 22 chars per line,
+       22 lines); above that step the wall to 30/33 (~21–22 lines, ≈ 500 characters), never below 30 px. 1 GIF only:
+       it fills the photo card (--act-* from cropdetect, --pos-x per GIF).
+     Contrast: the pin's #f0f0f0 on #a9aeb7 is 2.0:1 → dark ink #111 on the pin's own card colour (8.5:1), as in s25.
+     GIF f80-g1 = stored f02-g4 (960×540, 15 fps, 6 shots: the team with a thumbs-up, a hand drawing a spiral, a revolving
+       door, an office ceiling, a woman looking up, «Sincerely» being typed). Pillarbox: cropdetect on the .mp4 →
+       716:540:122:0 (73 of 95 frames; 718:540:120:0 on the rest; bars symmetric, 122 | 122) → --act-*. Covers the portrait
+       card at k = 1.444; --pos-x .45 keeps the bald man's thumbs-up, the spiral and the woman's face in the box; no bar can
+       enter the box for any --pos-x in 0.21…0.79. No grade, no tint. */
+  .s11 { color: #000;
+    background: linear-gradient(90deg, #4a4e56 0%, #54575e 20%, #585d63 35%, #5d6066 55%, #2a2a2e 64%, #313134 72%, #62636a 82%, #63666b 100%); }
+  .s11::before { content: ""; position: absolute; inset: 0; pointer-events: none;
+    background: linear-gradient(90deg, #313136 0%, #36373b 22%, #3f4045 34%, #5a5b61 45%, #6a6b72 50%, #6b6e73 70%, #717377 100%);
+    -webkit-mask-image: linear-gradient(180deg, #000 25%, transparent 75%); mask-image: linear-gradient(180deg, #000 25%, transparent 75%); }
+  .s11 .cap { text-box: trim-both cap alphabetic; line-height: 1; white-space: nowrap; margin: 0; }
 
-  /* full-bleed GIF: scale k fills the canvas with the ACTIVE picture; pos-x/pos-y place it (object-position) */
-  .sec .bleed { left: 0; top: 0; width: 1920px; height: 1080px; overflow: hidden; }
-  .sec .bleed video { --k: max(1920 / var(--act-w), 1080 / var(--act-h)); display: block; object-fit: cover;
+  /* the three cards */
+  .s11 .card { position: absolute; top: 150px; height: 780px; }
+  .s11 .c1 { left: 108px; width: 535.2px; background: #eaeaea; }
+  .s11 .c2 { left: 682.2px; width: 554.4px; overflow: hidden; background: #1b1b1d; }
+  .s11 .c3 { left: 1274.4px; width: 536.4px; background: #a9aeb7; }
+
+  /* photo card: the video is sized so the ACTIVE picture (pillarbox cropped) covers the card, placed by --pos-x/--pos-y */
+  .s11 .c2 { --bw: 554.4; --bh: 780; }
+  .s11 .c2 video { --act-x: 0; --act-y: 0; --act-w: var(--src-w); --act-h: var(--src-h); --pos-x: .5; --pos-y: .5;
+    --k: max(var(--bw) / var(--act-w), var(--bh) / var(--act-h));
+    position: absolute; display: block; object-fit: cover;
     width: calc(var(--src-w) * var(--k) * 1px); height: calc(var(--src-h) * var(--k) * 1px);
-    left: calc(var(--act-x) * var(--k) * -1px + (1920px - var(--act-w) * var(--k) * 1px) * var(--pos-x));
-    top:  calc(var(--act-y) * var(--k) * -1px + (1080px - var(--act-h) * var(--k) * 1px) * var(--pos-y)); }
+    left: calc((var(--bw) - var(--act-w) * var(--k)) * var(--pos-x) * 1px - var(--act-x) * var(--k) * 1px);
+    top:  calc((var(--bh) - var(--act-h) * var(--k)) * var(--pos-y) * 1px - var(--act-y) * var(--k) * 1px); }
 
-  .sec .band { left: 0; top: 1071.8px; width: 1920px; height: 8.2px; background: #7596d2; }
+  /* left card: big caps stack (pin cap 55.2 → 44.8, see above); top = cap top, left = ink left − side bearing */
+  .s11 .big { font-family: 'Inter', sans-serif; font-weight: 400; font-size: 61.4px; letter-spacing: -0.02em;
+              text-transform: uppercase; color: #000; }
+  .s11 .rt { text-align: right; }
+  .s11 .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
 
-  /* wordmark = heading */
-  .sec .mark { left: 132.9px; top: 32.4px; width: 27.5px; height: 25.8px; border-radius: 4px; background: #fafafa; }
-  .sec .head { left: 164.8px; top: 31px; font-family: 'Roboto Flex', sans-serif; font-size: 37.4px; font-weight: 900;
-               color: #fafafa; text-transform: uppercase; letter-spacing: .01em;
-               font-variation-settings: "wdth" 151, "wght" 900, "opsz" 37; }
-  .sec .head .q { margin-left: 30px; }
-
-  /* card: bottom-left anchor of the pin, grows up and right with the text */
-  .sec .card { left: 131.3px; bottom: 46px; width: var(--card-w); padding: 25px 24px 23.2px 23.9px; background: #eeeeee; }
-  .sec .body { margin: 0; font-family: 'Roboto Flex', sans-serif; font-size: var(--fs); line-height: var(--lh);
-               font-weight: 420; color: #1a1a1a; font-variation-settings: "wdth" 110, "wght" 420, "opsz" var(--opsz);
-               text-box: trim-both cap alphabetic; }
-  /* several paragraphs (e.g. VO): baseline-to-baseline gap = 1.5 lines (cap = .711 em in Roboto Flex) */
-  .sec .body + .body { margin-top: calc(var(--fs) * (var(--lh) * 1.5 - .711)); }
-  .sec[data-len="s"] { --fs: 40px; --lh: 1.15; --opsz: 40; }   /* ≤ 250 chars */
-  .sec[data-len="m"] { --fs: 34px; --lh: 1.2;  --opsz: 34; }   /* 251–600 chars */
-  .sec[data-len="l"] { --fs: 30px; --lh: 1.2;  --opsz: 30; }   /* > 600 chars */
-  .s11 { --card-w: 1280px; }   /* fit: 547 chars → tier m (34 px), 1280 × 358, 8 lines (3.58 : 1) */
-  .s11 .head { left: 163.2px; }   /* E ink left → 165.9 (pin 60.4) */
+  /* grey card: justified caps wall grown down from the pin's anchor */
+  .s11 .wall { left: 1283.3px; top: 165.6px; width: 519px; margin: 0;
+               font-family: 'Inter', sans-serif; font-weight: 400; font-size: 31px; line-height: 34px; letter-spacing: -0.02em;
+               text-transform: uppercase; color: #111; text-align: justify; text-box: trim-start cap alphabetic;
+               hyphens: manual; }
 
 /* ── s12.html ── */
-/* s12 · VO — SECTION template (pin d76; pilot s075 → s13 holds the full measurement table and the mapping).
-     Heading: one word, no qualifier → the pin's «9» slot stays empty.
-     Text: frame 83, 691 chars in 3 paragraphs (Figma line breaks: intro / first half / second half) → tier l (30 px, lh 1.2),
-       .body + .body gap = 1.5 lines baseline to baseline; card 1370 → 9 lines, 1370 × 394 (3.48 : 1), top 640.
-     GIF f83-g1: 960×540 PILLARBOXED — active columns 122–837 (cropdetect on the loop 716:540:122:0) → --act-x 122,
-       --act-w 716, k = 2.6816 (element 2574 × 1448 at left −327.2). --pos-y .33 (top −121.4): the speaking man's face sits at
-       y ≈ 200–480, x ≈ 840–1160, with both colleagues and the window above the card (y ≥ 640); the wordmark falls on the dark
-       green panel top-left. (pos-y 1 would put the heading on the bright blinds: 5.0 / 2.7 p90.)
-     Contrast (white #fafafa): poster 11 : 1 median, 10 : 1 p90; loop 11 : 1 (single shot). */
-  .sec { background: #1c1c1c; color: #fafafa; }
-  .sec .cap { text-box: trim-both cap alphabetic; line-height: 1; white-space: nowrap; margin: 0; }
+/* s12 · VO (Figma frame 83) — 1:1 on pin d40 «Mont Blanc» (web page: photo bled off top-left, data column,
+     justified text column, small photo, centred two-line title).
+     Reference = crops/d40-169.png (1323×744; the pin page 1056 wide sits at crop x 133.5–1189.5 on a white pad),
+     canvas = crop × 1.4512. Re-measured on the crop 2026-09-18 (ink bands):
+       field #fff · ink #000 · neo-grotesk regular, tight (Inter Tight 400)
+       photo     crop x 134–653.5, y 0–365 (bleeds off the page's left and top) → canvas 0–948.4 × 0–529.7
+                 (the photo bleeds, so the pad x 0–133 is not a margin: the photo runs to the canvas edge)
+       data      ink left 669 → 970.9 · cap tops 16 / 33 → 23.2 / 47.9 · 108 / 125 / 138 → 156.7 / 181.4 / 200.3
+       text      x 842–1172 → 1221.9–1700.8, justified, first-line indent 22 → 31.9 (1.85 em), no paragraph gaps,
+                 first cap top 17 → 24.7, pitch 14 → 20.3 (1.18 × the 17.2-px size), last baseline 537 → 779
+       small     photo 320–480 × 638–730 → dropped (the frame has one GIF; waived)
+       title     centre 929.5 → 1348.9 · MONT BLANC caps medium cap top 699 → 1014.4 · line 2 regular, baseline
+                 727.3 → 1055.5
+     Mapping of Victor's frame 83 (all its text, word for word):
+       text column  → the full VO text, three paragraphs, justified with the pin's indent, soft hyphens baked in
+       data column  → two readouts next to the photo, Victor's own phrases for the two moods of the voice:
+                      «В первой части» / «быстро, напряженно» · «Во второй части» / «спокойной, размеренной и легкой»
+                      (label rows on the pin's cap tops 23.2 and 156.7; the values wrap under them)
+       title        → «VO» in the MONT BLANC slot, and Victor's first sentence as the second line (what VO is here)
+       photo        → f83-g1, the low-angle shot of the board members looking down at the hero
+     Legibility (user rule): 17.2 / 18.6 → 30 px everywhere, pitch 20.3 → 35.4 (the pin's 1.18). The text column keeps
+       its anchor (1221.9 / cap top 24.7) and width (480) and runs 24 lines down to baseline ≈ 861 (pin 779; waived).
+       Data rows at pitch 36 from the pin's two label anchors. The title grows upward from the pin's centre and baseline.
+     GIF f83-g1 (960×540) is pillarboxed: cropdetect 716:540:122:0 (bars 122 px each side, symmetric) — the active
+       picture is cover-scaled into the box (k = 948.4 / 716 = 1.3246), bars pushed out; --pos-y .3 keeps the ceiling
+       edge, the three faces and the hero-boss's tie knot in the box (source y 42–442). No grade. */
+  .s12 { background: #fff; color: #000; }
+  .s12 .t { font-family: 'Inter Tight', sans-serif; font-weight: 400; font-size: 30px; margin: 0;
+            text-box: trim-both cap alphabetic; }
+  .s12 .one { white-space: nowrap; line-height: 1; }
 
-  /* full-bleed GIF: scale k fills the canvas with the ACTIVE picture; pos-x/pos-y place it (object-position) */
-  .sec .bleed { left: 0; top: 0; width: 1920px; height: 1080px; overflow: hidden; }
-  .sec .bleed video { --k: max(1920 / var(--act-w), 1080 / var(--act-h)); display: block; object-fit: cover;
+  /* photo: bleeds off the canvas' left and top edges like the pin's photo bleeds off its page */
+  .s12 .gif { left: 0; top: 0; width: 948.4px; height: 529.7px; overflow: hidden; --bw: 948.4; --bh: 529.7; }
+  .s12 .gif video { position: absolute; display: block; max-width: none; object-fit: fill;
+    --k: max(var(--bw) / var(--act-w), var(--bh) / var(--act-h));
     width: calc(var(--src-w) * var(--k) * 1px); height: calc(var(--src-h) * var(--k) * 1px);
-    left: calc(var(--act-x) * var(--k) * -1px + (1920px - var(--act-w) * var(--k) * 1px) * var(--pos-x));
-    top:  calc(var(--act-y) * var(--k) * -1px + (1080px - var(--act-h) * var(--k) * 1px) * var(--pos-y)); }
+    left: calc(var(--act-x) * var(--k) * -1px + (var(--bw) - var(--act-w) * var(--k)) * var(--pos-x) * 1px);
+    top:  calc(var(--act-y) * var(--k) * -1px + (var(--bh) - var(--act-h) * var(--k)) * var(--pos-y) * 1px); }
 
-  .sec .band { left: 0; top: 1071.8px; width: 1920px; height: 8.2px; background: #7596d2; }
+  /* data readouts: label row on the pin's anchor, value rows under it */
+  .s12 .d { left: 969.4px; line-height: 36px; }
+  .s12 .d1 { top: 23.2px; }
+  .s12 .d2 { top: 156.7px; }
 
-  /* wordmark = heading */
-  .sec .mark { left: 132.9px; top: 32.4px; width: 27.5px; height: 25.8px; border-radius: 4px; background: #fafafa; }
-  .sec .head { left: 164.8px; top: 31px; font-family: 'Roboto Flex', sans-serif; font-size: 37.4px; font-weight: 900;
-               color: #fafafa; text-transform: uppercase; letter-spacing: .01em;
-               font-variation-settings: "wdth" 151, "wght" 900, "opsz" 37; }
-  .sec .head .q { margin-left: 30px; }
+  /* text column: the pin's anchor and width, justified, first-line indent 1.85 em, no paragraph gaps */
+  .s12 .body { left: 1221.9px; top: 24.7px; width: 479px; line-height: 35.4px; text-align: justify; hyphens: manual; }
+  .s12 .body p { margin: 0; text-indent: 1.85em; }
 
-  /* card: bottom-left anchor of the pin, grows up and right with the text */
-  .sec .card { left: 131.3px; bottom: 46px; width: var(--card-w); padding: 25px 24px 23.2px 23.9px; background: #eeeeee; }
-  .sec .body { margin: 0; font-family: 'Roboto Flex', sans-serif; font-size: var(--fs); line-height: var(--lh);
-               font-weight: 420; color: #1a1a1a; font-variation-settings: "wdth" 110, "wght" 420, "opsz" var(--opsz);
-               text-box: trim-both cap alphabetic; }
-  /* several paragraphs (e.g. VO): baseline-to-baseline gap = 1.5 lines (cap = .711 em in Roboto Flex) */
-  .sec .body + .body { margin-top: calc(var(--fs) * (var(--lh) * 1.5 - .711)); }
-  .sec[data-len="s"] { --fs: 40px; --lh: 1.15; --opsz: 40; }   /* ≤ 250 chars */
-  .sec[data-len="m"] { --fs: 34px; --lh: 1.2;  --opsz: 34; }   /* 251–600 chars */
-  .sec[data-len="l"] { --fs: 30px; --lh: 1.2;  --opsz: 30; }   /* > 600 chars */
-  .s12 { --card-w: 1370px; }   /* fit: 691 chars in 3 paragraphs → tier l (30 px), 1370 × 394, 9 lines (3.48 : 1) */
-  .s12 .head { left: 166.1px; }   /* V ink left → 165.9 (pin 60.4) */
+  /* title: centred on 1348.9, last baseline 1055.5, grows upward */
+  .s12 .ttl { left: 848.9px; width: 1000px; bottom: calc(1080px - 1055.5px + 36px); text-align: center; line-height: 36px; }   /* one line only: VO keeps title line 1 position */
+  .s12 .ttl b { font-weight: 500; text-transform: uppercase; }
 
 /* ── s13.html ── */
 /* s13 · thanks — 1:1 on pin d25 «Work / Studio» + portrait, reference = crops/d25-169.png (996×560).
@@ -712,69 +779,97 @@
   </div>
 </section>
 
-<section data-slide="3" style="--w:1920; --h:1080" class="slide s03 sec" id="approach" data-len="l" data-ref="d76" data-ref-src="/boards/golomazova-danya/design-refs/crops/d76-169.png" aria-label="APPROACH: крафтовый подход — всё, что можно, снимаем вживую; VFX и AI там, где физический мир упирается в границы">
-  <div class="abs bleed" data-media="f03-g1" style="--src-w:540; --src-h:540; --act-x:0; --act-y:0; --act-w:540; --act-h:540; --pos-x:.5; --pos-y:.595">
-    <video class="loop abs" muted playsinline loop preload="none" poster="media/fig/f03-g1.jpg" aria-label="Крупно: лицо мужчины прижато к стеклу, губы и щека сплющены">
+<section data-slide="3" style="--w:1920; --h:1080" class="slide s03" id="approach" data-ref="d65" data-ref-src="/boards/golomazova-danya/design-refs/crops/d65-169.png" aria-label="APPROACH: крафтовый подход, VFX и AI как усилитель">
+  <div class="abs bleed" data-media="f03-g1" style="--src-w:540; --src-h:540; --act-x:0; --act-y:0; --act-w:540; --act-h:540; --pos-x:.5; --pos-y:.512">
+    <video class="loop abs" muted playsinline loop preload="none" poster="media/fig/f03-g1.jpg" aria-label="Лицо сотрудника, прижатое к стеклу">
       <source data-src="media/fig/f03-g1.webm" type="video/webm"><source data-src="media/fig/f03-g1.mp4" type="video/mp4">
     </video>
   </div>
-  <div class="abs band" aria-hidden="true"></div>
 
-  <div class="abs mark" aria-hidden="true"></div>
-  <h2 class="abs cap head">APPROACH</h2>
+  <h2 class="abs word" style="left:0;top:0;margin:0" aria-label="APPROACH">
+    <svg class="abs par pl" viewBox="0 0 41.5 294.7" aria-hidden="true">
+      <path d="M41.5 1.5Q-38.5 147.35 41.5 293.2Q-12.5 147.35 41.5 1.5Z" fill="#8db6c8" stroke="#8db6c8" stroke-width="3" stroke-linejoin="round"/>
+    </svg>
+    <span class="abs lh rs w1" aria-hidden="true">App</span>
+    <svg class="abs par pr" viewBox="0 0 37 294.7" aria-hidden="true">
+      <defs><linearGradient id="s03-pr" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#9cc0d0"/><stop offset=".45" stop-color="#cfe0ea"/><stop offset=".75" stop-color="#eeeef0"/><stop offset="1" stop-color="#c9c6cc"/>
+      </linearGradient></defs>
+      <path d="M1.5 1.5Q72.5 147.35 1.5 293.2Q46.5 147.35 1.5 1.5Z" fill="url(#s03-pr)" stroke="url(#s03-pr)" stroke-width="3" stroke-linejoin="round"/>
+    </svg>
+    <span class="abs lh rf w2" aria-hidden="true">roach</span>
+  </h2>
 
-  <div class="abs card">
-    <p class="body">Я&nbsp;абсолютный адепт крафтового подхода. Все, что можно построить и&nbsp;снять вживую,&nbsp;— мы снимаем вживую. Настоящие реальные локации, фактурная пластика актеров и&nbsp;осязаемый реквизит, даже та самая сцена с&nbsp;прилипшими к&nbsp;стеклу сотрудниками будет снята крафтово.</p>
-    <p class="body">VFX и&nbsp;AI-инструменты мы привлекаем как высокотехнологичный усилитель там, где физический мир упирается в&nbsp;свои границы,&nbsp;— для создания окружения, бесшовного расширения пространств и&nbsp;стильной интеграции интерфейсов.</p>
+  <div class="abs" style="left:0;top:0;width:1920px;height:1080px">
+    <p class="abs" style="left:0;top:0;width:1920px;height:1080px;margin:0" aria-label="Я абсолютный адепт крафтового подхода.">
+      <span class="abs cap rf mi row m1" aria-hidden="true">Я абсолютный</span>
+      <span class="abs cap rf mi row m2" aria-hidden="true">адепт</span>
+      <span class="abs cap rf mi row m3" aria-hidden="true">крафтового</span>
+      <span class="abs cap rf mi row m4" aria-hidden="true">подхода.</span>
+    </p>
+    <p class="abs rf mi col c3">Все, что можно пос&shy;тро&shy;ить и&nbsp;снять вжи&shy;вую, –&nbsp;мы сни&shy;ма&shy;ем вжи&shy;вую. Нас&shy;то&shy;ящие ре&shy;аль&shy;ные ло&shy;ка&shy;ции, фак&shy;тур&shy;ная плас&shy;ти&shy;ка ак&shy;те&shy;ров и&nbsp;ося&shy;за&shy;емый рек&shy;ви&shy;зит, даже та самая сцена с&nbsp;при&shy;лип&shy;ши&shy;ми к&nbsp;стек&shy;лу сот&shy;руд&shy;ни&shy;ка&shy;ми будет снята крафтово.</p>
+    <p class="abs rf mi col c4">VFX и&nbsp;AI-инструменты мы привлекаем как вы&shy;со&shy;ко&shy;тех&shy;но&shy;ло&shy;гич&shy;ный усилитель там, где физический мир упирается в&nbsp;свои границы, –&nbsp;для создания окружения, бес&shy;шов&shy;но&shy;го рас&shy;ши&shy;ре&shy;ния прос&shy;транств и&nbsp;стиль&shy;ной ин&shy;тег&shy;ра&shy;ции интерфейсов.</p>
   </div>
 </section>
 
-<section data-slide="4" style="--w:1920; --h:1080" class="slide s04 tm n4" id="look-feel" data-len="l" data-ref="d57" data-ref-src="/boards/golomazova-danya/design-refs/crops/d57-169.png" aria-label="LOOK &amp; FEEL">
+<section data-slide="4" style="--w:1920; --h:1080" class="slide s04" id="look-feel" data-ref="d42" data-ref-src="/boards/golomazova-danya/design-refs/crops/d42-169.png" aria-label="LOOK &amp; FEEL: камера передаёт состояние героя">
+  <div class="abs card" aria-hidden="true"></div>
+
   <div class="abs ph p1" data-media="f04-g1">
-    <video class="loop" muted playsinline loop preload="none" poster="media/fig/f02-g2.jpg" style="--src-w:960; --src-h:540; --pos-x:0.5; --pos-y:0.5" aria-label="Вид сверху: рука героя на тачпаде ноутбука, рядом телефон и мышь">
+    <video class="loop" muted playsinline loop preload="none" poster="media/fig/f02-g2.jpg" style="--src-w:960; --src-h:540; --pos-x:.5; --pos-y:.5" aria-label="Вид сверху: рука героя на тачпаде ноутбука, рядом телефон, мышь и кофе">
       <source data-src="media/fig/f02-g2.webm" type="video/webm"><source data-src="media/fig/f02-g2.mp4" type="video/mp4">
     </video>
   </div>
   <div class="abs ph p2" data-media="f04-g2">
-    <video class="loop" muted playsinline loop preload="none" poster="media/fig/f04-g2.jpg" style="--src-w:960; --src-h:540; --pos-x:0.35; --pos-y:0.5" aria-label="Экран ноутбука с таблицей Deal Management">
+    <video class="loop" muted playsinline loop preload="none" poster="media/fig/f04-g2.jpg" style="--src-w:960; --src-h:540; --pos-x:.2; --pos-y:.5" aria-label="Экран с таблицей DEAL MANAGEMENT, камера плывёт вдоль монитора">
       <source data-src="media/fig/f04-g2.webm" type="video/webm"><source data-src="media/fig/f04-g2.mp4" type="video/mp4">
     </video>
   </div>
   <div class="abs ph p3" data-media="f04-g3">
-    <video class="loop" muted playsinline loop preload="none" poster="media/fig/f04-g3.jpg" style="--src-w:960; --src-h:540; --act-x:94; --act-y:0; --act-w:772; --act-h:540; --pos-x:0.55; --pos-y:0.5" aria-label="Рука с часами над чертежом — камера следит за движением руки">
+    <video class="loop" muted playsinline loop preload="none" poster="media/fig/f04-g3.jpg" style="--src-w:960; --src-h:540; --act-x:94; --act-w:772; --pos-x:.6; --pos-y:.5" aria-label="Рука с часами над чертежом">
       <source data-src="media/fig/f04-g3.webm" type="video/webm"><source data-src="media/fig/f04-g3.mp4" type="video/mp4">
     </video>
   </div>
   <div class="abs ph p4" data-media="f04-g4">
-    <video class="loop" muted playsinline loop preload="none" poster="media/fig/f04-g4.jpg" style="--src-w:786; --src-h:540; --pos-x:0.5; --pos-y:0.5" aria-label="Просторное лобби офиса: розовые колонны, лестница, люди на диванах">
+    <video class="loop" muted playsinline loop preload="none" poster="media/fig/f04-g4.jpg" style="--src-w:786; --src-h:540; --pos-x:.66; --pos-y:.5" aria-label="Светлый холл офиса: розовые колонны, люди в креслах">
       <source data-src="media/fig/f04-g4.webm" type="video/webm"><source data-src="media/fig/f04-g4.mp4" type="video/mp4">
     </video>
   </div>
 
-  <h2 class="abs cap word">LOOK &amp; FEEL</h2>
+  <blockquote class="abs q">
+    <p>В&nbsp;POV-съемке, чтобы пере&shy;дать сос&shy;то&shy;яние героя, лицо кото&shy;рого мы прак&shy;ти&shy;чески не видим, всю эмо&shy;ци&shy;ональ&shy;ную наг&shy;рузку на себя возь&shy;мут плас&shy;тика камеры, реак&shy;ция рук и&nbsp;мон&shy;таж&shy;ная драматургия.</p>
+    <p>Изна&shy;чально камера будет реаги&shy;ро&shy;вать на мир дергано, нем&shy;ного хаотично, нап&shy;ря&shy;женно. Зри&shy;тель будет на физи&shy;оло&shy;ги&shy;чес&shy;ком уровне ощу&shy;щать <span class="sf">панику</span> чело&shy;века, на кото&shy;рого однов&shy;ре&shy;менно валятся десятки кри&shy;ти&shy;чес&shy;ких реше&shy;ний. А&nbsp;в&nbsp;момент пере&shy;хода, с&nbsp;появ&shy;ле&shy;нием Cloud.ru, камера успо&shy;ка&shy;ива&shy;ется, дви&shy;же&shy;ния ста&shy;но&shy;вятся широ&shy;кими, сво&shy;бод&shy;ными и&nbsp;уве&shy;рен&shy;ными. Мы бук&shy;вально даем зри&shy;телю сде&shy;лать глу&shy;бо&shy;кий <span class="sf">вдох</span> вместе с&nbsp;героем.</p>
+  </blockquote>
 
-  <div class="abs foot">
-    <p><span class="nw">В&nbsp;POV-съемке,</span> чтобы пере&shy;дать состо&shy;яние героя, лицо кото&shy;рого мы прак&shy;ти&shy;че&shy;ски не видим, всю эмо&shy;ци&shy;ональ&shy;ную нагрузку на себя возьмут пла&shy;стика камеры, реакция рук и&nbsp;мон&shy;таж&shy;ная драматургия.</p>
-    <p>Изна&shy;чально камера будет реаги&shy;ро&shy;вать на мир дергано, немного хаотично, напря&shy;женно. Зритель будет на физи&shy;оло&shy;ги&shy;че&shy;ском уровне ощущать панику чело&shy;века, на кото&shy;рого одно&shy;вре&shy;менно валятся десятки кри&shy;ти&shy;че&shy;ских решений. А&nbsp;в&nbsp;момент пере&shy;хода, с&nbsp;поя&shy;вле&shy;нием Cloud.ru, камера успо&shy;ка&shy;ива&shy;ется, дви&shy;же&shy;ния ста&shy;но&shy;вятся широ&shy;кими, сво&shy;бод&shy;ными и&nbsp;уве&shy;рен&shy;ными. Мы бук&shy;вально даем зрителю сделать глу&shy;бо&shy;кий вдох вместе с&nbsp;героем.</p>
-  </div>
+  <h2 class="abs" style="left:0;top:0;width:1920px;height:1080px;margin:0" aria-label="LOOK &amp; FEEL">
+    <span class="abs cap big w1" aria-hidden="true">LOOK</span>
+    <span class="abs cap big w2" aria-hidden="true">&amp; FEEL</span>
+  </h2>
 </section>
 
-<section data-slide="5" style="--w:1920; --h:1080" class="slide s05 tm n2" id="humor" data-len="l" data-ref="d57" data-ref-src="/boards/golomazova-danya/design-refs/crops/d57-169.png" aria-label="HUMOR">
-  <div class="abs ph p1" data-media="f06-g1">
-    <video class="loop" muted playsinline loop preload="none" poster="media/fig/f06-g1.jpg" style="--src-w:1280; --src-h:720; --pos-x:0.5; --pos-y:0.5" aria-label="Тёмный кабинет-архив: сотрудник один за столом под лампами">
-      <source data-src="media/fig/f06-g1.webm" type="video/webm"><source data-src="media/fig/f06-g1.mp4" type="video/mp4">
-    </video>
+<section data-slide="5" style="--w:1920; --h:1080" class="slide s05" id="humor" data-ref="d19" data-ref-src="/boards/golomazova-danya/design-refs/crops/d19-169.png" aria-label="HUMOR: несколько слоев юмора в ролике">
+  <h2 class="abs t one hl">HUMOR</h2>
+  <p class="abs t one hr">Я предлагаю сделать в&nbsp;ролике<br>несколько слоев юмора.</p>
+
+  <div class="abs t col c1">
+    <p><b>На первом уровне,</b> все будет работать за счет ироничной комбинации очень жизненного опыта и&nbsp;сюрреализма происходящего (синхронного движения <span class="one">топ-менеджмента</span> и&nbsp;гиперболизирования ситуаций).</p>
+    <p><b>Погружаемся на слой глубже,</b> и&nbsp;тут добавляются внутренние приколы в&nbsp;виде ночной пиццы, жарких дискуссий, а&nbsp;также</p>
   </div>
-  <div class="abs ph p2" data-media="f06-g2">
-    <video class="loop" muted playsinline loop preload="none" poster="media/fig/f06-g2.jpg" style="--src-w:960; --src-h:540; --pos-x:0.5; --pos-y:0.6" aria-label="Кудрявая девушка в очках напряжённо вглядывается в экран">
+  <div class="abs t col c2">
+    <p>повторяющейся сцены с&nbsp;кофе, «дзинь» микроволновки и,&nbsp;конечно же, уставшего лица героя в&nbsp;зеркале с&nbsp;надписью «Улыбнись сегодняшнему дню».</p>
+    <p><b>И, наконец, для самых внимательных</b> добавляются мемные детали из&nbsp;мира IT в&nbsp;виде надписей на&nbsp;флипчарте, текста в&nbsp;консоли ноутбука и&nbsp;старого системника под&nbsp;столом.</p>
+    <p class="k">Таким образом получается очень жизненная, насыщенная история, где каждая деталь имеет&nbsp;значение.</p>
+  </div>
+
+  <div class="abs gif g-l" data-media="f06-g2" style="--src-w:960; --src-h:540; --act-x:0; --act-y:0; --act-w:960; --act-h:540; --pos-x:.65; --pos-y:.5">
+    <video class="loop" muted playsinline loop preload="none" poster="media/fig/f06-g2.jpg" aria-label="Сотрудница в очках ночью хмуро вглядывается в монитор">
       <source data-src="media/fig/f06-g2.webm" type="video/webm"><source data-src="media/fig/f06-g2.mp4" type="video/mp4">
     </video>
   </div>
-
-  <h2 class="abs cap word">HUMOR</h2>
-
-  <div class="abs foot">
-    <p>Я&nbsp;пред&shy;ла&shy;гаю сделать в&nbsp;ролике несколько слоев юмора. На первом уровне, все будет рабо&shy;тать за счет иро&shy;нич&shy;ной ком&shy;би&shy;на&shy;ции очень жиз&shy;нен&shy;ного опыта и&nbsp;сюр&shy;ре&shy;ализма про&shy;ис&shy;хо&shy;дя&shy;щего (син&shy;хрон&shy;ного дви&shy;же&shy;ния <span class="nw">топ-менеджмента</span> и&nbsp;гипер&shy;бо&shy;ли&shy;зи&shy;ро&shy;ва&shy;ния ситу&shy;аций). Погру&shy;жа&shy;емся на слой глубже, и&nbsp;тут доба&shy;вля&shy;ются вну&shy;трен&shy;ние приколы в&nbsp;виде ночной пиццы, жарких дискус&shy;сий, а&nbsp;также по&shy;вто&shy;ря&shy;ющейся сцены с&nbsp;кофе, «дзинь» микро&shy;вол&shy;новки и, конечно же, устав&shy;шего лица героя в&nbsp;зеркале с&nbsp;над&shy;писью «Улыб&shy;нись сегод&shy;няш&shy;нему дню». И, наконец, для самых вни&shy;ма&shy;тель&shy;ных доба&shy;вля&shy;ются мемные детали из мира IT в&nbsp;виде над&shy;пи&shy;сей на флип&shy;чарте, текста в&nbsp;консоли ноут&shy;бука и&nbsp;старого систем&shy;ника под столом. Таким образом полу&shy;ча&shy;ется очень жиз&shy;нен&shy;ная, насы&shy;щен&shy;ная история, где каждая деталь имеет значение.</p>
+  <div class="abs gif g-r" data-media="f06-g1" style="--src-w:1280; --src-h:720; --act-x:0; --act-y:0; --act-w:1280; --act-h:720; --pos-x:.5; --pos-y:.5">
+    <video class="loop" muted playsinline loop preload="none" poster="media/fig/f06-g1.jpg" aria-label="Герой ночью в тесном архиве за столом под лампами, вокруг коробки и стеллажи">
+      <source data-src="media/fig/f06-g1.webm" type="video/webm"><source data-src="media/fig/f06-g1.mp4" type="video/mp4">
+    </video>
   </div>
 </section>
 
@@ -794,129 +889,158 @@
   </div>
 </section>
 
-<section data-slide="7" style="--w:1920; --h:1080" class="slide s07 sec" id="setting-factory" data-len="s" data-ref="d76" data-ref-src="/boards/golomazova-danya/design-refs/crops/d76-169.png" aria-label="SETTING ( PRODUCTION FACTORY ): цех конвейерной сборки">
-  <div class="abs bleed" data-media="f71-g1" style="--src-w:1280; --src-h:720; --act-x:0; --act-y:121; --act-w:1280; --act-h:478; --pos-x:.23; --pos-y:.5">
-    <video class="loop abs" muted playsinline loop preload="none" poster="media/fig/f71-g1.jpg" aria-label="Цех сборки: широкий проход между станками уходит вдаль, камера едет вперёд">
+<section data-slide="7" class="slide s07" id="setting-factory" data-ref="d39" data-ref-src="/boards/golomazova-danya/design-refs/crops/d39-169.png" aria-label="SETTING ( PRODUCTION FACTORY ): цех конвейерной сборки" style="--w:1920; --h:1080; --bw: 1240px">
+  <svg class="abs mark" viewBox="85 16 80 80" aria-hidden="true">
+    <g stroke="#1b1b1b" stroke-width="5.8" stroke-linecap="butt">
+      <line x1="120.3" y1="63.5" x2="120.5" y2="22.2"/>
+      <line x1="120.3" y1="63.5" x2="94.3" y2="41.5"/>
+      <line x1="120.3" y1="63.5" x2="140" y2="46.7"/>
+      <line x1="120.3" y1="63.5" x2="95" y2="68"/>
+      <line x1="120.3" y1="63.5" x2="151.5" y2="70"/>
+      <line x1="120.3" y1="63.5" x2="106.5" y2="92.5"/>
+      <line x1="120.3" y1="63.5" x2="131" y2="85.5"/>
+    </g>
+    <circle cx="120.3" cy="63.5" r="8" fill="#1b1b1b"/>
+  </svg>
+
+  <h2 class="abs cap head">SETTING ( PRODUCTION FACTORY )</h2>
+
+  <p class="abs blurb">VFX-фон: цех конвейерной сборки. Например, автомобильной. Широкий проход между станками, уходящий вдаль, слева и&nbsp;справа&nbsp;– два конвейера, которые передают части и&nbsp;собирают автомобиль.</p>
+
+  <div class="abs band" data-media="f71-g1">
+    <video class="loop" muted playsinline loop preload="none" poster="media/fig/f71-g1.jpg"
+           style="--src-w:1280; --src-h:720; --act-x:0; --act-y:120; --act-w:1280; --act-h:480; --pos-x:.5; --pos-y:.6"
+           aria-label="Цех конвейерной сборки: широкий проход между станками уходит вдаль, по сторонам — конвейеры и рабочие">
       <source data-src="media/fig/f71-g1.webm" type="video/webm"><source data-src="media/fig/f71-g1.mp4" type="video/mp4">
     </video>
   </div>
-  <div class="abs band" aria-hidden="true"></div>
 
-  <div class="abs mark" aria-hidden="true"></div>
-  <h2 class="abs cap head">SETTING <span class="q">( PRODUCTION FACTORY )</span></h2>
-
-  <div class="abs card">
-    <p class="body">VFX-фон: цех конвейерной сборки. Например, автомобильной. Широкий проход между станками, уходящий вдаль, слева и&nbsp;справа&nbsp;— два конвейера, которые передают части и&nbsp;собирают автомобиль.</p>
-  </div>
+  <p class="abs cap word" aria-hidden="true">FACTORY</p>
 </section>
 
-<section data-slide="8" style="--w:1920; --h:1080" class="slide s08 tm n4" id="cast" data-len="l" data-ref="d57" data-ref-src="/boards/golomazova-danya/design-refs/crops/d57-169.png" aria-label="CAST ( НИКАКИХ ЗАЕЗЖЕННЫХ ЛИЦ )">
+<section data-slide="8" style="--w:1920; --h:1080" class="slide s08" id="cast" data-ref="d21" data-ref-src="/boards/golomazova-danya/design-refs/crops/d21-169.png" aria-label="CAST: никаких заезженных лиц">
   <div class="abs ph p1" data-media="f72-g1">
-    <video class="loop" muted playsinline loop preload="none" poster="media/fig/f72-g1.jpg" style="--src-w:776; --src-h:540; --pos-x:0.4; --pos-y:0.5" aria-label="Молодой мужчина в чёрном пиджаке в кабинете, на стене портреты">
+    <video class="loop" muted playsinline loop preload="none" poster="media/fig/f72-g1.jpg" style="--src-w:776; --src-h:540; --pos-x:.37; --pos-y:.5" aria-label="Молодой актёр в тёмном пиджаке в тесном кабинете">
       <source data-src="media/fig/f72-g1.webm" type="video/webm"><source data-src="media/fig/f72-g1.mp4" type="video/mp4">
     </video>
   </div>
   <div class="abs ph p2" data-media="f72-g2">
-    <video class="loop" muted playsinline loop preload="none" poster="media/fig/f72-g2.jpg" style="--src-w:1280; --src-h:880; --pos-x:0.5; --pos-y:0.3" aria-label="Девушка с ручкой в руках эмоционально говорит в камеру">
+    <video class="loop" muted playsinline loop preload="none" poster="media/fig/f72-g2.jpg" style="--src-w:1280; --src-h:880; --pos-x:.42; --pos-y:.5" aria-label="Актриса крупным планом говорит и жестикулирует с ручкой в руке">
       <source data-src="media/fig/f72-g2.webm" type="video/webm"><source data-src="media/fig/f72-g2.mp4" type="video/mp4">
     </video>
   </div>
   <div class="abs ph p3" data-media="f72-g3">
-    <video class="loop" muted playsinline loop preload="none" poster="media/fig/f72-g3.jpg" style="--src-w:800; --src-h:550; --pos-x:0.5; --pos-y:0.5" aria-label="Кудрявый парень в синем свитере идёт по офису у панорамных окон">
+    <video class="loop" muted playsinline loop preload="none" poster="media/fig/f72-g3.jpg" style="--src-w:800; --src-h:550; --pos-x:.63; --pos-y:.5" aria-label="Парень в синем свитере радуется в офисе, девушка в жёлтом откатывается на кресле">
       <source data-src="media/fig/f72-g3.webm" type="video/webm"><source data-src="media/fig/f72-g3.mp4" type="video/mp4">
     </video>
   </div>
   <div class="abs ph p4" data-media="f72-g4">
-    <video class="loop" muted playsinline loop preload="none" poster="media/fig/f72-g4.jpg" style="--src-w:960; --src-h:540; --pos-x:0.3; --pos-y:0.5" aria-label="Улыбающийся сотрудник индийской внешности в галстуке, за ним карта мира">
+    <video class="loop" muted playsinline loop preload="none" poster="media/fig/f72-g4.jpg" style="--src-w:960; --src-h:540; --pos-x:.31; --pos-y:.5" aria-label="Улыбающийся парень индийской внешности в рубашке и галстуке в переговорной">
       <source data-src="media/fig/f72-g4.webm" type="video/webm"><source data-src="media/fig/f72-g4.mp4" type="video/mp4">
     </video>
   </div>
 
-  <h2 class="abs cap word">CAST</h2>
-
-  <div class="abs foot">
-    <p class="hd">(&nbsp;НИКАКИХ ЗАЕЗЖЕННЫХ ЛИЦ&nbsp;)</p>
-    <p>В&nbsp;этой истории важно пере&shy;дать все мак&shy;си&shy;мально реали&shy;стично и&nbsp;усилить это. Мы наме&shy;ренно не будем искать иде&shy;аль&shy;ных реклам&shy;ных актеров, наш кастинг будет стро&shy;иться на фак&shy;тур&shy;ных, инте&shy;ре&shy;сных и&nbsp;разно&shy;образ&shy;ных лицах, умении выра&shy;зи&shy;тельно пере&shy;да&shy;вать эмоции и&nbsp;каче&shy;ственно рабо&shy;тать с&nbsp;мимикой. Пред&shy;поч&shy;те&shy;ния будем отда&shy;вать про&shy;фес&shy;си&shy;ональ&shy;ным теат&shy;раль&shy;ным актерам, которые не часто сни&shy;ма&shy;лись в&nbsp;рекламе. Таким образом у&nbsp;нас полу&shy;чится собрать дей&shy;стви&shy;тельно крутой, коло&shy;рит&shy;ный сба&shy;лан&shy;си&shy;ро&shy;ван&shy;ный ансамбль, уча&shy;стники кото&shy;рого будут ощу&shy;щаться насто&shy;ящими сотруд&shy;ни&shy;ками <span class="nw">IT-компании,</span> а&nbsp;не «реклам&shy;ными акте&shy;рами в&nbsp;образе айтиш&shy;ни&shy;ков». Было бы забавно для шутки доба&shy;вить к&nbsp;команде раз&shy;ра&shy;бот&shy;чи&shy;ков одного парня индий&shy;ской внеш&shy;но&shy;сти&nbsp;— сделаем оммаж клас&shy;си&shy;че&shy;скому мему <span class="nw">IT-культуры.</span></p>
-  </div>
+  <h2 class="abs cap ttl ctr">CAST</h2>
+  <p class="abs mono by ctr">( НИКАКИХ<br>ЗАЕЗЖЕННЫХ ЛИЦ )</p>
+  <p class="abs mono cols">В&nbsp;этой исто&shy;рии важно пере&shy;дать все мак&shy;си&shy;мально реалис&shy;тично и&nbsp;уси&shy;лить это. Мы наме&shy;ренно не будем искать иде&shy;аль&shy;ных рек&shy;лам&shy;ных акте&shy;ров, наш кас&shy;тинг будет стро&shy;иться на фак&shy;тур&shy;ных, инте&shy;рес&shy;ных и&nbsp;раз&shy;но&shy;об&shy;раз&shy;ных лицах, уме&shy;нии выра&shy;зи&shy;тельно пере&shy;да&shy;вать эмо&shy;ции и&nbsp;качест&shy;венно рабо&shy;тать с&nbsp;мими&shy;кой. Пред&shy;поч&shy;те&shy;ния будем отда&shy;вать про&shy;фес&shy;си&shy;ональ&shy;ным теат&shy;раль&shy;ным акте&shy;рам, кото&shy;рые не часто сни&shy;ма&shy;лись в&nbsp;рек&shy;ламе. Таким обра&shy;зом у&nbsp;нас полу&shy;чится соб&shy;рать дей&shy;стви&shy;тельно кру&shy;той, коло&shy;рит&shy;ный сба&shy;лан&shy;си&shy;ро&shy;ван&shy;ный ансамбль, участ&shy;ники кото&shy;рого будут ощу&shy;щаться насто&shy;ящими сот&shy;руд&shy;ни&shy;ками IT-компании, а&nbsp;не “рек&shy;лам&shy;ными акте&shy;рами в&nbsp;образе айтиш&shy;ни&shy;ков”. Было бы забавно для шутки доба&shy;вить к&nbsp;команде раз&shy;ра&shy;бот&shy;чи&shy;ков одного парня индий&shy;ской внеш&shy;ности&nbsp;– сде&shy;лаем оммаж клас&shy;си&shy;чес&shy;кому мему IT-культуры.</p>
 </section>
 
-<section data-slide="9" style="--w:1920; --h:1080" class="slide s09 tm n4" id="light" data-len="s" data-ref="d57" data-ref-src="/boards/golomazova-danya/design-refs/crops/d57-169.png" aria-label="LIGHT">
+<section data-slide="9" style="--w:1920; --h:1080" class="slide s09 n4" id="light" data-ref="d11" data-ref-src="/boards/golomazova-danya/design-refs/crops/d11-169.png" aria-label="LIGHT: реалистичный объёмный свет">
+  <h2 class="abs cap big">Light</h2>
+
+  <p class="abs body">Я&nbsp;строю световой рисунок на&nbsp;реализме и&nbsp;объеме. Каждый кадр прорабатывается через естественные источники света и&nbsp;глубокий светотеневой контраст. Свет подчеркивает текстуры, пространство, отделяя героя от&nbsp;фона и&nbsp;задавая изображению глубину и&nbsp;объем.</p>
+
+  <div class="abs rule" aria-hidden="true"></div>
+
   <div class="abs ph p1" data-media="f77-g1">
-    <video class="loop" muted playsinline loop preload="none" poster="media/fig/f77-g1.jpg" style="--src-w:960; --src-h:540; --pos-x:0.5; --pos-y:0.5" aria-label="Девушка в опенспейсе, мягкий свет из окон">
+    <video class="loop" muted playsinline loop preload="none" poster="media/fig/f77-g1.jpg" style="--src-w:960; --src-h:540; --pos-x:.55; --pos-y:.5" aria-label="Героиня за рабочим столом в офисе, мягкий свет из окон">
       <source data-src="media/fig/f77-g1.webm" type="video/webm"><source data-src="media/fig/f77-g1.mp4" type="video/mp4">
     </video>
   </div>
   <div class="abs ph p2" data-media="f77-g2">
-    <video class="loop" muted playsinline loop preload="none" poster="media/fig/f77-g2.jpg" style="--src-w:960; --src-h:540; --act-x:122; --act-y:0; --act-w:716; --act-h:540; --pos-x:0.5; --pos-y:0.5" aria-label="Длинный коридор со стеклянными стенами, люди идут навстречу">
+    <video class="loop" muted playsinline loop preload="none" poster="media/fig/f77-g2.jpg" style="--src-w:960; --src-h:540; --act-x:122; --act-y:0; --act-w:716; --act-h:540; --pos-x:.5; --pos-y:.5" aria-label="Героиня идёт по стеклянному коридору офиса, свет сверху">
       <source data-src="media/fig/f77-g2.webm" type="video/webm"><source data-src="media/fig/f77-g2.mp4" type="video/mp4">
     </video>
   </div>
   <div class="abs ph p3" data-media="f77-g3">
-    <video class="loop" muted playsinline loop preload="none" poster="media/fig/f77-g3.jpg" style="--src-w:960; --src-h:540; --act-x:174; --act-y:16; --act-w:614; --act-h:510; --pos-x:0.6; --pos-y:0.5" aria-label="Девушка за рабочим столом передаёт бумаги, свет из окна">
+    <video class="loop" muted playsinline loop preload="none" poster="media/fig/f77-g3.jpg" style="--src-w:960; --src-h:540; --act-x:172; --act-y:14; --act-w:618; --act-h:514; --pos-x:.4; --pos-y:.5" aria-label="Героиня за столом разворачивается с пачкой бумаг в руке">
       <source data-src="media/fig/f77-g3.webm" type="video/webm"><source data-src="media/fig/f77-g3.mp4" type="video/mp4">
     </video>
   </div>
   <div class="abs ph p4" data-media="f77-g4">
-    <video class="loop" muted playsinline loop preload="none" poster="media/fig/f77-g4.jpg" style="--src-w:540; --src-h:540; --pos-x:0.5; --pos-y:0.5" aria-label="Опенспейс сверху: сотрудники за столами, один лежит на полу">
+    <video class="loop" muted playsinline loop preload="none" poster="media/fig/f77-g4.jpg" style="--src-w:540; --src-h:540; --pos-x:.5; --pos-y:.5" aria-label="Опенспейс сверху: сотрудники за столами, коллега лежит на полу">
       <source data-src="media/fig/f77-g4.webm" type="video/webm"><source data-src="media/fig/f77-g4.mp4" type="video/mp4">
     </video>
   </div>
-
-  <h2 class="abs cap word">LIGHT</h2>
-
-  <div class="abs foot">
-    <p>Я&nbsp;строю све&shy;то&shy;вой рисунок на реализме и&nbsp;объеме. Каждый кадр про&shy;ра&shy;ба&shy;ты&shy;ва&shy;ется через есте&shy;ствен&shy;ные источ&shy;ники света и&nbsp;глу&shy;бо&shy;кий све&shy;то&shy;те&shy;не&shy;вой кон&shy;траст. Свет под&shy;чер&shy;ки&shy;вает тек&shy;стуры, про&shy;стран&shy;ство, отделяя героя от фона и&nbsp;задавая изо&shy;бра&shy;же&shy;нию глубину и&nbsp;объем.</p>
-  </div>
 </section>
 
-<section data-slide="10" style="--w:1920; --h:1080" class="slide s10 sec" id="color" data-len="s" data-ref="d76" data-ref-src="/boards/golomazova-danya/design-refs/crops/d76-169.png" aria-label="COLOR: плотный, благородный цвет с мягким плёночным контрастом">
-  <div class="abs bleed" data-media="f78-g1" style="--src-w:960; --src-h:540; --act-x:0; --act-y:0; --act-w:960; --act-h:540; --pos-x:.5; --pos-y:.5">
-    <video class="loop abs" muted playsinline loop preload="none" poster="media/fig/f78-g1.jpg" aria-label="Тёмный офис: сотрудник в очках сидит за столом под настольной лампой, за ним стоит коллега">
+<section data-slide="10" style="--w:1920; --h:1080" class="slide s10" id="color" data-ref="d47" data-ref-src="/boards/golomazova-danya/design-refs/crops/d47-169.png" aria-label="COLOR: плотный, богатый, благородный цвет">
+  <div class="abs bleed" data-media="f78-g1" style="--src-w:960; --src-h:540; --act-x:0; --act-y:0; --act-w:960; --act-h:540; --zoom:1.04; --pos-x:.5; --pos-y:1">
+    <video class="loop abs" muted playsinline loop preload="none" poster="media/fig/f78-g1.jpg" aria-label="Ночной офис: сотрудник в очках за столом под лампами, глубокие тени, мягкий плёночный цвет">
       <source data-src="media/fig/f78-g1.webm" type="video/webm"><source data-src="media/fig/f78-g1.mp4" type="video/mp4">
     </video>
   </div>
-  <div class="abs band" aria-hidden="true"></div>
 
-  <div class="abs mark" aria-hidden="true"></div>
-  <h2 class="abs cap head">COLOR</h2>
+  <h2 class="abs" style="left:0;top:0;width:1920px;height:1080px;margin:0" aria-label="COLOR">
+    <span class="abs cap idx i1" aria-hidden="true">C</span>
+    <span class="abs cap idx i2" aria-hidden="true">O</span>
+    <span class="abs cap mark i4" aria-hidden="true">L</span>
+    <span class="abs cap idx i3" aria-hidden="true">OR</span>
+  </h2>
 
-  <div class="abs card">
-    <p class="body">Плотный, богатый, благородный цвет. Мы даем картинке мягкий аналоговый, пленочный контраст с&nbsp;глубоким черным и&nbsp;сочными, но естественными скинтонами. Цветокоррекция не выглядит искусственной: мы мягко усиливаем существующую в&nbsp;кадре палитру.</p>
-  </div>
+  <p class="abs mic g1">Плотный, богатый, благородный цвет.</p>
+  <p class="abs mic g2">Мы даем картинке мягкий аналоговый, пленочный контраст с&nbsp;глубоким черным и&nbsp;сочными, но естественными скинтонами. Цветокоррекция не выглядит искусственной: мы мягко усиливаем существующую в&nbsp;кадре палитру.</p>
 </section>
 
-<section data-slide="11" style="--w:1920; --h:1080" class="slide s11 sec" id="edit" data-len="m" data-ref="d76" data-ref-src="/boards/golomazova-danya/design-refs/crops/d76-169.png" aria-label="EDIT: динамичный рваный монтаж с двумя паузами и катарсическим релизом">
-  <div class="abs bleed" data-media="f80-g1" style="--src-w:960; --src-h:540; --act-x:122; --act-y:0; --act-w:716; --act-h:540; --pos-x:.5; --pos-y:1">
-    <video class="loop abs" muted playsinline loop preload="none" poster="media/fig/f02-g4.jpg" aria-label="Монтаж: коллеги улыбаются в камеру и показывают палец вверх, рука подписывает документ, мужчина на лестнице, лицо девушки крупно">
+<section data-slide="11" style="--w:1920; --h:1080" class="slide s11" id="edit" data-ref="d70" data-ref-src="/boards/golomazova-danya/design-refs/crops/d70-169.png" aria-label="EDIT — монтаж">
+  <div class="card c1" aria-hidden="true"></div>
+  <div class="card c3" aria-hidden="true"></div>
+
+  <!-- left card: heading + the start of the paragraph -->
+  <h2 class="abs cap big" style="left:118.6px;top:170.4px">EDIT</h2>
+  <p class="abs" style="left:0;top:0;width:1920px;height:1080px;margin:0;pointer-events:none">
+    <span class="sr">Монтаж будет очень динамичным, как американские горки, рваным,</span>
+    <span class="abs cap big" style="left:118.6px;top:234px" aria-hidden="true">Монтаж</span>
+    <span class="abs cap big" style="left:310.6px;top:295.2px" aria-hidden="true">будет</span>
+    <span class="abs cap big" style="left:307.8px;top:360px" aria-hidden="true">очень</span>
+    <span class="abs cap big" style="left:121.6px;top:463.2px" aria-hidden="true">динамичным,</span>
+    <span class="abs cap big" style="left:118.6px;top:524.4px" aria-hidden="true">как</span>
+    <span class="abs cap big" style="left:122.6px;top:588px" aria-hidden="true">американские</span>
+    <span class="abs cap big rt" style="right:1291px;top:787.2px" aria-hidden="true">горки,</span>
+    <span class="abs cap big rt" style="right:1291px;top:850.8px" aria-hidden="true">рваным,</span>
+  </p>
+
+  <!-- photo card: the frame's one GIF (pillarbox cropped by --act-*) -->
+  <div class="card c2">
+    <video class="loop" muted playsinline loop preload="none" poster="media/fig/f02-g4.jpg"
+           style="--src-w:960; --src-h:540; --act-x:122; --act-y:0; --act-w:716; --act-h:540; --pos-x:0.45; --pos-y:0.5"
+           data-crop="716:540:122:0"
+           aria-label="Рваный монтаж: команда с большим пальцем вверх, рука рисует спираль, вращающаяся дверь, потолок офиса, героиня смотрит вверх">
       <source data-src="media/fig/f02-g4.webm" type="video/webm"><source data-src="media/fig/f02-g4.mp4" type="video/mp4">
     </video>
   </div>
-  <div class="abs band" aria-hidden="true"></div>
 
-  <div class="abs mark" aria-hidden="true"></div>
-  <h2 class="abs cap head">EDIT</h2>
-
-  <div class="abs card">
-    <p class="body">Монтаж будет очень динамичным, как американские горки, рваным, и&nbsp;закручиваться по спирали, постепенно усиливая эффект наваливающихся решений на главного героя. Чтобы удерживать зрителя в&nbsp;напряжении и&nbsp;не перегрузить его, мы закладываем две драматургические паузы в&nbsp;низших точках истории, где зритель одновременно и&nbsp;максимально сопереживает герою, и&nbsp;сможет выдохнуть. В&nbsp;момент высвобождения происходит катарсический релиз: ритм вместе с&nbsp;музыкой резко успокаивается, кадры становятся длиннее и&nbsp;плавнее, передавая зрителю спокойствие и&nbsp;легкость героя.</p>
-  </div>
+  <!-- grey card: the rest of the paragraph -->
+  <p class="abs wall">и закручиваться по спирали, постепенно усиливая эффект наваливающихся решений на главного героя. Чтобы удерживать зрителя в напряжении и не перегрузить его, мы закладываем две драматургические паузы в низших точках истории, где зритель одновременно и максимально сопереживает герою, и сможет выдохнуть. В момент высвобождения происходит катарсический релиз: ритм вместе с музыкой резко успокаивается, кадры становятся длиннее и плавнее, передавая зрителю спокойствие и легкость героя.</p>
 </section>
 
-<section data-slide="12" style="--w:1920; --h:1080" class="slide s12 sec" id="vo" data-len="l" data-ref="d76" data-ref-src="/boards/golomazova-danya/design-refs/crops/d76-169.png" aria-label="VO: голос диктора в двух настроениях — напряжённый и спокойный">
-  <div class="abs bleed" data-media="f83-g1" style="--src-w:960; --src-h:540; --act-x:122; --act-y:0; --act-w:716; --act-h:540; --pos-x:.5; --pos-y:.33">
-    <video class="loop abs" muted playsinline loop preload="none" poster="media/fig/f83-g1.jpg" aria-label="Снизу вверх: мужчина в очках говорит в камеру, за ним двое коллег у окна с жалюзи">
+<section data-slide="12" style="--w:1920; --h:1080" class="slide s12" id="vo" data-ref="d40" data-ref-src="/boards/golomazova-danya/design-refs/crops/d40-169.png" aria-label="VO: голос диктора в двух настроениях">
+  <div class="abs gif" data-media="f83-g1" style="--src-w:960; --src-h:540; --act-x:122; --act-y:0; --act-w:716; --act-h:540; --pos-x:.5; --pos-y:.3">
+    <video class="loop" muted playsinline loop preload="none" poster="media/fig/f83-g1.jpg" aria-label="Снизу вверх: руководитель в очках и двое коллег склонились над героем в кабинете с жалюзи">
       <source data-src="media/fig/f83-g1.webm" type="video/webm"><source data-src="media/fig/f83-g1.mp4" type="video/mp4">
     </video>
   </div>
-  <div class="abs band" aria-hidden="true"></div>
 
-  <div class="abs mark" aria-hidden="true"></div>
-  <h2 class="abs cap head">VO</h2>
+  <p class="abs t d d1">В первой части<br>быстро,<br>напряженно</p>
+  <p class="abs t d d2">Во второй части<br>спокойной,<br>размеренной<br>и&nbsp;легкой</p>
 
-  <div class="abs card">
-    <p class="body">Голос диктора будет звучать в&nbsp;двух настроениях.</p>
-    <p class="body">В&nbsp;первой части ролика он будет говорить быстро, напряженно, будто проговаривая огромный список задач, реплики даже могут наслаиваться друг на друга, усиливая давление на героя. Таким образом мы возведем ощущение информационного давления в&nbsp;абсолют от бесконечного количества идей и&nbsp;необходимых от героя решений, которые сыпятся на него одномоментно.</p>
-    <p class="body">Во второй части, в&nbsp;момент когда герою предлагают выбрать Cloud.ru, речь диктора сменяется: расслабляется, становится спокойной, размеренной и&nbsp;легкой. Этим приемом мы подхватим смену настроения ролика и&nbsp;покажем зрителю на ассоциативном уровне, что с&nbsp;Cloud.ru все может быть действительно проще.</p>
+  <div class="abs t body">
+    <p>Голос дик&shy;то&shy;ра будет зву&shy;чать в&nbsp;двух настроениях.</p>
+    <p>В&nbsp;пер&shy;вой части ро&shy;ли&shy;ка он будет го&shy;во&shy;рить бы&shy;стро, на&shy;пря&shy;жен&shy;но, будто про&shy;го&shy;ва&shy;ри&shy;вая ог&shy;ром&shy;ный спи&shy;сок задач, реп&shy;ли&shy;ки даже могут на&shy;слаи&shy;вать&shy;ся друг на друга, уси&shy;ли&shy;вая дав&shy;ле&shy;ние на героя. Таким об&shy;ра&shy;зом мы воз&shy;ве&shy;дем ощу&shy;ще&shy;ние ин&shy;фор&shy;ма&shy;ци&shy;он&shy;но&shy;го дав&shy;ле&shy;ния в&nbsp;аб&shy;со&shy;лют от бес&shy;ко&shy;неч&shy;но&shy;го ко&shy;ли&shy;че&shy;ства идей и&nbsp;не&shy;об&shy;хо&shy;ди&shy;мых от героя ре&shy;ше&shy;ний, ко&shy;то&shy;рые сы&shy;пят&shy;ся на него одномоментно.</p>
+    <p>Во вто&shy;рой части, в&nbsp;мо&shy;мент когда герою пред&shy;ла&shy;га&shy;ют вы&shy;брать Cloud.ru, речь дик&shy;то&shy;ра сме&shy;ня&shy;ет&shy;ся: рас&shy;слаб&shy;ля&shy;ет&shy;ся, ста&shy;но&shy;вит&shy;ся спо&shy;кой&shy;ной, раз&shy;ме&shy;рен&shy;ной и&nbsp;лег&shy;кой. Этим при&shy;емом мы под&shy;хва&shy;тим смену на&shy;стро&shy;е&shy;ния ро&shy;ли&shy;ка и&nbsp;по&shy;ка&shy;жем зри&shy;те&shy;лю на ас&shy;со&shy;ци&shy;а&shy;тив&shy;ном уров&shy;не, что с&nbsp;Cloud.ru все может быть дей&shy;стви&shy;тель&shy;но проще.</p>
   </div>
+
+  <h2 class="abs t ttl"><b>VO</b></h2>
 </section>
 
 <section data-slide="13" style="--w:1920; --h:1080" class="slide s13" id="thanks" data-ref="d25" data-ref-src="/boards/golomazova-danya/design-refs/crops/d25-169.png" aria-label="Спасибо! Обсудим?">
