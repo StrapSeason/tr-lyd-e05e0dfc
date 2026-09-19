@@ -9,15 +9,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@100..900&family=Roboto+Flex:opsz,slnt,wdth,wght,XOPQ,XTRA,YOPQ,YTAS,YTDE,YTLC,YTUC@8..144,-10..0,25..151,100..1000,27..175,323..603,25..135,649..854,-305..-98,416..570,528..760&display=swap">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&display=swap">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,slnt,wdth,wght,XOPQ,XTRA,YOPQ,YTAS,YTDE,YTLC,YTUC@8..144,-10..0,25..151,100..1000,27..175,323..603,25..135,649..854,-305..-98,416..570,528..760&family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&family=Inter:opsz,wght@14..32,100..900&display=swap">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&family=Roboto+Flex:opsz,slnt,wdth,wght,XOPQ,XTRA,YOPQ,YTAS,YTDE,YTLC,YTUC@8..144,-10..0,25..151,100..1000,27..175,323..603,25..135,649..854,-305..-98,416..570,528..760&display=swap">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@100..900&display=swap">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,slnt,wdth,wght,XOPQ,XTRA,YOPQ,YTAS,YTDE,YTLC,YTUC@8..144,-10..0,25..151,100..1000,27..175,323..603,25..135,649..854,-305..-98,416..570,528..760&display=swap">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,slnt,wdth,wght,XOPQ,XTRA,YOPQ,YTAS,YTDE,YTLC,YTUC@8..144,-10..0,25..151,100..1000,27..175,323..603,25..135,649..854,-305..-98,416..570,528..760&family=Inter:opsz,wght@14..32,100..900&display=swap">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,slnt,wdth,wght,XOPQ,XTRA,YOPQ,YTAS,YTDE,YTLC,YTUC@8..144,-10..0,25..151,100..1000,27..175,323..603,25..135,649..854,-305..-98,416..570,528..760&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@100..900&family=Inter:opsz,wght@14..32,100..900&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&family=Inter+Tight:wght@100..900&display=swap">
 <link rel="stylesheet" href="deck.css">
 <style>
 /* ── s01.html ── */
@@ -30,71 +23,74 @@
           (40 / 1880 in the brief): every left edge = ink 40, every right edge = ink 1880.
        2. «в 2 строки напишем VICTOR LYAPAKHIN» — the giant yellow word is VICTOR / LYAPAKHIN (was LYAPA– / KHIN);
           LYAPAKHIN fills 40–1880, VICTOR takes the same size flush left (the pin's line 1 is flush left).
-          Width axis: the pin's BECO– is 5.66 caps wide and MING 4.97 caps; Roboto Flex wght 1000 gives that at
-          wdth ≈ 130–150 → wdth 140 (the old wdth 113 was a squeeze to fit LYAPA– into BECO-'s width). The cap grows from
-          142.6 to fill the width; line 2 keeps the pin's baseline 1046 and line 1 the pin's pitch (1.14 × cap).
-       3. The top-right slot no longer repeats the name: CLOUD.RU (bold, like the pin's bold credit word) moves there, flush
+       3. The top-right slot no longer repeats the name: CLOUD.RU (the pin's emphasised credit word) moves there, flush
           right on the 1880 line; the top-centre slot is dropped. «( DIRECTORS / TREATMENT )» stays top-left on the 40 line.
+     REVIEW 2 2026-09-19 (brief v4; wins over the pin and review 1):
+       «нужно от низа текст чуть выше поднять + сделать его тоньше» + G1 (one heading face, one body face) + G2 (≥ 56 px):
+       giant  → Inter Tight 600 (was Roboto Flex wght 1000 wdth 140), letter-spacing −0.04 em (the deck's largest type).
+                A normal-width face fills 40–1880 only at a larger size: 383 px, cap 278.6 (was 183.8). Measured ink:
+                LYAPAKHIN x 40–1880, y 743–1021 → lowest ink 58 px above the bottom (was 1046 / 34 px);
+                VICTOR x 40–1325, y 422–707 (C/O overshoot), cap top 425.8 = 743.4 − the pin's pitch 1.14 × cap.
+       top    → Inter 400, 34 px (was Inter Tight 400/700); the pin's bold credit words (TREATMENT, CLOUD.RU) = Inter 500,
+                the only weight G1 allows for a label that stands out. Ink 40 / 1880, cap tops 45.9 / 88 kept.
      Slots with no real content stay out (no filler): «The / Great», the 3-line small block, «A Project by …», «47», «2024».
      Loop f01-g1 (1280×720, no letterbox — cropdetect 1280:720:0:0): an open-plan office, rows of desks, desk lamps,
      monitors, people at work. Framing (no grade, no scrim): plain cover, no zoom (data-frame 1 0 0). _qa/s01-lum.cjs over
-     the loop at 4 fps: the % of pixels where the yellow falls under 3 : 1 — TL 2 %, TR 0 %, VICTOR 22 % (a lit monitor at
-     left, as BECO- crosses the pale face on the pin), LYAPAKHIN 5 %. (The old 1.08× zoom only served the old TL at x 308.)
-     Legibility: top rows 34 px (≥ 30 px labels). */
+     the loop at 4 fps: the % of pixels where the yellow falls under 3 : 1 — TL 2 %, TR 0 %, VICTOR 7 %, LYAPAKHIN 11 %
+     (the pale desks under «…HIN» at right).
+     Legibility: top rows 34 px (≥ 30 px labels). Inter at opsz 14 (font-optical-sizing none) = the deck's Inter. */
   .s01 { background: #0b0b0b; color: #f9fe00; }
   .s01 .cap { text-box: trim-both cap alphabetic; line-height: 1; white-space: nowrap; margin: 0; }
   /* full-bleed loop; data-crop / --crop = the GIF's active picture in source px (x y w h): no letterbox here.
      data-frame = the framing chosen for legibility (scale over cover, anchor x/y in 0–1). */
   .s01 .bgw { left: 0; top: 0; width: 1920px; height: 1080px; overflow: hidden; }
   .s01 .bgw video { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; display: block; object-fit: cover; }
-  .s01 .mic { font-family: 'Inter Tight', sans-serif; font-weight: 400; font-size: 34px; }
-  .s01 .mic b { font-weight: 700; }
-  .s01 .giant { font-family: 'Roboto Flex', sans-serif; font-size: 258.1px; font-weight: 1000;
-                 font-variation-settings: 'wght' 1000, 'wdth' 140; }
+  .s01 .mic { font-family: 'Inter', sans-serif; font-weight: 400; font-size: 34px; font-optical-sizing: none; }
+  .s01 .mic b { font-weight: 500; }
+  /* giant: Inter Tight 600; LYAPAKHIN ink 40–1880, baseline 1021.9 (lowest ink 58 px clear), VICTOR one pin pitch above */
+  .s01 .giant { font-family: 'Inter Tight', sans-serif; font-size: 275px; font-weight: 600; letter-spacing: -0.035em; }   /* review2 fix: cap ≈ 200 (was 184 in v3), staggered like BECO- / MING */
   .s01 .r { text-align: right; }
-  .s01 .tl1 { left: 37px; top: 45.9px; }
-  .s01 .tl2 { left: 39px; top: 88px; }
-  .s01 .tr1 { right: 38px; top: 45.9px; }
-  .s01 .g1 { left: 45.1px; top: 652.7px; }
-  .s01 .g2 { left: 24.8px; top: 862.2px; }
+  .s01 .tl1 { left: 36px; top: 45.9px; }
+  .s01 .tl2 { left: 38px; top: 88px; }
+  .s01 .tr1 { right: 36px; top: 45.9px; }
+  .s01 .g1 { left: 38px; top: 593px; }
+  .s01 .g2 { right: 34px; top: 821px; }
 
 /* ── s02.html ── */
-/* s02 · INTRO (Figma frame 2) — pin d55 (web page: a big face close-up on the left half, two small square photos
-     top-right, a narrow grey text column under the first one, a light «N°3» bottom-right, all on a pale grey field).
-     Reference = /boards/golomazova-danya/design-refs/crops/d55-169.png (1163×654), k = 1920 / 1163 = 1.65090.
-     The crop is padded: x 0–57 = smear of the photo's left column, x 1103–1162 = a lighter pad (#efefef). The pin page
-     is x 58–1102.5. No frames: the photo bleeds to the canvas' left edge, the field runs to the right edge.
-     Measured on the crop 2026-09-19 (edge = antialiased column/row fraction) → canvas:
-       field      #ececec (eyedropped 600,400,400,200)
-       photo      x 58–577.5, y 0–654 (page top to bottom)          → 0–953.4 × 0–1080 (bleeds left, top, bottom)
-       small 1    x 758.3–923.4, y 13.9–178.6 (square 165)           → 1251.9–1524.5 × 22.9–294.9
-       small 2    x 931.3–1096.5 (gutter 7.9)                        → 1537.5–1810.2 (gutter 13.0)
-       label      «Our Path» / «We don't do things by halves.» ink x 589, cap tops 16 / 35 → 972.4, 26.4 / 57.8 (UI copy)
-       column     ink x 759–922 (= small 1's width), cap top 198, pitch 9.47 (≈ 1.2 × size), one blank line between
-                  paragraphs, flush left / ragged, ink ≈ #7f7b74 (darkest), light-grey neo-grotesk
-                                                                     → ink-left 1253.0, cap top 326.9
-       N°3        light grotesk (stroke ≈ 0.09 cap), ink x 1052–1096 (right = small 2's right edge), cap 624–645.5
-                                                                     → ink-right 1809.4, baseline 1065.6, cap 36.3
-     Brief v3 («переверстать, вяленький» → pin d55):
-       big photo  → f02-g1, the colleagues staring into the lens (720×540, no bars): cover-scaled ×2, centred on the
-                    woman in the red cardigan (pos-x .5) — the group looks straight at the reader like the pin's face.
-       small area → 3 cells for f02-g2 / f02-g3 / f02-g4 (content: 3 GIFs for 2 boxes). The square small 1 stays a square
-                    (f02-g4, the team with the thumbs-up — people get the big cell; pillarbox 122 px each side cropped:
-                    active 716×540, window 540 wide centred on the bald man, pos-x .56); small 2 is cut into two
-                    stacked cells 272.7 × 129.5 with the pin's 13-px gutter — close to the GIFs' own 16:9, so the
-                    laptops lose little: f02-g2 top view hand on the touchpad (pos .52/.5), f02-g3 laptop with the
-                    code and the 3D model (pos-x .2 keeps the screen).
-       column     → the frame's whole text (Привет! / Спасибо… / Снять ролик…), Inter 400 24 / 31 px, justified with baked
-                    soft hyphens (headless Edge has no Russian dictionary), one blank line between paragraphs (pin);
-                    the 2-line «Спасибо…» is set flush left (justifying its first line would open wide gaps).
-                    Widened from small 1's width to the whole small-photo area (1251.9–1810.2): at 24 px the pin's
-                    272-px column would run ~27 lines off the canvas. Ink darkened #7f7b74 → #6b6862 (4.7:1 on the field).
-       N°3        → «INTRO», large: same light grotesk class (Inter 300), right edge and baseline of N°3.
-       label slot → dropped: the brief puts the whole text in the column; «Our Path» is page UI.            */
-  .s02 { background: #ececec; color: #6b6862; }
+/* s02 · INTRO (Figma frame 2) — pin d17 «CURL / ROCK AND / ROLL» (brief v4, review 2026-09-19 «давай еще вариант по дизайну»).
+     Reference = /boards/golomazova-danya/design-refs/crops/d17-169.png (3012×1694; the 2392-wide pin padded 310 px a side
+     with its red field, so the photos that bleed off the pin's edges stop at x 310 / 2702 in the crop). k = 1920/3012 = 0.63745.
+     Measured on the crop 2026-09-19 (re-verified against Oblako deck-v2 s07):
+       field  #f93822 → yellow #f9fe00 (brief: unity)          ink #161616 (pin)
+       photos y 620–1185 → 395.2–755.4; L x ≤1128 → 0–719 (bleeds off the canvas edge like the pin), R x ≥1884 → 1201–1920
+       word block flat edges x 1191–1828 → 759.2–1165.3; rows cap 129 (82.2), tops 622 / 765 / 909 / 1051 → 396.5 … bottom 752.2
+       corner ⅂ arm 1690–1828 × 622–657 (88.0 × 22.9), stem 1785–1828 (27.4) × one cap; corner ⅃ mirrored on the last row
+       labels above: cap 531–563 (21.0) → cap top 338.5, baseline 359.5; L ink-right 1125 → 717.1, C justified 1186–1825
+         → 756.0–1163.4, R ink-left 1887 → 1202.9 · labels below: cap top 1239 → 789.8, C centred on 960.6
+       micro rows: TL ink-left 367, TC bold caps centred (1246–1768), TR ink-right 2645.5; first cap/ascender top 56 → 35.7;
+         bottom rows last line 1616–1642, BC on the last line.
+     Brief v4 decisions:
+       fonts (G1)  logotype Inter Tight 600; every text row Inter — 400 for the running blocks, 500 caps for the pin's bold
+                   centre lines and the label rows. Smallest text 24 px (labels 25 px caps).
+       logotype    IN / TRO, 196 px, −0.04 em (cap 143; pin 4 rows × 82.2 → 2 rows). TRO fills the block width, so the frame
+                   keeps the pin's corners at the block's top-right (⅂ on row 1, like CUR⅂) and bottom-right (⅃, bottom 752.2;
+                   its arm runs under the O). Corner strokes = the letters' (stem 25.5, arm 21.5), arm 128 ≈ one letter cell.
+       photos      f02-g1 (colleagues staring into the lens, the most prominent) = the whole left box 719 × 360.2 (720×540 source,
+                   no bars; cover ×1.0, pos-y .56 keeps the back row's eyes and the front row's chins). Right box = square
+                   f02-g4 (pillarbox 122 px a side cropped → active 716×540; pos-x .56 on the man with the thumbs-up) + two stacked
+                   2:1 cells, 12-px gutter: f02-g2 (top view, hand on the touchpad; pos-y .6) and f02-g3 (laptop with code, .5).
+       text        all of frame 2, in reading order row by row: TL greeting · TC «Снять ролик целиком в формате POV» · TR rest of
+                   sentence 1 · labels above «Я хочу сделать так, чтобы | каждый IT-руководитель | и разработчик» · labels
+                   below «узнал в этом | сумасшедшем спринте себя, | улыбнулся» · BL «от точечных пасхалок … Cloud.ru.» ·
+                   BC «Мы создадим стильный, ироничный и невероятно живой ролик,» · BR «который захочется … чатах.»
+                   3 columns = the photo/logotype columns: side blocks inside 40–719 / 1201–1880, centre lines inside 759–1165.
+                   Justified blocks carry baked soft hyphens (headless Edge has no Russian dictionary); widths TR 620 · BL 655 ·
+                   BR 450 were picked for ≤ 6 px of justification slack per line.
+       G2          bottom row last baseline 1016 (lowest ink row 1020 → 59 px above the bottom edge).  */
+  .s02 { background: #f9fe00; color: #161616; }
   .s02 .cap { text-box: trim-both cap alphabetic; margin: 0; }
 
-  /* photo boxes: the video is sized so the ACTIVE picture (bars excluded) covers the box, placed by --pos-x/--pos-y */
+  /* photo cells: the video is sized so its ACTIVE picture (bars excluded) covers the cell, placed by --pos-x/--pos-y */
   .s02 .ph { overflow: hidden; background: #000; width: calc(var(--bw) * 1px); height: calc(var(--bh) * 1px); }
   .s02 .ph video { --act-x: 0; --act-y: 0; --act-w: var(--src-w); --act-h: var(--src-h); --pos-x: .5; --pos-y: .5;
     --k: max(var(--bw) / var(--act-w), var(--bh) / var(--act-h));
@@ -102,23 +98,24 @@
     width: calc(var(--src-w) * var(--k) * 1px); height: calc(var(--src-h) * var(--k) * 1px);
     left: calc((var(--bw) - var(--act-w) * var(--k)) * var(--pos-x) * 1px - var(--act-x) * var(--k) * 1px);
     top:  calc((var(--bh) - var(--act-h) * var(--k)) * var(--pos-y) * 1px - var(--act-y) * var(--k) * 1px); }
-  .s02 .big { left: 0; top: 0; --bw: 953.4; --bh: 1080; }
-  .s02 .c1  { left: 1251.9px; top: 22.9px;  --bw: 272.6; --bh: 272; }
-  .s02 .c2  { left: 1537.5px; top: 22.9px;  --bw: 272.7; --bh: 129.5; }
-  .s02 .c3  { left: 1537.5px; top: 165.4px; --bw: 272.7; --bh: 129.5; }
+  .s02 .pL  { left: 0;        top: 395.2px; --bw: 719;   --bh: 360.2; }
+  .s02 .pR1 { left: 1201px;   top: 395.2px; --bw: 360.2; --bh: 360.2; }
+  .s02 .pR2 { left: 1573.2px; top: 395.2px; --bw: 346.8; --bh: 174.1; }
+  .s02 .pR3 { left: 1573.2px; top: 581.3px; --bw: 346.8; --bh: 174.1; }
 
-  /* text column: ink-left on small 1's left edge, first cap top 326.9, right edge = small 2's right edge */
-  .s02 .col { left: 1250.5px; top: 326.9px; width: 558.3px; font-family: 'Inter', sans-serif; font-weight: 400;
-              font-size: 24px; line-height: 31px; letter-spacing: -0.005em; text-align: justify; hyphens: manual; }
-  .s02 .col p { margin: 0; }
-  .s02 .col p + p { margin-top: 31px; }
-  .s02 .col .short { text-align: left; }
-  .s02 .col .nw { white-space: nowrap; }
+  /* logotype IN / TRO — Inter Tight 600 (G1), in the pin's bracket frame */
+  .s02 .logo { left: 0; top: 0; margin: 0; font: 600 196px/1 'Inter Tight', sans-serif; letter-spacing: -0.04em; }
+  .s02 .logo span { position: absolute; white-space: nowrap; }
+  .s02 .bar { position: absolute; background: #161616; }
 
-  /* INTRO in the N°3 slot: ink-right 1809.4, baseline 1065.6 */
-  .s02 .ttl { right: calc(1920px - 1809.4px - 6.9px); bottom: calc(1080px - 1065.6px + 1.2px); font-family: 'Inter', sans-serif;
-              font-weight: 300; font-size: 140px; line-height: 1; letter-spacing: -0.02em; white-space: nowrap; }
-  .s02 { font-optical-sizing: none; }   /* unify-fonts: Inter was designed without the opsz axis */
+  /* text rows — Inter (G1) */
+  .s02 .mic { font-family: 'Inter', sans-serif; font-weight: 400; font-size: 24px; line-height: 29px; }
+  .s02 .mic p { margin: 0; }
+  .s02 .claim { font-family: 'Inter', sans-serif; font-weight: 500; font-size: 24px; line-height: 29px; text-transform: uppercase; text-align: center; }
+  .s02 .lab { font-family: 'Inter', sans-serif; font-weight: 500; font-size: 25px; line-height: 1; letter-spacing: -0.01em; text-transform: uppercase; white-space: nowrap; }
+  .s02 .just { text-align: justify; hyphens: manual; }
+  .s02 .r { text-align: right; }
+  .s02 .nw { white-space: nowrap; }
 
 /* ── s03.html ── */
 /* s03 · APPROACH (Figma frame 3) — pin d65 «(fractum)Ordo»: a face full-bleed, one giant word split by crescent brackets
@@ -149,6 +146,14 @@
           gap 67; 8 lines each, first cap top 773.1 (below the p feet 766), last baseline ≈ 1001. Micro row unchanged
           (the pin's device). Line breaks follow the mock's; «физический» carries no soft hyphens (with them line 4 went
           three-word loose).
+     Review 2 2026-09-19 (brief v4, G1 + G2) — supersedes the face/bracket part of item 1 above:
+       G1: «(App)roach» is ONE line of Inter Tight 600, −0.045 em, 310 px, yellow; the brackets are Inter Tight's own «( )»
+          (no drawn crescents, no serif «App», no condensed «roach»), set tight: ( → A +0.01 em, ) with no extra space
+          (ink: ( 252–331 · A –531 · pp 536–933 incl. ) · r 957 … h 1666). Outer ink edges stay on the pin's 251.4 / 1666.2.
+          Cap top 397, baseline 621, x-height top 451, brackets 383–663, p descenders to 684: the baseline rises 68 px from
+          the pin's 689 so the descenders clear the micro row (cap top 704; the pin's word has none).
+          Micro row in Inter 400 30 px (адепт 500 = the pin's bold slot; upright, no faux oblique), anchors unchanged.
+       G2: lowest text ink 1005 (the columns) = 75 px above the bottom edge.
      Template: at 25 px each column holds ≈ 215 characters in 8 lines (last baseline ≈ 1001); up to 9 lines (≈ 245 chars)
        still clears the canvas bottom by 49 px. Longer text → another pin.
      GIF f03-g1 (540×540 square, no bars — cropdetect 540:540:0:0): full-bleed at 3.556×, --pos-y .512 puts the eyes at
@@ -164,18 +169,16 @@
     left: calc(var(--act-x) * var(--k) * -1px + (1920px - var(--act-w) * var(--k) * 1px) * var(--pos-x));
     top:  calc(var(--act-y) * var(--k) * -1px + (1080px - var(--act-h) * var(--k) * 1px) * var(--pos-y)); }
 
-  .s03 .rs { font-family: 'Roboto Serif', serif; }
-  .s03 .rf { font-family: 'Roboto Flex', sans-serif; }
-  .s03 .word { color: #f9fe00; }
-  .s03 .w1 { left: 306px; top: 395px; font-size: 349.7px; font-weight: 470; letter-spacing: -0.02em; font-variation-settings: "wdth" 77, "opsz" 8, "wght" 470; }
-  .s03 .w2 { left: 1046px; top: 342.5px; font-size: 411px; font-weight: 400; font-variation-settings: "wdth" 72.3, "opsz" 144, "wght" 400, "YTAS" 649, "YTLC" 540; }
-  .s03 .par { top: 436.8px; height: 252.4px; width: 40px; overflow: visible; }
-  .s03 .pl { left: 251.4px; } .s03 .pr { left: 999.5px; }
+  /* the giant word: one line of Inter Tight 600, the brackets are its own glyphs; bracket gaps set per side (em) */
+  .s03 .word { left: 229.5px; top: 396.3px; margin: 0; font-family: 'Inter Tight', sans-serif; font-weight: 600; font-size: 310px;
+               letter-spacing: -0.045em; color: #f9fe00; }
+  .s03 .word .bl { margin-right: 0.01em; }
+  .s03 .word .br { margin: 0; }
 
-  .s03 .mi { font-size: 30px; font-weight: 400; font-variation-settings: "wdth" 75, "wght" 400, "opsz" 30; }
+  .s03 .mi { font-family: 'Inter', sans-serif; font-size: 30px; font-weight: 400; }
   .s03 .row { top: 704.1px; }
-  .s03 .m1 { left: 252.2px; } .s03 .m2 { left: 490.1px; font-weight: 700; font-variation-settings: "wdth" 75, "wght" 700, "opsz" 30; }
-  .s03 .m3 { left: 856.4px; } .s03 .m4 { right: 250.6px; font-style: oblique 10deg; font-variation-settings: "wdth" 75, "wght" 400, "opsz" 30, "slnt" -10; }
+  .s03 .m1 { left: 252.2px; } .s03 .m2 { left: 490.1px; font-weight: 500; }
+  .s03 .m3 { left: 856.4px; } .s03 .m4 { right: 251.4px; }
 
   .s03 .col { top: 773.1px; width: 372px; margin: 0; font-family: 'Inter', sans-serif; font-weight: 400; font-size: 25px;
               line-height: 30px; text-align: justify; hyphens: manual; white-space: normal; text-box: trim-both cap alphabetic; }
@@ -183,82 +186,59 @@
   .s03 .c4 { right: 252.5px; }
 
 /* ── s04.html ── */
-/* s04 · LOOK & FEEL (Figma frame 4) — pin d42 «PD … PAOLA», reference = crops/d42-169.png (1095×616), k = 1.7534.
-     Geometry source Oblako deck-v2/s15, every value re-measured on the crop (2026-09-18):
-       field #a4a39b · ink #000 (big) / #050505 (quote)
-       card    paper x 304–555, y 226.6–606.0 crop → w 440.1, top 397.3, bottom 1062.6; paper #e4e2dc…#ebeae4, darker
-               left edge (paper curl), 1-px shadow line #898880 on the right and bottom edges
-       photo   x 321.65–538.4, y 271.65–542.6 → card-left + 31.0, top 476.3, 380.1 × 475.1
-       quote   6 justified bold caps lines, ink x 525–693, cap 8.6 (→ 15.1, font ≈ 21.2 px), pitch 11 (→ 19.3), first cap
-               top 196 (→ 343.7), last baseline 259.5 (→ 455.0 = photo top − 21.3); left edge = card right − 30 crop
-               (−52.6): the block hangs over the card's top-right corner. Two words in a light serif (EXPRESSION, UNIQUE).
-               Face ≈ Roboto Flex wdth 60–75 bold (Oblako's wdth 60 confirmed: «ENABLE EACH INDIVIDUAL TO» ≤ 294.6 px).
-       big     condensed grotesk, cap 455–609.5 (→ cap top 797.8, baseline 1069.6, cap 271); PD ink left 27 (→ 47.3),
-               PAOLA ink right 1070 (→ 1877.9). Stems 26–27 crop = 0.17 cap — Oblako's wght 800 was far too heavy
-               (0.24 cap); lab sweep on PAOLA: wdth 56 / wght 615 gives width 0.998 and stem 1.0 of the pin.
-       nav     JEWERLY (239) · STORES · tagline · SEARCH · CART (001) — UI debris, dropped (brief rule 4), zone ignored.
-     Content mapping (brief v2: 4 GIFs 2×2 in the card, giant word split round the card, ~560 chars in the caps block):
-       • Giant word «LOOK» … «& FEEL», not «LOOK &» … «FEEL»: at any size «LOOK &» is the long half (854 vs 462 px at the
-         pin's size) — the card would sit right of centre and leave no room for the quote. «LOOK» | «& FEEL» keeps the
-         pin's short-left / long-right rhythm. 10 glyphs vs PD+PAOLA's 7 do not fit round a 440-px card at the pin's size
-         (gaps would be 33 px), so the words are set at 0.88 (336 px, cap 239): baseline and outer ink edges are the
-         pin's, gaps 109/109 px; the card keeps its size, top and bottom and moves to x 689.5 (+156.5) between them.
-       • Quote = Victor's two paragraphs, word for word (578 chars), same caps + justified + 2 serif words
-         («ПАНИКУ», «ВДОХ» — the panic → breath arc). Legibility: 21.2 → 30 px. Anchored on the pin's bottom-left
-         relation (last baseline 455.0, left = card right − 52.6), grown up and right to the big word's right edge
-         (1878): 13 lines, pitch 32 (the pin's 0.91-em leading makes Cyrillic Й breves touch Д/Щ descenders; 1.07 em
-         clears them). Serif words in Roboto Serif 500 (Noto Serif Display's hairlines vanished at 640 px).
-       • Photo area → 4 cells 185.05 × 232.55, gutter 10 (the pin has one photo, no gutter), paper shows between.
-     Contrast (v2): #050505 on the field #a4a39b = 8.0 : 1, on the card paper ≈ 16 : 1.
-     Review 2026-09-19 (the review wins over the pin; zones waived with the reason):
-       • «увеличить гифки с плашкой»: the card and its 2×2 GIFs are scaled × 1.4 from the pin's card (440.1 × 665.3 →
-         616.1 × 931.4; photo offsets 31 / 79 → 43.4 / 110.6; photo area 532.1 × 665.1; cells 260 × 326.5, gutter 12):
-         cell area × 1.96. The card keeps the pin's bottom (1062.6) and still splits the giant word: «LOOK» | card |
-         «& FEEL». To make room the words step down 336 → 319 px (cap 227, 0.84 of the pin; outer ink edges 47.3 /
-         1877.9 and baseline 1069.6 stay the pin's), gaps 60 | 41 (the pin's card also leans towards the right word).
-       • The quote can no longer hang over the card's top-right corner (a card top at 131 leaves no room above it for
-         578 chars), so it moves to the corner's outside: first cap top = card top (131.2), left = card right + 40
-         (= «& FEEL»'s ink left, 1270), right ink edge 1878 as before; 30 px, 17 lines, ends ≈ 675 above «& FEEL».
-       • Field «как у EDIT»: the EDIT slide's grey (eyedropped on _review/edit-bg-ref.png: #323236 … #5d5f65 … #717376,
-         cool blue-grey) FAILS black type: black on #5a5c62 (its average) = 3.1 : 1, on #4a4e56 = 2.5 : 1, on its
-         lightest #717376 = 4.4 : 1. So the field is EDIT's lightest tone lifted just past AA: #75777b, black #000 on it
-         = 4.7 : 1 (quote and giant words), on the card paper ≈ 17 : 1. The true EDIT grey would need white type
-         (#f0f0f0 on #5a5c62 ≈ 5.9 : 1) — flagged to the user. Card shadow re-tinted for the darker field.
-     GIF crops (cover, cropdetect on each .mp4): f02-g2 960×540 clean · f04-g2 960×540 clean ·
-       f04-g3 960×540 pillarbox 94 px each side (symmetric) → --act-x 94 --act-w 772 · f04-g4 786×540 clean. */
-  .s04 { --cx: 613.3px; --cy: 131.2px; --cw: 616.1px; background: #75777b; color: #000; }
+/* s04 · LOOK & FEEL (Figma frame 4) — design variant «3D ring» after the user's reference _review/r3-3d-ring-ref.png
+     (Patta «Let's connect»): tiny caps kicker · big centred sentence-case heading · a strip of photos bent around a
+     cylinder, cut by the canvas edges · one element below. No danya pin → no geometry gate.
+     Reference measured (736 px wide, column scan of the strip): the photos sit on the OUTSIDE of a drum — the centre
+     panel is the nearest and tallest (216 px), heights fall to ≈ 0.82 at ±320 px and ≈ 0.64–0.74 at the edges; panel
+     widths 220 (centre) → 170–181 (±1) → cut slivers; gaps ≈ 13 px; the drum is tilted ≈ 3° (right end higher).
+     This file follows the reference: convex drum, centre farthest forward, ends recede.
+     Geometry (canvas px): perspective 1000 · drum radius 2400 · panel 740 × 460 (flat) · gap 16 ·
+     step 2·atan((w/2 + g/2)/R) = 17.90° · panels at ±0.5 and ±1.5 steps (4 GIFs, no repeats) ·
+     tilt -2.5° · ring centre line y 540. The drum is pushed back by R so the virtual front of the drum (the gap between the two inner panels) is at z = 0 and the ends recede.
+     Measured on the render: strip 472 px tall at the centre gap → 462 (x 800 / 1100) → 405 (x 1700) → 333 px at the canvas
+     edges = 0.71 × the centre (reference: 0.82 at ±320/736, 0.64–0.74 at its edges).
+     The ring carries data-sway (anim.js sways it ±3° around the drum axis; the ring's origin IS the axis).
+     GIF crops: f02-g2 960×540 clean · f04-g2 960×540 clean · f04-g3 960×540 pillarbox 94 px each side
+     (cropdetect 772:540:94:0) → --act-x 94 --act-w 772 · f04-g4 786×540 clean. */
+  .s04 { color: #fafafa;
+    background: linear-gradient(90deg, #3f424a 0%, #4a4e56 16%, #54575e 30%, #5d6066 52%, #2a2a2e 64%, #313134 73%, #4d4f55 86%, #54565c 100%); }
+  .s04::before { content: ""; position: absolute; inset: 0; pointer-events: none;
+    background: linear-gradient(90deg, #313136 0%, #36373b 20%, #45464b 32%, #5e5f65 44%, #6a6b72 52%, #5c5d63 62%, #3f4045 76%, #38393e 100%);
+    -webkit-mask-image: linear-gradient(180deg, #000 25%, transparent 75%); mask-image: linear-gradient(180deg, #000 25%, transparent 75%); }
   .s04 .cap { text-box: trim-both cap alphabetic; line-height: 1; white-space: nowrap; margin: 0; }
 
-  .s04 .card { left: var(--cx); top: var(--cy); width: var(--cw); height: 931.4px;
-               background: linear-gradient(90deg, #d6d3cc 0, #e2dfd8 7px, #e7e5df 17px, #eae8e2 60%, #e8e6e0);
-               box-shadow: 2.2px 2.2px 0 #5c5e62, 4px 4px 4px rgba(0,0,0,.14); }
+  /* kicker + heading, centred */
+  .s04 .kick { left: 0; width: 1920px; top: 56px; text-align: center;
+               font-family: 'Inter', sans-serif; font-weight: 500; font-size: 22px; letter-spacing: 0.14em; text-transform: uppercase; }
+  .s04 .ttl { left: 0; width: 1920px; top: 112px; text-align: center;
+              font-family: 'Inter Tight', sans-serif; font-weight: 600; font-size: 162px; letter-spacing: -0.035em; }
 
-  /* photo area = N cells (here 2×2); video sized so the ACTIVE picture covers the cell, placed by --pos-x/--pos-y */
-  .s04 .ph { --g: 12; --bw: calc((532.1 - var(--g)) / 2); --bh: calc((665.1 - var(--g)) / 2);
-             width: calc(var(--bw) * 1px); height: calc(var(--bh) * 1px); overflow: hidden; }
-  .s04 .p1, .s04 .p3 { left: calc(var(--cx) + 43.4px); }
-  .s04 .p2, .s04 .p4 { left: calc(var(--cx) + 43.4px + (var(--bw) + var(--g)) * 1px); }
-  .s04 .p1, .s04 .p2 { top: calc(var(--cy) + 110.6px); }
-  .s04 .p3, .s04 .p4 { top: calc(var(--cy) + 110.6px + (var(--bh) + var(--g)) * 1px); }
-  .s04 .ph video { --act-x: 0; --act-y: 0; --act-w: var(--src-w); --act-h: var(--src-h); --pos-x: .5; --pos-y: .5;
+  /* 3D ring: stage (perspective, zero-height line at the ring's centre) › drum (pushed back by R, tilted) ›
+     ring (data-sway; origin = drum axis) › panels (rotateY(i·step) translateZ(R)) */
+  .s04 .stage { left: 0; top: 540px; width: 1920px; height: 0; perspective: 1000px; perspective-origin: 960px 0; }
+  .s04 .drum, .s04 .ring { position: absolute; left: 0; top: 0; width: 0; height: 0; transform-style: preserve-3d; }
+  .s04 .drum { left: 960px; transform: translateZ(-2400px) rotateZ(-2.5deg); }
+  .s04 .pn { --bw: 740; --bh: 460; position: absolute; left: -370px; top: -230px; width: 740px; height: 460px;
+             overflow: hidden; backface-visibility: hidden; background: #1c1c1f;
+             transform: rotateY(calc(var(--i) * 17.901deg)) translateZ(2400px); }
+  /* video sized so the ACTIVE picture covers the panel (letterbox bars never show), placed by --pos-x/--pos-y */
+  .s04 .pn video { --act-x: 0; --act-y: 0; --act-w: var(--src-w); --act-h: var(--src-h); --pos-x: .5; --pos-y: .5;
     --k: max(var(--bw) / var(--act-w), var(--bh) / var(--act-h));
     position: absolute; display: block; max-width: none; object-fit: fill;
     width: calc(var(--src-w) * var(--k) * 1px); height: calc(var(--src-h) * var(--k) * 1px);
     left: calc((var(--bw) - var(--act-w) * var(--k)) * var(--pos-x) * 1px - var(--act-x) * var(--k) * 1px);
     top:  calc((var(--bh) - var(--act-h) * var(--k)) * var(--pos-y) * 1px - var(--act-y) * var(--k) * 1px); }
 
-  /* quote block (review 2026-09-19): top-left at the card's top-right corner, outside it — first cap top = card top,
-     left = card right + 40; grows down; ink right 1878 */
-  .s04 .q { left: calc(var(--cx) + var(--cw) + 40px); right: 42px; top: var(--cy); margin: 0;
-            font-family: 'Roboto Flex', sans-serif; font-size: 30px; line-height: 32px; font-variation-settings: 'wdth' 60, 'wght' 700, 'opsz' 30;
-            text-transform: uppercase; text-align: justify; hyphens: manual; text-box: trim-both cap alphabetic; }
-  .s04 .q p { margin: 0; }
-  .s04 .q .sf { font-family: 'Roboto Serif', serif; font-weight: 500; font-variation-settings: 'opsz' 30; }
-
-  .s04 .big { top: 842.8px; font-family: 'Roboto Flex', sans-serif; font-size: 319px; color: #000;
-              font-variation-settings: "wdth" 56, "wght" 615, "opsz" 144; }
-  .s04 .w1 { left: 38.1px; }
-  .s04 .w2 { right: 40.1px; }
+  /* full LOOK & FEEL text (578 chars, word for word): Inter 400 24/35, justified, soft hyphens (headless Edge has no Russian
+     dictionary). 3 × 530-px columns, gap 48, centred: column 1 = paragraph 1 (the thesis), columns 2–3 = paragraph 2
+     balanced; at this width the column break falls on the sentence break «…решений. | А в момент перехода…» (tense → calm),
+     5 lines each. Measured ink: first cap top 851, lowest descender 1013 → 66 px above the bottom (G2 ≥ 56). */
+  .s04 .txt { left: 117px; width: 1686px; top: 852px; margin: 0;
+              font-family: 'Inter', sans-serif; font-weight: 400; font-size: 24px; line-height: 35px; letter-spacing: -0.005em;
+              text-align: justify; hyphens: manual; display: grid; grid-template-columns: 530px 1108px; column-gap: 48px; align-items: start; }
+  .s04 .txt p { margin: 0; text-box: trim-both cap alphabetic; }
+  .s04 .txt .p2 { columns: 2; column-gap: 48px; column-fill: balance; }
 
 /* ── s05.html ── */
 /* s05 · HUMOR (Figma frame 6) — 1:1 on pin d19 (album page: header pairs · tracklist · label · two close-ups).
@@ -296,12 +276,20 @@
        LABEL block are filled by the left column (waived: content). Dropped (no content, no filler): NO column
        (numbers would be decorative), PRODUCER / LENGTH columns and column heads, GENRE / ALBUM / RELEASED labels.
        Column break: after «а также» in layer 2 — the fullest last line in the left column with 11 / 11 rows.
+     Review v4 (2026-09-19, G1 + G2 only, «no other change»):
+       G1 — the pin's one tight bold grotesk becomes the deck pair: HUMOR (the heading) in Inter Tight 600 −0.02 em,
+       every other row (lead sentence, the three layers, the closing sentence) in Inter 400, 0 tracking. Same 30 px caps,
+       same pitch 31, same colours (black leads / closing sentence, grey #6b6b6b rest = 4.8 : 1 on #f4f4f4). Inter 400 caps
+       still set the rows 8 | 8 with the same column break (after «а также», left last row 93 % full), so every
+       vertical anchor is unchanged: header cap tops 19 / 50, last text baseline 438, photos 461–1062.
+       G2 — lowest text ink is the rows' baseline 438 (642 px above the bottom); the photos are not text.
      GIFs (cropdetect: no bars in either loop): box --bw × --bh, cover scale by the active picture, --pos-x/--pos-y
        = object-position of the active picture. f06-g2 (960×540) pos-x .65: the face (x 440–720) and the hair stay in
        the box. f06-g1 (1280×720) centred: the hero at his desk under the strip lights, shelves on both sides. */
   .s05 { background: #f4f4f4; color: #030303; --pitch: 31px; }
-  .s05 .t { font-family: 'Inter Tight', sans-serif; font-weight: 640; font-size: 30px; line-height: var(--pitch);
-            letter-spacing: -0.04em; text-transform: uppercase; margin: 0; text-box: trim-both cap alphabetic; }
+  .s05 .t { font-family: 'Inter', sans-serif; font-weight: 400; font-size: 30px; line-height: var(--pitch);
+            letter-spacing: 0; text-transform: uppercase; margin: 0; text-box: trim-both cap alphabetic; }
+  .s05 .h { font-family: 'Inter Tight', sans-serif; font-weight: 600; letter-spacing: -0.02em; }
   .s05 .one { white-space: nowrap; }
 
   /* header (cap tops 19 / 19 + pitch) */
@@ -343,28 +331,35 @@
        VIEW        link caps, baseline 368 = card bottom − 8.45    → last baseline = card bottom − 23.2
        band        #7596d2 from y 390.2 to the bottom               → top 1071.8, canvas-wide
      Mapping (template for every section slide):
-       wordmark slot = Victor's heading: first word in the MIKOS slot (same cap, same extended heavy caps), the
-         bracketed qualifier «( OFFICE )» in the «9» slot, set after the word at the pin's word gap (48 px).
-         SETTING is 7 letters vs MIKOS 5, so the qualifier starts right of the pin's «9» (waived: content).
-         Headings without a qualifier (COLOR, EDIT, VO) leave the «9» slot empty.
-       card = all the frame's text, one paragraph style (the pin's title style: grotesk regular #1a1a1a, left, ragged).
-         REVIEW 2026-09-19 «плашку с текстом уменьшить» (smaller text, smaller card, closer to the pin): text size by
-         length (data-len): ≤ 250 chars «s» 28 px · 251–600 «m» 26 px · > 600 «l» 24 px (was 40 / 34 / 30; the pin's
-         own card type is ≈ 25 px at canvas scale — cap 6.5 pin px). The card grows from its bottom-left anchor, keeping the pin's padding (23.9 left / 25 above the first
-         cap / 23.2 below the last baseline) and the pin's proportion (799.6 × 237.7 ≈ 3.36 : 1): --card-w = the smallest
-         width (step 10) with width ≥ 3.3 × height and a last line ≥ 30 % of the longest (_qa/s06-fit.mjs); height =
-         content. Several paragraphs: .body + .body gap. The pin's VIEW link has no real content → dropped (no filler).
+       wordmark slot = Victor's heading: first word in the MIKOS slot (same cap top / cap height / ink left), the
+         bracketed qualifier «( OFFICE )» after it at the pin's word gap (48 px). Headings without a qualifier (COLOR,
+         EDIT, VO) leave the «9» slot empty.
+       card = all the frame's text, one paragraph style, grown from the pin card's bottom-left anchor with the pin's
+         padding (23.9 left / 25 above the first cap / 23.2 below the last baseline). The pin's VIEW link has no real
+         content → dropped (no filler). Several paragraphs: .body + .body gap.
        GIF: full-bleed; the letterbox (if any) is cropped by --act-* (active picture in source px) and framed by
          --pos-x / --pos-y (0…1, object-position of the active picture). No grade, no tint.
+     REVIEW2 2026-09-19 («давай еще меньшу плашку и текст + сделаем текст прописными и выравнивание по квадрату») + G1/G2:
+       • G1 — heading SETTING ( OFFICE ) in Inter Tight 600, −0.02 em, 36.4 px = the pin's cap 26.6 (was Roboto Flex
+         extended 900). It is narrower than the pin's extended MIKOS, so «( OFFICE )» (at the 48-px gap) now starts at
+         354, left of the pin's «9» slot (382.9) — waived.
+       • Card text: Inter 400 CAPS, justified, soft hyphens (headless Edge has no Russian hyphenation dictionary),
+         hyphenated compounds kept whole (.nw). Size tiers by length (data-len): ≤ 250 chars «s» 22 px · 251–600 «m»
+         21 px · > 600 «l» 20 px (was 28 / 26 / 24; nothing under 20). Pitch 1.25 em (clears Й breves, Д/Щ feet).
+       • «по квадрату»: --card-w is picked so the justified block ends on a nearly full last line; when that line is
+         ≥ 90 % full the last line is justified too (data-last="justify") and the text is a clean rectangle.
+         s06: 562 chars → tier m, 21 px; width 890 → 9 lines, last line 93 % full; card 890 × 273.5 (was 990 × 294,
+         area −16 %; 3.25 : 1, the pin card is 3.36 : 1). A 10-line / 815-px card also fits but breaks «каким-/либо»
+         and leaves looser lines. Generator: scan widths 800–960 px, keep 9–10 lines, last line ≥ 0.9, worst extra
+         word space ≤ 6 px; if nothing reaches 0.9 drop data-last and keep the last line ragged.
+       • G2 — lowest text ink 1013 (card text, 67 px above the bottom); the card keeps the pin's bottom (1034).
      This slide: f68-g1 (960×540, no letterbox — cropdetect on the loop: 960:540:0:0; the poster's dark bottom is
-       content). 16:9 → full-bleed at exactly 2×, nothing to re-frame; the card (bottom 27 %, x 131–1121) covers desks and
-       keyboards, the office itself — ceiling, windows, glass walls, the people's heads and the heroine walking —
-       stays in the free upper part.
-       Contrast (poster, white #fafafa): SETTING on the dark left wall ≥ 8.8 : 1; «( OFFICE )» on the grey ceiling
-       ≈ 3.2 : 1 median (3.9 behind «( OF», 3.0 behind «FICE )») — heavy 37-px caps = large text (AA ≥ 3 : 1); black
-       would sink SETTING (1.4–1.8 : 1). The pin itself is white on #acadaf ≈ 2.2 : 1. The GIF is 16:9 and the dark wall
-       ends at x ≈ 390, so no crop can put the qualifier on dark footage without a > 1.7× blow-up. Only the poster
-       (shot 1 of the 3-shot loop) is this light: shots 2–3 give «( OFFICE )» 6.5–7.5 : 1. */
+       content). 16:9 → full-bleed at exactly 2×, nothing to re-frame; the card (x 131–1021, y 760–1034) covers desks and
+       keyboards; the ceiling, windows, glass walls, the people's heads and the heroine walking stay free.
+       Contrast (text-less render of the poster, white #fafafa): SETTING on the dark left wall 8.2–15 : 1; «( OFFICE )»
+       median 3.95 : 1 (7.8 darkest, 2.2 on a ceiling light behind «FICE») — 36-px semibold caps = large text (AA ≥ 3 : 1);
+       black would sink SETTING (1.4–1.8 : 1). The pin itself is white on #acadaf ≈ 2.2 : 1. Only the poster (shot 1 of
+       the 3-shot loop) is this light: shots 2–3 are darker behind the qualifier. Card text #1a1a1a on #eeeeee 15 : 1. */
   .sec { background: #1c1c1c; color: #fafafa; }
   .sec .cap { text-box: trim-both cap alphabetic; line-height: 1; white-space: nowrap; margin: 0; }
 
@@ -379,75 +374,80 @@
 
   /* wordmark = heading */
   .sec .mark { left: 132.9px; top: 32.4px; width: 27.5px; height: 25.8px; border-radius: 4px; background: #fafafa; }
-  .sec .head { left: 164.8px; top: 31px; font-family: 'Roboto Flex', sans-serif; font-size: 37.4px; font-weight: 900;
-               color: #fafafa; text-transform: uppercase; letter-spacing: .01em;
-               font-variation-settings: "wdth" 151, "wght" 900, "opsz" 37; }
-  .sec .head .q { margin-left: 30px; }
+  .sec .head { left: 164.8px; top: 31px; font-family: 'Inter Tight', sans-serif; font-size: 36.4px; font-weight: 600;
+               color: #fafafa; text-transform: uppercase; letter-spacing: -0.02em; }
+  .sec .head .q { margin-left: 36.7px; }   /* ink gap SETTING → «(» = 48, the pin's MIKOS → «9» gap */
+  .sec .nw { white-space: nowrap; }   /* hyphenated compounds never break at their hyphen */
 
   /* card: bottom-left anchor of the pin, grows up and right with the text */
   .sec .card { left: 131.3px; bottom: 46px; width: var(--card-w); padding: 25px 24px 23.2px 23.9px; background: #eeeeee; }
-  .sec .body { margin: 0; font-family: 'Roboto Flex', sans-serif; font-size: var(--fs); line-height: var(--lh);
-               font-weight: 420; color: #1a1a1a; font-variation-settings: "wdth" 110, "wght" 420, "opsz" var(--opsz);
-               text-box: trim-both cap alphabetic; }
-  /* several paragraphs (e.g. VO): baseline-to-baseline gap = 1.5 lines (cap = .711 em in Roboto Flex) */
-  .sec .body + .body { margin-top: calc(var(--fs) * (var(--lh) * 1.5 - .711)); }
-  .sec[data-len="s"] { --fs: 28px; --lh: 1.25; --opsz: 28; }   /* ≤ 250 chars */
-  .sec[data-len="m"] { --fs: 26px; --lh: 1.25; --opsz: 26; }   /* 251–600 chars */
-  .sec[data-len="l"] { --fs: 24px; --lh: 1.25; --opsz: 24; }   /* > 600 chars */
-  .s06 { --card-w: 990px; }   /* _qa/s06-fit.mjs: 562 chars → tier m (26 px), 990 × 294, 8 lines (3.37 : 1; the pin card is 3.36 : 1) */
+  .sec .body { margin: 0; font-family: 'Inter', sans-serif; font-size: var(--fs); line-height: var(--lh); font-weight: 400;
+               color: #1a1a1a; text-transform: uppercase; text-align: justify; hyphens: manual; text-box: trim-both cap alphabetic; }
+  /* several paragraphs (e.g. VO): baseline-to-baseline gap = 1.5 lines (cap = .727 em in Inter) */
+  .sec .body + .body { margin-top: calc(var(--fs) * (var(--lh) * 1.5 - .727)); }
+  /* «по квадрату»: the last line is justified too, only when the fit leaves it ≥ 90 % full (data-last="justify") */
+  .sec[data-last="justify"] .body:last-child { text-align-last: justify; }
+  .sec[data-len="s"] { --fs: 22px; --lh: 1.25; }   /* ≤ 250 chars */
+  .sec[data-len="m"] { --fs: 21px; --lh: 1.25; }   /* 251–600 chars */
+  .sec[data-len="l"] { --fs: 20px; --lh: 1.25; }   /* > 600 chars (never below 20 px) */
+  .s06 { --card-w: 890px; }   /* 562 chars → tier m (21 px caps): 890 × 273.5, 9 lines, last line 93 % full → data-last="justify" (3.25 : 1; the pin card is 3.36 : 1) */
 
 /* ── s07.html ── */
-/* s07 · SETTING ( PRODUCTION FACTORY ) — Figma frame 71 — 1:1 on pin d39 «SATELLITE» (a band-shaped photo at eye
-     level, a giant grotesk word under it filling the band's width, a centred two-line blurb, a nav row, a mark).
-     Reference = /boards/golomazova-danya/design-refs/crops/d39-169.png (1138×640), k = 1920 / 1138 = 1.68717.
-     Re-measured on the pin 2026-09-18 (antialiased edge fractions; Oblako deck-v2/s04 had the word 1 px low, its cap 1.7 px short):
-       field #efeee9 · ink #1b1b1b (eyedropped)
-       mark     7-arm asterisk x 93–151, y 22–92, centre 120.3,63.5, arms 5.8 wide, hub ⌀ 16 → drawn from the pin: 7 butt-ended strokes
-                from the centre to the measured tips (SVG units = pin px); the ® is a trademark sign, dropped
-       nav      caps, cap 30–35, ink x 699–955.5       → cap top 50.6, ink left 1179.3, right 1612
-       button   #1b1b1b x 979–1039, y 22–44            → 1651.7–1753 × 37.1–74.2
-       blurb    2 centred lines, centre x 568.5, baselines 136 / 147 (pitch 11) → centre 959.2, last baseline 248.0
-       band     x 97.8–1040.15, y 164.8–464.3          → left 165.0, top 278.0, 1590 × 505.3
-       word     SATELLITE flat cap 481.4–618.45 (137.05 → 231.2), ink x 98–1038.3, stems 30 (→ 50.6)
-                → cap top 812.2, baseline 1043.4, ink 165.3–1751.8; Roboto Flex 325.2 px (cap .711 em), wght 645
-                (F / T stems 49 px on the render), wdth 132 so FACTORY spans SATELLITE's ink (7 letters vs 9, tracking 0).
-     The heading run is 30 px Inter 560 caps; the blurb is 34 px Inter 500, 3 lines of ≤ 63 chars (--bw 1240 + balance).
-     Mapping (Figma frame 71 → pin):
-       giant word   = «FACTORY» (the brief's word; the pin's SATELLITE slot, same cap, both ink edges)
-       nav row      = Victor's heading «SETTING ( PRODUCTION FACTORY )», one caps run from the pin's first nav item
-                      (ink left 1179.3, cap top 50.6); 30 px (user rule: legibility; pin cap 8.4 px). At 30 px the run
-                      needs the row's full extent, so the JOIN button (UI, no content in this frame) is dropped — waived.
-       blurb        = the frame's whole paragraph (183 chars), 34 px, centred on the pin's centre x; the last baseline
-                      stays on the pin's (248.0) and the block grows up (3 lines instead of 2; waived: legibility).
-       band         = the frame's only GIF f71-g1 (1280×720, letterbox 120 px top and bottom — cropdetect on the .mp4
-                      gives 1280:480:0:120 on all 60 frames, symmetric → active 1280×480 at 0,120). The active picture
-                      covers the band (×1.2422, 90.9 px of height to lose); --pos-y .6 keeps the aisle's vanishing
-                      point in the upper third and the floor with the two conveyor lines down to the workers.
-     Nothing sits on the footage (no contrast issue); the GIF is not graded. */
-  .s07 { background: #efeee9; color: #1b1b1b; }
+/* s07-d51 · SETTING ( PRODUCTION FACTORY ) — Figma frame 71 — brief v5 variant B, 1:1 on pin d51 «ME´NU» (a site nav over a
+     full-bleed photo: scattered logo letters with a diagonal stroke, a thin grid, a pink micro, a four-item nav row).
+     Reference = /boards/golomazova-danya/design-refs/crops/d51-169.png (683×384, x 0–31 smear pad), k = 1920 / 683 = 2.8111.
+     Geometry source Oblako deck-v2/s16 (+ _qa/s16.json), re-verified on the crop 2026-09-19 (crop px → canvas px):
+       logo  white geometric caps, cap 33 → 92.8; M x 84–114 y 31–63 · E x 128–149 y 16–48 · ´ x 164–181 y 24–39 · N x 186–212
+             y 40–73 · U x 225–252 y 19–51; ink gaps ≈ 14 → 39
+       grid  H y 98.3 full width · V x 168.6 from the H line down · V x 305.5 and 524.7 full height · faint H y 67.5 / 139.5
+             → canvas H 275.3 · V 473 · 857.8 · 1474 (2 px, white 50 %) · faint 188.7 / 391.2 (12 %)
+       micro pink letter-spaced caps x 368–458 y 45–48 (centred in col 3) · nav: 4 items, each a left-aligned block CENTRED in
+             its grid column (about/día centre 99, shop 236.5, blog+/every day look 415 = the column centres), line-1 x-top 337
+             · squiggle under the last line of col 3 (lavender) · col 4 line 2 pink, runs off the right edge
+     Mapping (brief v5 + G1 fonts + G2 bottom clearance; deck yellow replaces the pink/lavender):
+       logo   = F A C ´ T O R Y, Inter Tight 600 127.6 px (cap 92.8 = the pin cap), white #f6f7f2, the pin's letter heights
+                reused (low 87 · high 45 · lower 112.4 · high 53.4 canvas cap tops), ink gaps 39; F ink left 236 = M; the stroke
+                sits between FAC and TORY exactly as the pin's ´ sits before N (same size, angle, gap). 7 letters span 236–1085,
+                so the V line at 857.8 starts at the H line — the pin's own rule (its V 168.6 stops where the logo is).
+       micro  = the heading «SETTING / ( PRODUCTION FACTORY )», Inter Tight 600 30 px yellow, two lines in col 4 (x 1519–1877),
+                centred on the pin micro's y 131 (the long logotype takes cols 1–3 of the top band).
+       nav    = the frame text, Inter 400 30 / 38 px white, word for word, four real phrases, blocks centred in their columns:
+                col 1 «VFX-фон: цех конвейерной сборки.» · col 2 «Например, автомобильной.» · col 3 «Широкий проход … два
+                конвейера,» (yellow squiggle under its last line) · col 4 «которые передают части / и собирают автомобиль.»
+                (line 2 yellow = the pin's pink line; block moved in to x 1519 so nothing runs off the canvas).
+                Cap top 916 (the pin's 947 raised for 3-line col 3); lowest text ink 1017 (63 px above the bottom).
+     Photo = f71-g1 (1280×720, letterbox 120/120 — cropdetect 1280:480:0:120 on all 60 frames). The active 1280×480 picture
+     covers the canvas (× 2.25, 960 canvas px of width to lose); --pos-x .875 keeps source x 373–1227: the aisle vanishing
+     into the haze left of centre, the man with the tyre cart in col 2, the blue CS-521 machines right. Chosen by contrast:
+     at .5 the red tool chests' white drawer stripes sit under col 1. Not graded, not blurred, no scrim.
+     Contrast on the poster (median / 90th percentile of the background under each block, vs white): col 1 6.9 / 4.4,
+     col 2 16.7 / 4.5, col 3 16.1 / 6.2, col 4 10.9 / 5.7, yellow col-4 line ≈ 16, micro (yellow) 8.9 / 4.8, logo 4.4 / 2.5
+     (big type, ≥ 3 : 1). Over the whole loop the body medians stay ≥ 4.0 (col 2 on the first 10 frames), mostly ≥ 5.6. */
+  .s07 { background: #0b100d; color: #f6f7f2; }
   .s07 .cap { text-box: trim-both cap alphabetic; line-height: 1; white-space: nowrap; margin: 0; }
-  .s07 .mark { left: 143.4px; top: 27px; width: 135px; height: 135px; overflow: visible; }
 
-  /* heading = the pin's nav row */
-  .s07 .head { left: 1177.6px; top: 50.6px; font-family: 'Inter', sans-serif; font-weight: 560; font-size: 30px;
-               letter-spacing: .01em; text-transform: uppercase; }
-
-  /* blurb: centred on the pin's centre x, last baseline on the pin's, grows up */
-  .s07 .blurb { left: calc(959.2px - var(--bw) / 2); width: var(--bw); bottom: 832px; margin: 0; text-align: center;
-                font-family: 'Inter', sans-serif; font-weight: 500; font-size: 34px; line-height: 44px; letter-spacing: -.005em;
-                text-wrap: balance; text-box: trim-both cap alphabetic; }
-
-  /* band: the GIF's ACTIVE picture (--act-*, source px) covers the box; --pos-x/--pos-y place it (object-position) */
-  .s07 .band { left: 165px; top: 278px; width: 1590px; height: 505.3px; overflow: hidden; }
-  .s07 .band video { --bw: 1590; --bh: 505.3; --k: max(var(--bw) / var(--act-w), var(--bh) / var(--act-h));
+  /* photo: the GIF's ACTIVE picture (--act-*, source px) covers the canvas; --pos-x/--pos-y place it */
+  .s07 .ph { left: 0; top: 0; width: 1920px; height: 1080px; overflow: hidden; }
+  .s07 .ph video { --bw: 1920; --bh: 1080; --k: max(var(--bw) / var(--act-w), var(--bh) / var(--act-h));
     position: absolute; display: block; object-fit: cover;
     width: calc(var(--src-w) * var(--k) * 1px); height: calc(var(--src-h) * var(--k) * 1px);
     left: calc((var(--bw) - var(--act-w) * var(--k)) * var(--pos-x) * 1px - var(--act-x) * var(--k) * 1px);
     top:  calc((var(--bh) - var(--act-h) * var(--k)) * var(--pos-y) * 1px - var(--act-y) * var(--k) * 1px); }
 
-  .s07 .word { left: 140.3px; top: 812.2px; font-family: 'Roboto Flex', sans-serif; font-size: 325.2px; font-weight: 645;
-               letter-spacing: 0; font-variation-settings: "wdth" 132, "wght" 645, "opsz" 144; }
-  .s07 { font-optical-sizing: none; }   /* unify-fonts: Inter was designed without the opsz axis */
+  .s07 .grid { left: 0; top: 0; width: 1920px; height: 1080px; overflow: visible; pointer-events: none; }
+
+  /* logotype F A C ´ T O R Y — zero-width anchors, each glyph centred on its ink centre (flex, no transform) */
+  .s07 .lg { width: 0; display: flex; justify-content: center; margin: 0;
+             font-family: 'Inter Tight', sans-serif; font-weight: 600; font-size: 127.6px; color: #f6f7f2; }
+  .s07 .lg span { display: block; text-box: trim-both cap alphabetic; line-height: 1; white-space: nowrap; }
+
+  /* the pin's pink micro → the frame heading, yellow */
+  .s07 .mi { font-family: 'Inter Tight', sans-serif; font-weight: 600; font-size: 30px; letter-spacing: 0; color: #f9fe00; }
+
+  /* nav row → the frame text, Inter 400 30 / 38, lines left-aligned, blocks centred in their grid column */
+  .s07 .nav { margin: 0; font-family: 'Inter', sans-serif; font-weight: 400; font-size: 30px; line-height: 38px;
+              color: #f6f7f2; white-space: nowrap; text-box: trim-both cap alphabetic; }
+  .s07 .nav .y { color: #f9fe00; }
 
 /* ── s08.html ── */
 /* s08 · CAST (Figma frame 72) — pin d21 SIGNATURE, reference = crops/d21-169.png (832×468), k = 1920 / 832 = 2.30769.
@@ -485,6 +485,9 @@
          The block keeps the pin's bottom anchor (last baseline 983) and grows up.
        • subtitle «( НИКАКИХ / ЗАЕЗЖЕННЫХ ЛИЦ )»: same Inter Regular caps as the columns (one text face on the slide,
          as the pin's byline and columns share one), 30 px (label ≥ 30), under CAST.
+     Review 2 2026-09-19 (brief v4): G1 — CAST in Inter Tight 600, 191 px, −0.03 em (cap 138.5 and cap top 87.7 = the
+       pin's, ink 1038–1506, left ink on the column's 1038); the condensed Roboto Flex is gone. Subtitle and columns were
+       already Inter 400. G2 — lowest text ink 981 (the left column's last line) = 99 px above the bottom; nothing moved.
      Contrast: #070205 on #f9fe00 = 18.8 : 1 (title, subtitle, columns). */
   .s08 { --L: 1037px; --cw: 391px; --cg: 60px; --fs: 25px; --lh: 31px; background: #f9fe00; color: #070205; }
   .s08 .cap { text-box: trim-both cap alphabetic; line-height: 1; white-space: nowrap; margin: 0; }
@@ -503,8 +506,8 @@
     top:  calc((var(--bh) - var(--act-h) * var(--k)) * var(--pos-y) * 1px - var(--act-y) * var(--k) * 1px); }
 
   /* left edge shared by CAST, the subtitle and the left column (ink; each element's side bearing compensated) */
-  .s08 .ttl { left: calc(var(--L) - 4.5px); top: 87.7px; font-family: 'Roboto Flex', sans-serif; font-size: 194.8px;
-              text-transform: uppercase; font-variation-settings: "wdth" 42, "wght" 640, "opsz" 144; }
+  .s08 .ttl { left: calc(var(--L) - 5.7px); top: 87.7px; font-family: 'Inter Tight', sans-serif; font-weight: 600; font-size: 191px;
+              letter-spacing: -0.03em; text-transform: uppercase; }
   .s08 .sans { font-family: 'Inter', sans-serif; font-weight: 400; text-transform: uppercase; }
   .s08 .by { left: calc(var(--L) - 2px); top: 290px; font-size: 30px; line-height: 38px; letter-spacing: 0;
              text-box: trim-both cap alphabetic; white-space: nowrap; margin: 0; }
@@ -562,28 +565,43 @@
                                                                          to the desk with a sheaf of papers, face in the cell
        f77-g4 540×540 no bars                               pos .50   open office from above, a colleague lying on the floor
      Nothing graded or tinted; no type on footage. */
+  /* Review 2 2026-09-19 (brief v4) — supersedes the giant-word and type parts above:
+       «давай лайт сделаем желтым + текст снизу и лайт поднимем повыше» + G1 / G2.
+       giant word  yellow #f9fe00, Inter Tight 600, −0.045 em, 444.2 px (cap 321.5): the largest size at which LIG fits
+                   between the 40-px margin and the photo (Inter Tight has no width axis; at the pin's cap 515 LIG would be
+                   935 px). LIG ink 40–616 (touches the photo's left edge like the pin's L foot), HT 1305–1841 (touches its
+                   right edge; the right margin is 79 because HT is narrower at the same size). Nothing runs off the canvas
+                   (G2). Raised: cap top 300, baseline 622 (was 283.5 / 798.5) — centre 461, 80 px above the photo's centre.
+                   Yellow on white is 1.07 : 1 by luminance: the word reads by hue, as the reviewer asked.
+       micro rows  Inter 400 caps 24 px (G1; was IBM Plex Mono 500). Header items 2–3 keep the pin's lefts (644.1 / 1017.2);
+                   item 1 moves to x 159 and item 4's right edge to 1742 to line up with the footer blocks.
+       footer      two justified caps blocks, last baseline on the photo's bottom edge 980.6 (lowest ink 980 = 100 px above
+                   the bottom, G2; was 1058.7). Widths fitted for Inter caps: left 431 px (x 159–590, 4 lines, no hyphen),
+                   right 414 px (x 1331–1745, 4 lines, 1 hyphen), 26–27 px clear of the photo.
+       Template: LIG | HT size = min over halves of (space between margin and photo) / ink width in em; footer blocks
+       ≤ ~4 × 410 px of caps at 24 px (≈ 105 characters) — scan widths 404–432 for the fewest hyphens / smallest slack. */
   .s09 { background: #ffffff; color: #111111; }
   .s09 .cap { text-box: trim-both cap alphabetic; line-height: 1; white-space: nowrap; margin: 0; }
 
   /* giant split word: halves tuck under the photo (photo is later in the DOM) */
-  .s09 .big { top: 283.5px; font-family: 'Roboto Flex', sans-serif; font-size: 724.6px; color: #000; }
-  .s09 .b1 { right: 1283px; font-variation-settings: "wdth" 38, "wght" 745, "opsz" 144; }
-  .s09 .b2 { left: 1283px;  font-variation-settings: "wdth" 58, "wght" 722, "opsz" 144; }
+  .s09 .big { top: 300px; font-family: 'Inter Tight', sans-serif; font-weight: 600; font-size: 444.2px; letter-spacing: -0.045em; color: #f9fe00; }
+  .s09 .b1 { left: 16.2px; }
+  .s09 .b2 { left: 1281.2px; }
 
   /* micro rows: deck mono, grown to 24 px (both rows one size, as in the pin) */
-  .s09 .mono { font-family: 'IBM Plex Mono', monospace; font-weight: 500; font-size: 24px; text-transform: uppercase; color: #111111; }
+  .s09 .mono { font-family: 'Inter', sans-serif; font-weight: 400; font-size: 24px; text-transform: uppercase; color: #111111; }
   .s09 .hdr { left: 0; top: 0; width: 1920px; height: 60px; margin: 0; }
   .s09 .h { top: 18.9px; }
-  .s09 .h1 { left: 196.5px; } .s09 .h2 { left: 644.1px; } .s09 .h3 { left: 1017.2px; } .s09 .h4 { right: 253px; }
+  .s09 .h1 { left: 157px; } .s09 .h2 { left: 644.1px; } .s09 .h3 { left: 1017.2px; } .s09 .h4 { right: 175px; }
   /* footer items: last baseline on the pin's footer row (1058.7), grow up; justified, hyphens baked in */
-  .s09 .blk { bottom: 21.3px; width: 390px; margin: 0; line-height: 32px; text-align: justify; hyphens: manual;
+  .s09 .blk { bottom: 99.4px; width: 414px; margin: 0; line-height: 32px; text-align: justify; hyphens: manual;
               text-box: trim-both cap alphabetic; white-space: normal; }
-  .s09 .f1 { left: 194px; text-align-last: left; }
-  .s09 .f2 { right: 190px; text-align-last: right; }
+  .s09 .f1 { left: 157px; width: 431px; text-align-last: left; }
+  .s09 .f2 { right: 175px; text-align-last: right; }
 
   /* photo box = the pin's (617, 102.6, 687.5 × 878) split 2×2, gutter 12; the video is sized so its ACTIVE picture
      covers the cell and placed by --pos-x / --pos-y */
-  .s09 .phbox { left: 617px; top: 102.6px; width: 687.5px; height: 878px; background: #ffffff; }  /* hides the tucked letters behind the gutter */
+  .s09 .phbox { left: 617px; top: 102.6px; width: 687.5px; height: 878px; background: #ffffff; }  /* white under the 12-px gutter */
   .s09 .ph { --bw: 337.75; --bh: 433; width: calc(var(--bw) * 1px); height: calc(var(--bh) * 1px); overflow: hidden; background: #000; }
   .s09 .p1 { left: 617px; top: 102.6px; } .s09 .p2 { left: 966.75px; top: 102.6px; }
   .s09 .p3 { left: 617px; top: 547.6px; } .s09 .p4 { left: 966.75px; top: 547.6px; }
@@ -627,6 +645,13 @@
      GIF f78-g1 (960×540, 16:9, no bars — cropdetect 960:540:0:0; two shots, the poster is the brighter first one):
        full-bleed, --zoom 1.04 + --pos-y 1 (picture up 43 px, 4 % upscale). Ungraded, no scrim.
        Contrast: see _qa/s10.json → contrast. The pin's red is the portrait's own wall → no red field here. */
+  /* Review 2 2026-09-19 (brief v4) — supersedes item 1 of the v3 review above:
+       «колор вернула бы в прежние размеры и оставила бы желтый»: the corner letters are back at the v2 sizes (the pin's:
+       C / O / OR ink 146 tall like T / 2 / 7, the L = the pin's small mark, 89 tall), kept yellow #f9fe00, in Inter Tight 600
+       (G1, the deck heading face; the Roboto Flex 900 wide cut is gone). G2: the bottom letters rise to ink 1020 (60 px above
+       the edge; the pin's 7 sat on 1059). All four sit on a 40-px frame (deck side margin; top 40 to match): C ink 40–165 ×
+       40–186 · O 1749–1880 × 40–187 · L 40–94 × 932–1020 · OR 1631–1880 × 875–1020. The short line moves with the corner
+       column to x 40. The paragraph column (v3 item 2) is unchanged. */
   .s10 { background: #14181a; color: #ffffff; }
   .s10 .cap { text-box: trim-both cap alphabetic; line-height: 1; white-space: nowrap; margin: 0; }
 
@@ -636,16 +661,17 @@
     left: calc(var(--act-x) * var(--k) * -1px + (1920px - var(--act-w) * var(--k) * 1px) * var(--pos-x));
     top:  calc(var(--act-y) * var(--k) * -1px + (1080px - var(--act-h) * var(--k) * 1px) * var(--pos-y)); }
 
-  .s10 .idx { font-family: 'Roboto Flex', sans-serif; font-weight: 900; font-size: 285px; color: #f9fe00;
-              font-variation-settings: "wdth" 151, "wght" 900, "opsz" 144; }
-  .s10 .i1 { left: 20px; top: 26px; }
-  .s10 .i2 { right: 23px; top: 26px; }
-  .s10 .i4 { left: 3px; bottom: 20px; }
-  .s10 .i3 { right: 24px; bottom: 24px; }
+  /* corner letters: Inter Tight 600, yellow, the v2 sizes (the pin's: cap ≈ 146 for C · O · OR, L = the small mark);
+     top = cap top (.cap trims to cap / baseline), lefts / rights re-fitted to the ink */
+  .s10 .idx { font-family: 'Inter Tight', sans-serif; font-weight: 600; color: #f9fe00; }
+  .s10 .i1 { left: 33px; top: 41.4px; font-size: 197.3px; }
+  .s10 .i2 { right: 32px; top: 42.4px; font-size: 197.8px; }
+  .s10 .i3 { right: 40px; top: 877px; font-size: 195.3px; letter-spacing: -0.02em; }
+  .s10 .i4 { left: 33px; top: 932px; font-size: 122.4px; }
 
   .s10 .mic { font-family: 'Inter', sans-serif; font-weight: 400; font-size: 26px; line-height: 30px; margin: 0;
               text-transform: uppercase; text-box: trim-both cap alphabetic; hyphens: manual; }
-  .s10 .g1 { left: 24px; bottom: 580px; width: 330px; text-align: left; }
+  .s10 .g1 { left: 39px; bottom: 580px; width: 330px; text-align: left; }
   .s10 .g2 { left: 1286px; bottom: 580px; width: 480px; text-align: justify; }
 
 /* ── s11.html ── */
@@ -696,6 +722,10 @@
      --pos-y .5 shows source rows 69–471). No blur, no darkening, no tint. It is also Victor's own layout: in Figma
      frame 80 this GIF is the 1920 × 1080 frame background. The middle card keeps the same GIF (two <video>s, same
      source; deck.js starts both when the slide enters the viewport). #1b1b1d under it only until the poster paints. */
+  /* Review 2 2026-09-19 (brief v4): G1 — the stepped caps on the light card are the heading block → Inter Tight 600,
+     63.7 px, −0.02 em, cap 46.2 (was Inter 400 61.4 px, cap 44.8): АМЕРИКАНСКИЕ = 499 px ink, the card's 500-px measure.
+     Cap tops, ink lefts and the bottom pair's right edge stay on the pin's (lefts re-fitted for Inter Tight's side
+     bearings). The grey-card wall stays Inter 400. G2 — lowest text ink 901, 179 px above the bottom; nothing moved. */
   .s11 { color: #000; background: #1b1b1d; }
   .s11 .cap { text-box: trim-both cap alphabetic; line-height: 1; white-space: nowrap; margin: 0; }
 
@@ -716,7 +746,7 @@
     top:  calc((var(--bh) - var(--act-h) * var(--k)) * var(--pos-y) * 1px - var(--act-y) * var(--k) * 1px); }
 
   /* left card: big caps stack (pin cap 55.2 → 44.8, see above); top = cap top, left = ink left − side bearing */
-  .s11 .big { font-family: 'Inter', sans-serif; font-weight: 400; font-size: 61.4px; letter-spacing: -0.02em;
+  .s11 .big { font-family: 'Inter Tight', sans-serif; font-weight: 600; font-size: 63.7px; letter-spacing: -0.02em;
               text-transform: uppercase; color: #000; }
   .s11 .rt { text-align: right; }
   .s11 .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
@@ -747,17 +777,24 @@
                     (k = 1010.2 / 540 = 1.8707, window 512 source px wide) and centred on his face (pos-x .54).
        labels     → «ГОЛОС» · «ПЕРВАЯ ЧАСТЬ» · «ВТОРАЯ ЧАСТЬ» (Victor's words for the three paragraphs), caps like
                     RE-THINK / RE-ACT / RE-UNITE, 30 px (labels ≥ 30), each on its paragraph's first cap line.
-       paragraphs → the three VO paragraphs word for word, Inter Tight 400 24 / 28 px (the pin's 1.16 leading), flush left
+       paragraphs → the three VO paragraphs word for word, Inter 400 24 / 28 px (the pin's 1.16 leading), flush left
                     and ragged as the pin sets them (brief: «justified or as the pin sets it»), baked soft hyphens.
        giant      → «VO» in the RE slot: same left edge (the paragraph column), cap 195.6, stems ≈ RE's.
        nav/footer → dropped: page UI, no content in the frame for them (no filler).
      The text is 692 characters where the pin's is ≈ 700 at 15 px; at 24 px it needs ~2.5× the pin's area:
        paragraph column widened to the right (1364.3 → 1880, the 40-px edge line of brief v3); paragraphs flow one
        blank line apart instead of sitting on the pin's fixed 199 / 364 / 521 rows, and start at 170 (pin 199.1); VO keeps its left edge and cap but
-       sits on the photo's bottom line (baseline 1044.0) instead of 911.5, so the text has room above it.            */
+       sits on the photo's bottom line (baseline 1044.0) instead of 911.5, so the text has room above it.
+     REVIEW 2 2026-09-19 (brief v4, wins over the pin and v3):
+       G1 → giant «VO» in Inter Tight 600 (was 450), −0.03 em, cap 195.6 kept (269 px); labels and paragraphs in Inter 400
+            (was Inter Tight 400), opsz 14 = the deck's Inter; labels 30 px, body 24 / 28 px, ink-lefts 974.7 / 1364.3 kept.
+       G2 → VO's lowest ink (O overshoot) at y 1021 = 58 px above the bottom (baseline 1019; v3 1044 on the photo's bottom
+            line). The photo box stays on the pin (33.8–1044), so VO now ends 23 px above the photo's bottom edge.
+       Inter sets ~2 lines longer than Inter Tight: the rows start at cap top 124 (v3 170, pin 199.1) so the last text line
+       ends at 732 and keeps the pin's ≈ 95-px gap (0.5 × cap) above VO (cap top 823).                                    */
   .s12 { background: #fff; color: #010101; }
   .s12 .cap { text-box: trim-both cap alphabetic; margin: 0; }
-  .s12 .t { font-family: 'Inter Tight', sans-serif; font-weight: 400; }
+  .s12 .t { font-family: 'Inter', sans-serif; font-weight: 400; font-optical-sizing: none; }
 
   /* portrait: the active picture (bars excluded) covers the box */
   .s12 .ph { left: 0; top: 33.8px; --bw: 958.3; --bh: 1010.2; width: calc(var(--bw) * 1px); height: calc(var(--bh) * 1px);
@@ -768,17 +805,17 @@
     left: calc((var(--bw) - var(--act-w) * var(--k)) * var(--pos-x) * 1px - var(--act-x) * var(--k) * 1px);
     top:  calc((var(--bh) - var(--act-h) * var(--k)) * var(--pos-y) * 1px - var(--act-y) * var(--k) * 1px); }
 
-  /* rows: label (left 973.0 → ink 974.7) + paragraph (ink-left 1364.3) share the first cap line; first row at 170 */
-  .s12 .rows { left: 0; top: 170px; width: 1920px; }
+  /* rows: label (left 971.7 → ink 974.7) + paragraph (ink-left 1364.3) share the first cap line; first row at 124 */
+  .s12 .rows { left: 0; top: 124px; width: 1920px; }
   .s12 .row { position: relative; }
   .s12 .row + .row { margin-top: 38.5px; }   /* one blank line: last baseline → next cap top = 28 + (28 − 17.5) */
-  .s12 .lab { position: absolute; left: 973.0px; top: 0; font-size: 30px; line-height: 1; white-space: nowrap; }
-  .s12 .p { margin-left: 1364.3px; width: 515.7px; font-size: 24px; line-height: 28px; text-align: left; hyphens: manual; }
+  .s12 .lab { position: absolute; left: 971.7px; top: 0; font-size: 30px; line-height: 1; white-space: nowrap; }
+  .s12 .p { margin-left: 1362.6px; width: 517.4px; font-size: 24px; line-height: 28px; text-align: left; hyphens: manual; }
   .s12 .p.short { text-align: left; }
 
-  /* giant VO: left edge on the paragraph column, cap 195.6, baseline on the photo's bottom line */
-  .s12 .giant { left: 1362.6px; bottom: calc(1080px - 1044px); font-family: 'Inter Tight', sans-serif; font-size: 269px;
-                font-weight: 450; line-height: 1; letter-spacing: -0.01em; white-space: nowrap; }
+  /* giant VO: left edge on the paragraph column (ink 1364), cap 195.6, baseline 1019 → lowest ink 1021 (G2: 58 px clear) */
+  .s12 .giant { left: 1361.9px; bottom: calc(1080px - 1019px); font-family: 'Inter Tight', sans-serif; font-size: 269px;
+                font-weight: 600; line-height: 1; letter-spacing: -0.03em; white-space: nowrap; }
 
 /* ── s13.html ── */
 /* s13 · thanks — 1:1 on pin d25 «Work / Studio» + portrait, reference = crops/d25-169.png (996×560).
@@ -799,18 +836,22 @@
      brought in to the 40-px edge line (the pin's big words start at ink 117.6, its small slots at 111.8 / 545.5):
        big words ink left 40 (С / О side bearing 6.2 at 185.6 px → left 33.8);
        name and role stacked under each other on that edge: «Victor Lyapakhin» / «Director’s treatment» / «for Cloud.ru»,
-       cap tops 525.9 / 569.9 / 613.9 (ink left 40: V bearing 1.2, D 3.5, f 0.5). The pin's second small column is empty. */
+       cap tops 525.9 / 569.9 / 613.9 (ink left 40: V bearing 1.2, D 3.5, f 0.5). The pin's second small column is empty.
+     REVIEW 2 2026-09-19 (brief v4, wins over the pin and v3):
+       G1 → «Спасибо!» / «Обсудим?» Inter Tight 600, −0.03 em (was 640, −0.01 em); the three small lines Inter 400 (was 500),
+            34 px, opsz 14 (the deck's Inter). Measured ink left 40–41 on every line.
+       G2 → «Обсудим?» cap top 849 (v3 878.7, pin 915.7): the у / д descenders end at y 1021, 58 px above the bottom. */
   .s13 { background: #fffdfc; color: #181615; }
   .s13 .cap { text-box: trim-both cap alphabetic; line-height: 1; white-space: nowrap; margin: 0; }
-  .s13 .big { font-family: 'Inter Tight', sans-serif; font-size: 185.6px; font-weight: 640; letter-spacing: -0.01em; }
-  .s13 .small { font-family: 'Inter', sans-serif; font-size: 34px; font-weight: 500; }
+  .s13 .big { font-family: 'Inter Tight', sans-serif; font-size: 185.6px; font-weight: 600; letter-spacing: -0.03em; }
+  .s13 .small { font-family: 'Inter', sans-serif; font-size: 34px; font-weight: 400; }
   .s13 .w1 { left: 33.8px; top: 23.1px; }
-  .s13 .w2 { left: 33.8px; top: 878.7px; } /* lifted 37 px from the pin's 915.7: у / д descenders (the pin's «Studio» has none) would cross the canvas edge; now the lowest ink sits on the pin's lowest ink row (1050.6) */
+  .s13 .w2 { left: 33.8px; top: 849px; } /* G2: lifted 66.7 px from the pin's 915.7 so the у / д descenders (the pin's «Studio» has none) end 58 px above the bottom (lowest ink 1021) */
   .s13 .sl  { left: 38.8px; top: 525.9px; }
   .s13 .sr1 { left: 36.5px; top: 569.9px; }
   .s13 .sr2 { left: 39.5px; top: 613.9px; }
   .s13 .ph { left: 1104.6px; top: 0; width: 815.4px; height: 1080px; object-fit: cover; object-position: 50% 30%; display: block; }
-  .s13 { font-optical-sizing: none; }   /* unify-fonts: Inter was designed without the opsz axis */
+  .s13 { font-optical-sizing: none; }   /* unify-fonts: Inter at opsz 14, as on the other Inter slides */
 </style>
 </head>
 <body>
@@ -833,35 +874,67 @@
   </h1>
 </section>
 
-<section data-slide="2" style="--w:1920; --h:1080" class="slide s02" id="intro" data-ref="d55" data-ref-src="/boards/golomazova-danya/design-refs/crops/d55-169.png" aria-label="INTRO: привет и задача ролика">
-  <div class="abs ph big" data-media="f02-g1">
-    <video class="loop" muted playsinline loop preload="none" poster="media/fig/f02-g1.jpg" style="--src-w:720; --src-h:540; --pos-x:.5; --pos-y:.5" aria-label="Коллеги героя столпились и смотрят прямо в камеру — в лицо зрителю">
+<section data-slide="2" style="--w:1920; --h:1080" class="slide s02" id="intro" data-ref="d17" data-ref-src="/boards/golomazova-danya/design-refs/crops/d17-169.png" aria-label="INTRO: привет и задача ролика">
+  <!-- photos: f02-g1 takes the whole left box; the right box is split into a square + two stacked cells -->
+  <div class="abs ph pL" data-media="f02-g1">
+    <video class="loop" muted playsinline loop preload="none" poster="media/fig/f02-g1.jpg" style="--src-w:720; --src-h:540; --pos-x:.5; --pos-y:.56" aria-label="Коллеги героя столпились и смотрят прямо в камеру — в лицо зрителю">
       <source data-src="media/fig/f02-g1.webm" type="video/webm"><source data-src="media/fig/f02-g1.mp4" type="video/mp4">
     </video>
   </div>
-  <div class="abs ph c1" data-media="f02-g4">
+  <div class="abs ph pR1" data-media="f02-g4">
     <video class="loop" muted playsinline loop preload="none" poster="media/fig/f02-g4.jpg" style="--src-w:960; --src-h:540; --act-x:122; --act-y:0; --act-w:716; --act-h:540; --pos-x:.56; --pos-y:.5" aria-label="Улыбающаяся команда в офисе, мужчина в очках показывает большой палец">
       <source data-src="media/fig/f02-g4.webm" type="video/webm"><source data-src="media/fig/f02-g4.mp4" type="video/mp4">
     </video>
   </div>
-  <div class="abs ph c2" data-media="f02-g2">
-    <video class="loop" muted playsinline loop preload="none" poster="media/fig/f02-g2.jpg" style="--src-w:960; --src-h:540; --pos-x:.52; --pos-y:.5" aria-label="Вид сверху: рука героя на тачпаде ноутбука, рядом телефон, мышь и чашка">
+  <div class="abs ph pR2" data-media="f02-g2">
+    <video class="loop" muted playsinline loop preload="none" poster="media/fig/f02-g2.jpg" style="--src-w:960; --src-h:540; --pos-x:.5; --pos-y:.6" aria-label="Вид сверху: рука героя на тачпаде ноутбука, рядом телефон, мышь и чашка">
       <source data-src="media/fig/f02-g2.webm" type="video/webm"><source data-src="media/fig/f02-g2.mp4" type="video/mp4">
     </video>
   </div>
-  <div class="abs ph c3" data-media="f02-g3">
-    <video class="loop" muted playsinline loop preload="none" poster="media/fig/f02-g3.jpg" style="--src-w:960; --src-h:540; --pos-x:.2; --pos-y:.5" aria-label="Ноутбук с кодом и 3D-моделью на экране, офис смазан в движении">
+  <div class="abs ph pR3" data-media="f02-g3">
+    <video class="loop" muted playsinline loop preload="none" poster="media/fig/f02-g3.jpg" style="--src-w:960; --src-h:540; --pos-x:.5; --pos-y:.5" aria-label="Ноутбук с кодом и 3D-моделью на экране, офис смазан в движении">
       <source data-src="media/fig/f02-g3.webm" type="video/webm"><source data-src="media/fig/f02-g3.mp4" type="video/mp4">
     </video>
   </div>
 
-  <div class="abs col cap">
+  <!-- top row -->
+  <div class="abs mic cap tl" style="left:40px; top:40px">
     <p>Привет!</p>
-    <p class="short">Спасибо за клас&shy;сный режис&shy;сер&shy;ский челлендж!</p>
-    <p>Снять ролик це&shy;ли&shy;ком в&nbsp;фор&shy;ма&shy;те POV и&nbsp;при этом не про&shy;сто за&shy;влечь зри&shy;те&shy;ля, а&nbsp;по&shy;бу&shy;дить фи&shy;зи&shy;че&shy;ски со&shy;пе&shy;ре&shy;жи&shy;вать герою&nbsp;— это за&shy;да&shy;ча на тон&shy;кую ра&shy;бо&shy;ту с&nbsp;рит&shy;мом, ми&shy;зан&shy;сце&shy;ной и&nbsp;де&shy;та&shy;ля&shy;ми. Я&nbsp;хочу сде&shy;лать так, чтобы каж&shy;дый <span class="nw">IT-руководитель</span> и&nbsp;раз&shy;ра&shy;бот&shy;чик узнал в&nbsp;этом су&shy;ма&shy;сшед&shy;шем сприн&shy;те себя, улыб&shy;нул&shy;ся от то&shy;чеч&shy;ных пас&shy;ха&shy;лок и&nbsp;по&shy;чув&shy;ство&shy;вал фи&shy;зи&shy;че&shy;ское об&shy;лег&shy;че&shy;ние, когда в&nbsp;кадре по&shy;яв&shy;ля&shy;ет&shy;ся ре&shy;ше&shy;ние от Cloud.ru. Мы со&shy;зда&shy;дим стиль&shy;ный, иро&shy;нич&shy;ный и&nbsp;не&shy;ве&shy;ро&shy;ят&shy;но живой ролик, ко&shy;то&shy;рый за&shy;хо&shy;чет&shy;ся раз&shy;би&shy;рать на кадры и&nbsp;ше&shy;рить в&nbsp;про&shy;филь&shy;ных чатах.</p>
+    <p>Спасибо за классный режиссерский челлендж!</p>
+  </div>
+  <p class="abs claim cap tc" style="left:0; width:1921.2px; top:40px">Снять ролик целиком<br>в&nbsp;формате POV</p>
+  <div class="abs mic cap just tr" style="right:40px; top:40px; width:620px; text-align-last:right">
+    <p>и&nbsp;при этом не про&shy;сто за&shy;влечь зри&shy;те&shy;ля, а&nbsp;по&shy;бу&shy;дить фи&shy;зи&shy;че&shy;ски со&shy;пе&shy;ре&shy;жи&shy;вать герою&nbsp;— это за&shy;да&shy;ча на тон&shy;кую ра&shy;бо&shy;ту с&nbsp;рит&shy;мом, ми&shy;зан&shy;сце&shy;ной и&nbsp;деталями.</p>
   </div>
 
-  <h2 class="abs ttl cap">INTRO</h2>
+  <!-- labels above the photos -->
+  <p class="abs lab cap r al" style="right:calc(1920px - 719px); top:341.3px">Я&nbsp;хочу сделать так, чтобы</p>
+  <p class="abs lab cap just ac" style="left:753.4px; width:411.3px; top:341.3px; text-align-last:justify; white-space:normal">каждый <span class="nw">IT-руководитель</span></p>
+  <p class="abs lab cap ar" style="left:1200.4px; top:341.3px">и&nbsp;разработчик</p>
+
+  <!-- logotype -->
+  <h2 class="abs logo" aria-label="INTRO">
+    <span class="cap" aria-hidden="true" style="left:748.6px; top:396.5px">IN</span>
+    <span class="cap" aria-hidden="true" style="left:754.4px; top:575.6px">TRO</span>
+  </h2>
+  <div class="bar" aria-hidden="true" style="left:1037.3px; top:396.5px; width:128px; height:21.5px"></div>
+  <div class="bar" aria-hidden="true" style="left:1139.8px; top:396.5px; width:25.5px; height:143.1px"></div>
+  <div class="bar" aria-hidden="true" style="left:1139.8px; top:609.1px; width:25.5px; height:143.1px"></div>
+  <div class="bar" aria-hidden="true" style="left:1037.3px; top:730.7px; width:128px; height:21.5px"></div>
+
+  <!-- labels below the photos -->
+  <p class="abs lab cap r bl1" style="right:calc(1920px - 717.1px); top:789.8px">узнал в&nbsp;этом</p>
+  <p class="abs lab cap bc1" style="left:2.5px; width:1921.2px; text-align:center; top:789.8px">сумасшедшем спринте себя,</p>
+  <p class="abs lab cap bl3" style="left:1202.9px; top:789.8px">улыбнулся</p>
+
+  <!-- bottom row (last baseline 1018: lowest ink ≥ 56 px above the bottom edge, G2) -->
+  <div class="abs mic cap just bl" style="left:40px; bottom:64px; width:655px; text-align-last:left">
+    <p>от то&shy;чеч&shy;ных пас&shy;ха&shy;лок и&nbsp;по&shy;чув&shy;ство&shy;вал фи&shy;зи&shy;че&shy;ское об&shy;лег&shy;че&shy;ние, когда в&nbsp;кадре по&shy;яв&shy;ля&shy;ет&shy;ся ре&shy;ше&shy;ние от Cloud.ru.</p>
+  </div>
+  <p class="abs claim cap bc" style="left:0; width:1921.2px; bottom:64px">Мы создадим стильный,<br>ироничный и&nbsp;невероятно<br>живой ролик,</p>
+  <div class="abs mic cap just br" style="right:40px; bottom:64px; width:450px; text-align-last:right">
+    <p>ко&shy;то&shy;рый за&shy;хо&shy;чет&shy;ся раз&shy;би&shy;рать на кадры и&nbsp;ше&shy;рить в&nbsp;про&shy;филь&shy;ных чатах.</p>
+  </div>
 </section>
 
 <section data-slide="3" style="--w:1920; --h:1080" class="slide s03" id="approach" data-ref="d65" data-ref-src="/boards/golomazova-danya/design-refs/crops/d65-169.png" aria-label="APPROACH: крафтовый подход, VFX и AI как усилитель">
@@ -871,66 +944,59 @@
     </video>
   </div>
 
-  <h2 class="abs word" style="left:0;top:0;margin:0" aria-label="APPROACH">
-    <svg class="abs par pl" viewBox="0 0 40 252.4" aria-hidden="true">
-      <path d="M38.5 1.5Q-35.5 126.2 38.5 250.9Q-11.5 126.2 38.5 1.5Z" fill="#f9fe00" stroke="#f9fe00" stroke-width="3" stroke-linejoin="round"/>
-    </svg>
-    <span class="abs lh rs w1" aria-hidden="true">App</span>
-    <svg class="abs par pr" viewBox="0 0 40 252.4" aria-hidden="true">
-      <path d="M1.5 1.5Q75.5 126.2 1.5 250.9Q51.5 126.2 1.5 1.5Z" fill="#f9fe00" stroke="#f9fe00" stroke-width="3" stroke-linejoin="round"/>
-    </svg>
-    <span class="abs lh rf w2" aria-hidden="true">roach</span>
-  </h2>
+  <h2 class="abs cap word" aria-label="APPROACH"><span aria-hidden="true"><span class="bl">(</span>App<span class="br">)</span>roach</span></h2>
 
   <div class="abs" style="left:0;top:0;width:1920px;height:1080px">
     <p class="abs" style="left:0;top:0;width:1920px;height:1080px;margin:0" aria-label="Я абсолютный адепт крафтового подхода.">
-      <span class="abs cap rf mi row m1" aria-hidden="true">Я абсолютный</span>
-      <span class="abs cap rf mi row m2" aria-hidden="true">адепт</span>
-      <span class="abs cap rf mi row m3" aria-hidden="true">крафтового</span>
-      <span class="abs cap rf mi row m4" aria-hidden="true">подхода.</span>
+      <span class="abs cap mi row m1" aria-hidden="true">Я абсолютный</span>
+      <span class="abs cap mi row m2" aria-hidden="true">адепт</span>
+      <span class="abs cap mi row m3" aria-hidden="true">крафтового</span>
+      <span class="abs cap mi row m4" aria-hidden="true">подхода.</span>
     </p>
     <p class="abs col c3">Все, что можно по&shy;стро&shy;ить и&nbsp;снять вжи&shy;вую,&nbsp;– мы сни&shy;ма&shy;ем вжи&shy;вую. На&shy;сто&shy;я&shy;щие ре&shy;аль&shy;ные ло&shy;ка&shy;ции, фак&shy;тур&shy;ная пла&shy;сти&shy;ка ак&shy;те&shy;ров и&nbsp;ося&shy;за&shy;емый рек&shy;ви&shy;зит, даже та самая сцена с&nbsp;при&shy;лип&shy;ши&shy;ми к&nbsp;стек&shy;лу со&shy;труд&shy;ни&shy;ка&shy;ми будет снята крафтово.</p>
     <p class="abs col c4">VFX и&nbsp;AI-инструменты мы при&shy;вле&shy;ка&shy;ем как вы&shy;со&shy;ко&shy;тех&shy;но&shy;ло&shy;гич&shy;ный уси&shy;ли&shy;тель там, где физический мир упи&shy;ра&shy;ет&shy;ся в&nbsp;свои гра&shy;ни&shy;цы,&nbsp;– для соз&shy;да&shy;ния окру&shy;же&shy;ния, бес&shy;шов&shy;но&shy;го рас&shy;ши&shy;ре&shy;ния про&shy;странств и&nbsp;стиль&shy;ной ин&shy;те&shy;гра&shy;ции интерфейсов.</p>
   </div>
 </section>
 
-<section data-slide="4" style="--w:1920; --h:1080" class="slide s04" id="look-feel" data-ref="d42" data-ref-src="/boards/golomazova-danya/design-refs/crops/d42-169.png" aria-label="LOOK &amp; FEEL: камера передаёт состояние героя">
-  <div class="abs card" aria-hidden="true"></div>
+<section data-slide="4" style="--w:1920; --h:1080" class="slide s04" id="look-feel" data-ref="3d-ring" data-ref-src="/cases/2026-09-lyapakhin-cloud-ru/deck-danya/_review/r3-3d-ring-ref-169.png" aria-label="LOOK &amp; FEEL: камера передаёт состояние героя">
+  <p class="abs cap kick">POV · пластика камеры</p>
+  <h2 class="abs cap ttl">Look &amp; Feel</h2>
 
-  <div class="abs ph p1" data-media="f04-g1">
-    <video class="loop" muted playsinline loop preload="none" poster="media/fig/f02-g2.jpg" style="--src-w:960; --src-h:540; --pos-x:.5; --pos-y:.5" aria-label="Вид сверху: рука героя на тачпаде ноутбука, рядом телефон, мышь и кофе">
-      <source data-src="media/fig/f02-g2.webm" type="video/webm"><source data-src="media/fig/f02-g2.mp4" type="video/mp4">
-    </video>
-  </div>
-  <div class="abs ph p2" data-media="f04-g2">
-    <video class="loop" muted playsinline loop preload="none" poster="media/fig/f04-g2.jpg" style="--src-w:960; --src-h:540; --pos-x:.2; --pos-y:.5" aria-label="Экран с таблицей DEAL MANAGEMENT, камера плывёт вдоль монитора">
-      <source data-src="media/fig/f04-g2.webm" type="video/webm"><source data-src="media/fig/f04-g2.mp4" type="video/mp4">
-    </video>
-  </div>
-  <div class="abs ph p3" data-media="f04-g3">
-    <video class="loop" muted playsinline loop preload="none" poster="media/fig/f04-g3.jpg" style="--src-w:960; --src-h:540; --act-x:94; --act-w:772; --pos-x:.6; --pos-y:.5" aria-label="Рука с часами над чертежом">
-      <source data-src="media/fig/f04-g3.webm" type="video/webm"><source data-src="media/fig/f04-g3.mp4" type="video/mp4">
-    </video>
-  </div>
-  <div class="abs ph p4" data-media="f04-g4">
-    <video class="loop" muted playsinline loop preload="none" poster="media/fig/f04-g4.jpg" style="--src-w:786; --src-h:540; --pos-x:.66; --pos-y:.5" aria-label="Светлый холл офиса: розовые колонны, люди в креслах">
-      <source data-src="media/fig/f04-g4.webm" type="video/webm"><source data-src="media/fig/f04-g4.mp4" type="video/mp4">
-    </video>
+  <div class="abs stage">
+    <div class="drum">
+      <div class="ring" data-sway="3">
+        <div class="pn" data-media="f04-g1" style="--i:-1.5">
+          <video class="loop" muted playsinline loop preload="none" poster="media/fig/f02-g2.jpg" style="--src-w:960; --src-h:540; --pos-x:0.12; --pos-y:0.5" aria-label="Вид сверху: рука героя на тачпаде ноутбука, рядом телефон, мышь и кофе">
+            <source data-src="media/fig/f02-g2.webm" type="video/webm"><source data-src="media/fig/f02-g2.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="pn" data-media="f04-g2" style="--i:-0.5">
+          <video class="loop" muted playsinline loop preload="none" poster="media/fig/f04-g2.jpg" style="--src-w:960; --src-h:540; --pos-x:0.3; --pos-y:0.5" aria-label="Экран с таблицей DEAL MANAGEMENT, камера плывёт вдоль монитора">
+            <source data-src="media/fig/f04-g2.webm" type="video/webm"><source data-src="media/fig/f04-g2.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="pn" data-media="f04-g3" style="--i:0.5">
+          <video class="loop" muted playsinline loop preload="none" poster="media/fig/f04-g3.jpg" style="--src-w:960; --src-h:540; --act-x:94; --act-w:772; --pos-x:0.6; --pos-y:0.5" aria-label="Рука с часами над чертежом">
+            <source data-src="media/fig/f04-g3.webm" type="video/webm"><source data-src="media/fig/f04-g3.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="pn" data-media="f04-g4" style="--i:1.5">
+          <video class="loop" muted playsinline loop preload="none" poster="media/fig/f04-g4.jpg" style="--src-w:786; --src-h:540; --pos-x:0.4; --pos-y:0.5" aria-label="Светлый холл офиса: розовые колонны, люди в креслах">
+            <source data-src="media/fig/f04-g4.webm" type="video/webm"><source data-src="media/fig/f04-g4.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
   </div>
 
-  <blockquote class="abs q">
-    <p>В&nbsp;POV-съемке, чтобы пере&shy;дать сос&shy;то&shy;яние героя, лицо кото&shy;рого мы прак&shy;ти&shy;чески не видим, всю эмо&shy;ци&shy;ональ&shy;ную наг&shy;рузку на себя возь&shy;мут плас&shy;тика камеры, реак&shy;ция рук и&nbsp;мон&shy;таж&shy;ная драматургия.</p>
-    <p>Изна&shy;чально камера будет реаги&shy;ро&shy;вать на мир дергано, нем&shy;ного хаотично, нап&shy;ря&shy;женно. Зри&shy;тель будет на физи&shy;оло&shy;ги&shy;чес&shy;ком уровне ощу&shy;щать <span class="sf">панику</span> чело&shy;века, на кото&shy;рого однов&shy;ре&shy;менно валятся десят&shy;ки кри&shy;ти&shy;чес&shy;ких реше&shy;ний. А&nbsp;в&nbsp;мо&shy;мент пере&shy;хода, с&nbsp;появ&shy;ле&shy;нием Cloud.ru, камера успо&shy;ка&shy;ива&shy;ется, дви&shy;же&shy;ния ста&shy;но&shy;вятся широ&shy;кими, сво&shy;бод&shy;ными и&nbsp;уве&shy;рен&shy;ными. Мы бук&shy;вально даем зри&shy;телю сде&shy;лать глу&shy;бо&shy;кий <span class="sf">вдох</span> вместе с&nbsp;героем.</p>
-  </blockquote>
-
-  <h2 class="abs" style="left:0;top:0;width:1920px;height:1080px;margin:0" aria-label="LOOK &amp; FEEL">
-    <span class="abs cap big w1" aria-hidden="true">LOOK</span>
-    <span class="abs cap big w2" aria-hidden="true">&amp; FEEL</span>
-  </h2>
+  <div class="abs txt">
+    <p class="p1">В&nbsp;POV-съемке, чтобы пе&shy;ре&shy;дать со&shy;сто&shy;я&shy;ние ге&shy;роя, лицо ко&shy;то&shy;ро&shy;го мы прак&shy;ти&shy;чес&shy;ки не ви&shy;дим, всю эмо&shy;ци&shy;ональ&shy;ную на&shy;груз&shy;ку на себя возь&shy;мут пла&shy;сти&shy;ка ка&shy;ме&shy;ры, ре&shy;ак&shy;ция рук и&nbsp;мон&shy;таж&shy;ная драматургия.</p>
+    <p class="p2">Из&shy;на&shy;чаль&shy;но ка&shy;ме&shy;ра будет ре&shy;аги&shy;ро&shy;вать на мир дер&shy;га&shy;но, нем&shy;но&shy;го ха&shy;отич&shy;но, на&shy;пря&shy;жен&shy;но. Зри&shy;тель будет на фи&shy;зи&shy;оло&shy;ги&shy;чес&shy;ком уров&shy;не ощу&shy;щать па&shy;ни&shy;ку че&shy;ло&shy;ве&shy;ка, на ко&shy;то&shy;ро&shy;го од&shy;но&shy;вре&shy;мен&shy;но ва&shy;лят&shy;ся де&shy;сят&shy;ки кри&shy;ти&shy;чес&shy;ких ре&shy;ше&shy;ний. А&nbsp;в&nbsp;мо&shy;мент пе&shy;ре&shy;хо&shy;да, с&nbsp;по&shy;яв&shy;ле&shy;ни&shy;ем Cloud.ru, ка&shy;ме&shy;ра ус&shy;по&shy;ка&shy;ива&shy;ет&shy;ся, дви&shy;же&shy;ния ста&shy;но&shy;вят&shy;ся ши&shy;ро&shy;ки&shy;ми, сво&shy;бод&shy;ны&shy;ми и&nbsp;уве&shy;рен&shy;ны&shy;ми. Мы бук&shy;валь&shy;но даем зри&shy;те&shy;лю сде&shy;лать глу&shy;бо&shy;кий вдох вме&shy;сте с&nbsp;героем.</p>
+  </div>
 </section>
 
 <section data-slide="5" style="--w:1920; --h:1080" class="slide s05" id="humor" data-ref="d19" data-ref-src="/boards/golomazova-danya/design-refs/crops/d19-169.png" aria-label="HUMOR: несколько слоев юмора в ролике">
-  <h2 class="abs t one hl">HUMOR</h2>
+  <h2 class="abs t h one hl">HUMOR</h2>
   <p class="abs t one hr">Я предлагаю сделать в&nbsp;ролике<br>несколько слоев юмора.</p>
 
   <div class="abs t col c1">
@@ -955,7 +1021,7 @@
   </div>
 </section>
 
-<section data-slide="6" style="--w:1920; --h:1080" class="slide s06 sec" id="setting-office" data-len="m" data-ref="d76" data-ref-src="/boards/golomazova-danya/design-refs/crops/d76-169.png" aria-label="SETTING ( OFFICE ): большое минималистичное офисное пространство">
+<section data-slide="6" style="--w:1920; --h:1080" class="slide s06 sec" id="setting-office" data-len="m" data-last="justify" data-ref="d76" data-ref-src="/boards/golomazova-danya/design-refs/crops/d76-169.png" aria-label="SETTING ( OFFICE ): большое минималистичное офисное пространство">
   <div class="abs bleed" data-media="f68-g1" style="--src-w:960; --src-h:540; --act-x:0; --act-y:0; --act-w:960; --act-h:540; --pos-x:.5; --pos-y:.5">
     <video class="loop abs" muted playsinline loop preload="none" poster="media/fig/f68-g1.jpg" aria-label="Офис: сотрудники за столами, героиня проходит между рабочими местами">
       <source data-src="media/fig/f68-g1.webm" type="video/webm"><source data-src="media/fig/f68-g1.mp4" type="video/mp4">
@@ -967,37 +1033,51 @@
   <h2 class="abs cap head">SETTING <span class="q">( OFFICE )</span></h2>
 
   <div class="abs card">
-    <p class="body">Пространство офиса будет ощущаться достаточно большим, так как главный герой работает в&nbsp;крупной компании с&nbsp;советом директоров. У&nbsp;нас будут две переговорки, кабинет героя, чиллаут-зона, кафетерий и&nbsp;опенспейс. Визуально это минималистичный офис, условный и&nbsp;не ассоциирующийся с&nbsp;каким-либо брендом, в&nbsp;нейтральных тонах и&nbsp;наличием природных фактур&nbsp;— дерево, металл, стекло, бетон или камень. Точечными акцентами будут служить редкие предметы мебели и&nbsp;декор в&nbsp;глубоких сложных оттенках. Офис будет выглядеть как очень стильное, современное и&nbsp;гармоничное пространство.</p>
+    <p class="body">Про&shy;стран&shy;ство офиса будет ощу&shy;щать&shy;ся до&shy;ста&shy;точ&shy;но боль&shy;шим, так как глав&shy;ный герой ра&shy;бо&shy;та&shy;ет в&nbsp;круп&shy;ной ком&shy;па&shy;нии с&nbsp;со&shy;ве&shy;том ди&shy;рек&shy;то&shy;ров. У&nbsp;нас будут две пе&shy;ре&shy;го&shy;вор&shy;ки, ка&shy;би&shy;нет героя, <span class="nw">чиллаут-зона</span>, ка&shy;фе&shy;те&shy;рий и&nbsp;опен&shy;спейс. Ви&shy;зу&shy;аль&shy;но это ми&shy;ни&shy;ма&shy;ли&shy;стич&shy;ный офис, ус&shy;лов&shy;ный и&nbsp;не ас&shy;со&shy;ци&shy;иру&shy;ющий&shy;ся с&nbsp;<span class="nw">каким-либо</span> брен&shy;дом, в&nbsp;ней&shy;траль&shy;ных тонах и&nbsp;на&shy;ли&shy;чи&shy;ем при&shy;род&shy;ных фак&shy;тур&nbsp;— де&shy;ре&shy;во, ме&shy;талл, стек&shy;ло, бетон или ка&shy;мень. То&shy;чеч&shy;ны&shy;ми ак&shy;цен&shy;та&shy;ми будут слу&shy;жить ред&shy;кие пред&shy;ме&shy;ты ме&shy;бе&shy;ли и&nbsp;декор в&nbsp;глу&shy;бо&shy;ких слож&shy;ных от&shy;тен&shy;ках. Офис будет вы&shy;гля&shy;деть как очень стиль&shy;ное, со&shy;вре&shy;мен&shy;ное и&nbsp;гар&shy;мо&shy;нич&shy;ное пространство.</p>
   </div>
 </section>
 
-<section data-slide="7" class="slide s07" id="setting-factory" data-ref="d39" data-ref-src="/boards/golomazova-danya/design-refs/crops/d39-169.png" aria-label="SETTING ( PRODUCTION FACTORY ): цех конвейерной сборки" style="--w:1920; --h:1080; --bw: 1240px">
-  <svg class="abs mark" viewBox="85 16 80 80" aria-hidden="true">
-    <g stroke="#1b1b1b" stroke-width="5.8" stroke-linecap="butt">
-      <line x1="120.3" y1="63.5" x2="120.5" y2="22.2"/>
-      <line x1="120.3" y1="63.5" x2="94.3" y2="41.5"/>
-      <line x1="120.3" y1="63.5" x2="140" y2="46.7"/>
-      <line x1="120.3" y1="63.5" x2="95" y2="68"/>
-      <line x1="120.3" y1="63.5" x2="151.5" y2="70"/>
-      <line x1="120.3" y1="63.5" x2="106.5" y2="92.5"/>
-      <line x1="120.3" y1="63.5" x2="131" y2="85.5"/>
-    </g>
-    <circle cx="120.3" cy="63.5" r="8" fill="#1b1b1b"/>
-  </svg>
-
-  <h2 class="abs cap head">SETTING ( PRODUCTION FACTORY )</h2>
-
-  <p class="abs blurb">VFX-фон: цех конвейерной сборки. Например, автомобильной. Широкий проход между станками, уходящий вдаль, слева и&nbsp;справа&nbsp;– два конвейера, которые передают части и&nbsp;собирают автомобиль.</p>
-
-  <div class="abs band" data-media="f71-g1">
+<section data-slide="7" style="--w:1920; --h:1080" class="slide s07" id="setting-factory" data-ref="d51" data-ref-src="/boards/golomazova-danya/design-refs/crops/d51-169.png" aria-label="SETTING ( PRODUCTION FACTORY ): цех конвейерной сборки">
+  <div class="abs ph" data-media="f71-g1" data-crop="1280:480:0:120">
     <video class="loop" muted playsinline loop preload="none" poster="media/fig/f71-g1.jpg"
-           style="--src-w:1280; --src-h:720; --act-x:0; --act-y:120; --act-w:1280; --act-h:480; --pos-x:.5; --pos-y:.6"
+           style="--src-w:1280; --src-h:720; --act-x:0; --act-y:120; --act-w:1280; --act-h:480; --pos-x:.875; --pos-y:.5"
            aria-label="Цех конвейерной сборки: широкий проход между станками уходит вдаль, по сторонам — конвейеры и рабочие">
       <source data-src="media/fig/f71-g1.webm" type="video/webm"><source data-src="media/fig/f71-g1.mp4" type="video/mp4">
     </video>
   </div>
 
-  <p class="abs cap word" aria-hidden="true">FACTORY</p>
+  <svg class="abs grid" viewBox="0 0 1920 1080" aria-hidden="true">
+    <rect x="0" y="275.3" width="1920" height="2" fill="rgba(238,238,232,.5)"/>
+    <rect x="473" y="276.3" width="2" height="803.7" fill="rgba(238,238,232,.5)"/>
+    <rect x="857.8" y="276.3" width="2" height="803.7" fill="rgba(238,238,232,.5)"/>
+    <rect x="1474" y="0" width="2" height="1080" fill="rgba(238,238,232,.5)"/>
+    <rect x="0" y="188.7" width="590" height="2" fill="rgba(238,238,232,.12)"/>
+    <rect x="0" y="391.2" width="474" height="2" fill="rgba(238,238,232,.12)"/>
+    <!-- the logo's diagonal stroke (the pin's «´» between ME and NU) → between FAC and TORY -->
+    <line x1="591.6" y1="108.3" x2="635" y2="71.6" stroke="#f6f7f2" stroke-width="11" stroke-linecap="butt"/>
+    <!-- squiggle under the last line of column 3 (the pin's lavender wave) → yellow -->
+    <path d="M915 1036 q8.5 -15 17 0 t17 0 t17 0 t17 0 t17 0 t17 0 t17 0 t17 0 t17 0 t17 0 t17 0 t17 0"
+          fill="none" stroke="#f9fe00" stroke-width="4.2" stroke-linecap="round"/>
+  </svg>
+
+  <h2 class="abs" style="left:0;top:0;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);margin:0">SETTING ( PRODUCTION FACTORY )</h2>
+  <div aria-hidden="true">
+    <p class="abs lg" style="left:266.5px;top:87px"><span>F</span></p>
+    <p class="abs lg" style="left:380px;top:45px"><span>A</span></p>
+    <p class="abs lg" style="left:504.5px;top:84px"><span>C</span></p>
+    <p class="abs lg" style="left:687.5px;top:112.4px"><span>T</span></p>
+    <p class="abs lg" style="left:807px;top:53.4px"><span>O</span></p>
+    <p class="abs lg" style="left:925px;top:93px"><span>R</span></p>
+    <p class="abs lg" style="left:1042.5px;top:48px"><span>Y</span></p>
+  </div>
+
+  <p class="abs cap mi" style="left:1519px;top:100px" aria-hidden="true">SETTING</p>
+  <p class="abs cap mi" style="left:1519px;top:140px" aria-hidden="true">( PRODUCTION FACTORY )</p>
+
+  <p class="abs nav" style="left:133.5px;top:916px">VFX-фон: цех<br>конвейерной сборки.</p>
+  <p class="abs nav" style="left:553.5px;top:916px">Например,<br>автомобильной.</p>
+  <p class="abs nav" style="left:926.6px;top:916px">Широкий проход между станками,<br>уходящий вдаль, слева и&nbsp;справа&nbsp;–<br>два конвейера,</p>
+  <p class="abs nav" style="left:1519px;top:916px">которые передают части<br><span class="y">и собирают автомобиль.</span></p>
 </section>
 
 <section data-slide="8" style="--w:1920; --h:1080" class="slide s08" id="cast" data-ref="d21" data-ref-src="/boards/golomazova-danya/design-refs/crops/d21-169.png" aria-label="CAST: никаких заезженных лиц">
@@ -1100,14 +1180,14 @@
   <div class="card c3" aria-hidden="true"></div>
 
   <!-- left card: heading + the start of the paragraph -->
-  <h2 class="abs cap big" style="left:118.6px;top:170.4px">EDIT</h2>
+  <h2 class="abs cap big" style="left:119.8px;top:170.4px">EDIT</h2>
   <p class="abs" style="left:0;top:0;width:1920px;height:1080px;margin:0;pointer-events:none">
     <span class="sr">Монтаж будет очень динамичным, как американские горки, рваным,</span>
-    <span class="abs cap big" style="left:118.6px;top:234px" aria-hidden="true">Монтаж</span>
-    <span class="abs cap big" style="left:310.6px;top:295.2px" aria-hidden="true">будет</span>
+    <span class="abs cap big" style="left:121px;top:234px" aria-hidden="true">Монтаж</span>
+    <span class="abs cap big" style="left:311.8px;top:295.2px" aria-hidden="true">будет</span>
     <span class="abs cap big" style="left:307.8px;top:360px" aria-hidden="true">очень</span>
-    <span class="abs cap big" style="left:121.6px;top:463.2px" aria-hidden="true">динамичным,</span>
-    <span class="abs cap big" style="left:118.6px;top:524.4px" aria-hidden="true">как</span>
+    <span class="abs cap big" style="left:124px;top:463.2px" aria-hidden="true">динамичным,</span>
+    <span class="abs cap big" style="left:119.8px;top:524.4px" aria-hidden="true">как</span>
     <span class="abs cap big" style="left:122.6px;top:588px" aria-hidden="true">американские</span>
     <span class="abs cap big rt" style="right:1291px;top:787.2px" aria-hidden="true">горки,</span>
     <span class="abs cap big rt" style="right:1291px;top:850.8px" aria-hidden="true">рваным,</span>
@@ -1165,5 +1245,6 @@
 </section>
 
 <script src="deck.js"></script>
+<script src="anim.js"></script>
 </body>
 </html>
