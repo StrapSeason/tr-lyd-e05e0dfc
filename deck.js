@@ -55,7 +55,9 @@
       const [W, H] = sizeOf(s);
       const sideBySide = solo && cmp === 'side';
       const availW = sideBySide ? vw / 2 : vw;
-      const k = raw ? 1 : solo ? Math.min(availW / W, vh / H) : vw / W;
+      // phones held sideways: each slide fits the screen whole (the site snaps slide by slide, see gate.js)
+      const phoneLand = !solo && matchMedia('(pointer: coarse) and (orientation: landscape)').matches;
+      const k = raw ? 1 : solo ? Math.min(availW / W, vh / H) : phoneLand ? Math.min(vw / W, vh / H) : vw / W;
       s.style.transform = `scale(${k})`;
       frame.style.width = W * k + 'px';
       frame.style.height = H * k + 'px';
