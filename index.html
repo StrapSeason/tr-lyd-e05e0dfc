@@ -202,59 +202,62 @@
   .s03 .c4 { right: 252.5px; }
 
 /* ── s04.html ── */
-/* s04 · LOOK & FEEL (Figma frame 4) — design variant «3D ring» after the user's reference _review/r3-3d-ring-ref.png
-     (Patta «Let's connect»): tiny caps kicker · big centred sentence-case heading · a strip of photos bent around a
-     cylinder, cut by the canvas edges · one element below. No danya pin → no geometry gate.
-     Reference measured (736 px wide, column scan of the strip): the photos sit on the OUTSIDE of a drum — the centre
-     panel is the nearest and tallest (216 px), heights fall to ≈ 0.82 at ±320 px and ≈ 0.64–0.74 at the edges; panel
-     widths 220 (centre) → 170–181 (±1) → cut slivers; gaps ≈ 13 px; the drum is tilted ≈ 3° (right end higher).
-     This file follows the reference: convex drum, centre farthest forward, ends recede.
-     Geometry (canvas px): perspective 1000 · drum radius 2400 · panel 740 × 460 (flat) · gap 16 ·
-     step 2·atan((w/2 + g/2)/R) = 17.90° · panels at ±0.5 and ±1.5 steps (4 GIFs, no repeats) ·
-     tilt -2.5° · ring centre line y 540. The drum is pushed back by R so the virtual front of the drum (the gap between the two inner panels) is at z = 0 and the ends recede.
-     Measured on the render: strip 472 px tall at the centre gap → 462 (x 800 / 1100) → 405 (x 1700) → 333 px at the canvas
-     edges = 0.71 × the centre (reference: 0.82 at ±320/736, 0.64–0.74 at its edges).
-     The ring carries data-sway (anim.js sways it ±3° around the drum axis; the ring's origin IS the axis).
-     GIF crops: f02-g2 960×540 clean · f04-g2 960×540 clean · f04-g3 960×540 pillarbox 94 px each side
-     (cropdetect 772:540:94:0) → --act-x 94 --act-w 772 · f04-g4 786×540 clean. */
-  .s04 { color: #fafafa;
-    background: linear-gradient(90deg, #3f424a 0%, #4a4e56 16%, #54575e 30%, #5d6066 52%, #2a2a2e 64%, #313134 73%, #4d4f55 86%, #54565c 100%); }
-  .s04::before { content: ""; position: absolute; inset: 0; pointer-events: none;
-    background: linear-gradient(90deg, #313136 0%, #36373b 20%, #45464b 32%, #5e5f65 44%, #6a6b72 52%, #5c5d63 62%, #3f4045 76%, #38393e 100%);
-    -webkit-mask-image: linear-gradient(180deg, #000 25%, transparent 75%); mask-image: linear-gradient(180deg, #000 25%, transparent 75%); }
+/* s04 · LOOK & FEEL (Figma frame 4) — v6 after the user's reference _review/r4-look-rebelle-ref.png (REBELLE «BEHINDE THE
+     SCENES», a tall phone page 1179×2556): «Лук филл давай так заверстаем». No danya pin → no geometry gate; checked side by
+     side (_qa/s04-side.jpg). The previous 3D-ring version is in _archive-13v5.
+     Reference read at 923 px wide (k = 1920 / 923 = 2.08 horizontally): margins 20 → 40 · labels «REBELLE» x 20, «DESIGN STUDIO»
+     x 300 on the photo's top line · caps paragraph x 20–435, low in the left half · portrait photo x 487–903 · condensed title
+     x 22–898 · footer row left / centre / right · three small photos x 20–618, bottom-left, right third empty.
+     16:9 adaptation: the horizontals follow the reference (photo 1013–1880 = ref 487–903 × 2.08); the tall page's voids are
+     squeezed out vertically, so the big photo turns landscape (867 × 450) and the small ones 16:9.
+       top      labels Inter 400 20 px caps +0.06 em, cap top 40 = the photo's top; «POV · …» right-aligned to the text column (920)
+       left     the full text (577 chars word for word from _plan.json; the plan's trailing space dropped) — Inter 400 22/31 caps
+                +0.02 em, justified, soft hyphens (headless Edge has no ru dictionary), column 40–920, 10 lines, cap top 195,
+                last baseline 490 = the photo's bottom; paragraph 1's last line justified so the block is one rectangle
+                (paragraph 2 still starts on a new line). Of widths 865 / 873 / 880 and tracking .01–.03, 880 / .02 is the only
+                set with 2 hyphens (ХА-ОТИЧНО, ДЕ-СЯТКИ), not stacked, and «ДРАМАТУРГИЯ.» unbroken.
+       right    f04-g4 (786×540, clean) — the calm, wide camera after the transition; box 1013–1880 × 40–490 (1.93),
+                cover-crop 786 × 408 of the source, centred (ceiling / floor trimmed; the walking heroine's head stays in).
+       title    «LOOK & FEEL» Inter Tight 600, 340.7 px, −0.04 em, yellow #f9fe00: ink 40–1880 × 527–781 (cap 248).
+       footer   the arc of the text, Inter 400 20 px caps: «Дергано · хаотично · напряженно» (40) · «Переход — Cloud.ru» (centred
+                on 960) · «Широко · свободно · уверенно» (right on 1880); cap top 810.
+       bottom   f02-g2 · f04-g2 · f04-g3 as three 16:9 boxes 308 × 173, gap 24, 40–1013 (the row ends on the big photo's left
+                edge), 850.6–1024 → lowest ink 56 px above the bottom (G2). f04-g3 is pillarboxed (cropdetect 772:540:94:0)
+                → --act-x 94 / --act-w 772, the bars never show. No tint, no grade, no captions. */
+  .s04 { background: #000; color: #d9d6cf; }
   .s04 .cap { text-box: trim-both cap alphabetic; line-height: 1; white-space: nowrap; margin: 0; }
+  .s04 .lab { font-family: 'Inter', sans-serif; font-weight: 400; font-size: 20px; letter-spacing: .06em; text-transform: uppercase; }
+  .s04 .l1 { left: 40px; top: 40px; }
+  .s04 .l2 { right: calc(1920px - 920px); top: 40px; }
 
-  /* kicker + heading, centred */
-  .s04 .kick { left: 0; width: 1920px; top: 56px; text-align: center;
-               font-family: 'Inter', sans-serif; font-weight: 500; font-size: 22px; letter-spacing: 0.14em; text-transform: uppercase; }
-  .s04 .ttl { left: 0; width: 1920px; top: 112px; text-align: center;
-              font-family: 'Inter Tight', sans-serif; font-weight: 600; font-size: 162px; letter-spacing: -0.035em; }
-
-  /* 3D ring: stage (perspective, zero-height line at the ring's centre) › drum (pushed back by R, tilted) ›
-     ring (data-sway; origin = drum axis) › panels (rotateY(i·step) translateZ(R)) */
-  .s04 .stage { left: 0; top: 540px; width: 1920px; height: 0; perspective: 1000px; perspective-origin: 960px 0; }
-  .s04 .drum, .s04 .ring { position: absolute; left: 0; top: 0; width: 0; height: 0; transform-style: preserve-3d; }
-  .s04 .drum { left: 960px; transform: translateZ(-2400px) rotateZ(-2.5deg); }
-  .s04 .pn { --bw: 740; --bh: 460; position: absolute; left: -370px; top: -230px; width: 740px; height: 460px;
-             overflow: hidden; backface-visibility: hidden; background: #1c1c1f;
-             transform: rotateY(calc(var(--i) * 17.901deg)) translateZ(2400px); }
-  /* video sized so the ACTIVE picture covers the panel (letterbox bars never show), placed by --pos-x/--pos-y */
-  .s04 .pn video { --act-x: 0; --act-y: 0; --act-w: var(--src-w); --act-h: var(--src-h); --pos-x: .5; --pos-y: .5;
+  .s04 .ph { overflow: hidden; background: #111; }
+  .s04 .ph video { --act-x: 0; --act-y: 0; --act-w: var(--src-w); --act-h: var(--src-h); --pos-x: .5; --pos-y: .5;
     --k: max(var(--bw) / var(--act-w), var(--bh) / var(--act-h));
     position: absolute; display: block; max-width: none; object-fit: fill;
     width: calc(var(--src-w) * var(--k) * 1px); height: calc(var(--src-h) * var(--k) * 1px);
     left: calc((var(--bw) - var(--act-w) * var(--k)) * var(--pos-x) * 1px - var(--act-x) * var(--k) * 1px);
     top:  calc((var(--bh) - var(--act-h) * var(--k)) * var(--pos-y) * 1px - var(--act-y) * var(--k) * 1px); }
+  .s04 .big { --bw: 867; --bh: 450; left: 1013px; top: 40px; width: 867px; height: 450px; }
 
-  /* full LOOK & FEEL text (578 chars, word for word): Inter 400 24/35, justified, soft hyphens (headless Edge has no Russian
-     dictionary). 3 × 530-px columns, gap 48, centred: column 1 = paragraph 1 (the thesis), columns 2–3 = paragraph 2
-     balanced; at this width the column break falls on the sentence break «…решений. | А в момент перехода…» (tense → calm),
-     5 lines each. Measured ink: first cap top 851, lowest descender 1013 → 66 px above the bottom (G2 ≥ 56). */
-  .s04 .txt { left: 117px; width: 1686px; top: 852px; margin: 0;
-              font-family: 'Inter', sans-serif; font-weight: 400; font-size: 24px; line-height: 35px; letter-spacing: -0.005em;
-              text-align: justify; hyphens: manual; display: grid; grid-template-columns: 530px 1108px; column-gap: 48px; align-items: start; }
-  .s04 .txt p { margin: 0; text-box: trim-both cap alphabetic; }
-  .s04 .txt .p2 { columns: 2; column-gap: 48px; column-fill: balance; }
+  .s04 .txt { left: 40px; width: 880px; bottom: calc(1080px - 490px); margin: 0;
+              font-family: 'Inter', sans-serif; font-weight: 400; font-size: 22px; line-height: 31px; letter-spacing: .02em;
+              text-transform: uppercase; text-align: justify; hyphens: manual; }
+  .s04 .txt p { margin: 0; }
+  .s04 .txt p:first-child { text-align-last: justify; text-box: trim-start cap alphabetic; }
+  .s04 .txt p:last-child { text-box: trim-end cap alphabetic; }
+
+  .s04 .ttl { left: 21.8px; top: 530px; font-family: 'Inter Tight', sans-serif; font-weight: 600; font-size: 340.7px;
+              letter-spacing: -0.04em; color: #f9fe00; text-transform: uppercase; }
+
+  .s04 .ft { font-family: 'Inter', sans-serif; font-weight: 400; font-size: 20px; letter-spacing: .06em; text-transform: uppercase; top: 810px; }
+  .s04 .f1 { left: 40px; }
+  .s04 .f2 { left: 960px; transform: translateX(-50%); }
+  .s04 .f3 { right: 40px; }
+
+  .s04 .sm { --bw: 308.33; --bh: 173.44; top: 850.56px; width: 308.33px; height: 173.44px; }
+  .s04 .sm1 { left: 40px; }
+  .s04 .sm2 { left: 372.33px; }
+  .s04 .sm3 { left: 704.67px; }
 
 /* ── s05.html ── */
 /* s05 · HUMOR (Figma frame 6) — 1:1 on pin d19 (album page: header pairs · tracklist · label · two close-ups).
@@ -438,7 +441,15 @@
      at .5 the red tool chests' white drawer stripes sit under col 1. Not graded, not blurred, no scrim.
      Contrast on the poster (median / 90th percentile of the background under each block, vs white): col 1 6.9 / 4.4,
      col 2 16.7 / 4.5, col 3 16.1 / 6.2, col 4 10.9 / 5.7, yellow col-4 line ≈ 16, micro (yellow) 8.9 / 4.8, logo 4.4 / 2.5
-     (big type, ≥ 3 : 1). Over the whole loop the body medians stay ≥ 4.0 (col 2 on the first 10 frames), mostly ≥ 5.6. */
+     (big type, ≥ 3 : 1). Over the whole loop the body medians stay ≥ 4.0 (col 2 on the first 10 frames), mostly ≥ 5.6.
+     REVIEW 4 2026-09-19 («текст в два ряда сделаем, не в 4, и поменьше») — supersedes the nav mapping above:
+       nav    = the frame text as ONE paragraph on two lines, Inter 400 23 / 31 px white, word for word, broken at the comma
+                after «станками,» (line 1 1074 px, line 2 1101 px: the most even split); «и собирают автомобиль.» stays yellow
+                (the sentence's end). Anchored at the bottom-left of the pin's nav row: ink-left 212 = the pin's col-1 item
+                «about día» (crop 75.5); last baseline 1015 (pin col-1 1020), lowest ink ≈ 1020 = 60 px above the bottom.
+       grid   the V lines at 473 and 857.8 now stop 36 px above the paragraph (y 931) instead of running through its words —
+                the pin's own rule (it stops a V line where its logo spans it). The squiggle is dropped: no phrase ends a
+                column any more. */
   .s07 { background: #0b100d; color: #f6f7f2; }
   .s07 .cap { text-box: trim-both cap alphabetic; line-height: 1; white-space: nowrap; margin: 0; }
 
@@ -460,8 +471,8 @@
   /* the pin's pink micro → the frame heading, yellow */
   .s07 .mi { font-family: 'Inter Tight', sans-serif; font-weight: 600; font-size: 30px; letter-spacing: 0; color: #f9fe00; }
 
-  /* nav row → the frame text, Inter 400 30 / 38, lines left-aligned, blocks centred in their grid column */
-  .s07 .nav { margin: 0; font-family: 'Inter', sans-serif; font-weight: 400; font-size: 30px; line-height: 38px;
+  /* nav row → the frame text as one paragraph on two lines (review 4), Inter 400 23 / 31, bottom-left of the pin's row */
+  .s07 .nav { margin: 0; font-family: 'Inter', sans-serif; font-weight: 400; font-size: 23px; line-height: 31px;
               color: #f6f7f2; white-space: nowrap; text-box: trim-both cap alphabetic; }
   .s07 .nav .y { color: #f9fe00; }
 
@@ -596,7 +607,18 @@
                    right 414 px (x 1331–1745, 4 lines, 1 hyphen), 26–27 px clear of the photo.
        Template: LIG | HT size = min over halves of (space between margin and photo) / ink width in em; footer blocks
        ≤ ~4 × 410 px of caps at 24 px (≈ 105 characters) — scan widths 404–432 for the fewest hyphens / smallest slack. */
-  .s09 { background: #ffffff; color: #111111; }
+  /* Review 4 2026-09-19 («го черный фон и текст наборный поменьше в 2 строки») — supersedes the field / micro parts above:
+       field      #0b0b0b (the deck black, s01); the panel under the GIF grid is black too, so the 12-px gutters read as
+                  the field. LIG | HT stays yellow #f9fe00 (now 18 : 1 on the field).
+       micro      all type off-white #e8e8e2, Inter 400 caps 17 / 23 px (was 24 / 32) on both rows. Two lines per footer block
+                  is what sets the size: the blocks widen outward to the 40-px margins (left 40–599, right 1321–1880, 559 px,
+                  18 / 16.5 px clear of the photo grid, was 27 / 26) and the longer sentence (102 characters) needs 554 px at 17 px
+                  caps — 19 px caps would need 616 px, more than the space beside the photo. A soft hyphen in «ге-роя» fills
+                  the right block's first line (558.7 of 559 px: no loose word gaps). Justified, last line flush
+                  to the block's outer edge, last baseline on the photo's bottom edge 980.6 as before.
+       header     items 1 and 4 follow the blocks out: item 1 left 40, item 4 right edge 1880; items 2–3 keep the pin's lefts
+                  (644.1 / 1017.2); cap top 18.9 kept. */
+  .s09 { background: #0b0b0b; color: #e8e8e2; }
   .s09 .cap { text-box: trim-both cap alphabetic; line-height: 1; white-space: nowrap; margin: 0; }
 
   /* giant split word: halves tuck under the photo (photo is later in the DOM) */
@@ -604,20 +626,20 @@
   .s09 .b1 { left: 16.2px; }
   .s09 .b2 { left: 1281.2px; }
 
-  /* micro rows: deck mono, grown to 24 px (both rows one size, as in the pin) */
-  .s09 .mono { font-family: 'Inter', sans-serif; font-weight: 400; font-size: 24px; text-transform: uppercase; color: #111111; }
+  /* micro rows: Inter caps 17 px off-white (review 4), both rows one size, as in the pin */
+  .s09 .mono { font-family: 'Inter', sans-serif; font-weight: 400; font-size: 17px; text-transform: uppercase; color: #e8e8e2; }
   .s09 .hdr { left: 0; top: 0; width: 1920px; height: 60px; margin: 0; }
   .s09 .h { top: 18.9px; }
-  .s09 .h1 { left: 157px; } .s09 .h2 { left: 644.1px; } .s09 .h3 { left: 1017.2px; } .s09 .h4 { right: 175px; }
-  /* footer items: last baseline on the pin's footer row (1058.7), grow up; justified, hyphens baked in */
-  .s09 .blk { bottom: 99.4px; width: 414px; margin: 0; line-height: 32px; text-align: justify; hyphens: manual;
+  .s09 .h1 { left: 40px; } .s09 .h2 { left: 644.1px; } .s09 .h3 { left: 1017.2px; } .s09 .h4 { right: 40px; }
+  /* footer items: last baseline on the photo's bottom edge (980.6), two lines each; justified, hyphens baked in */
+  .s09 .blk { bottom: 99.4px; margin: 0; line-height: 23px; text-align: justify; hyphens: manual;
               text-box: trim-both cap alphabetic; white-space: normal; }
-  .s09 .f1 { left: 157px; width: 431px; text-align-last: left; }
-  .s09 .f2 { right: 175px; text-align-last: right; }
+  .s09 .f1 { left: 40px; width: 559px; text-align-last: left; }
+  .s09 .f2 { right: 40px; width: 559px; text-align-last: right; }
 
   /* photo box = the pin's (617, 102.6, 687.5 × 878) split 2×2, gutter 12; the video is sized so its ACTIVE picture
      covers the cell and placed by --pos-x / --pos-y */
-  .s09 .phbox { left: 617px; top: 102.6px; width: 687.5px; height: 878px; background: #ffffff; }  /* white under the 12-px gutter */
+  .s09 .phbox { left: 617px; top: 102.6px; width: 687.5px; height: 878px; background: #0b0b0b; }  /* the field's black under the 12-px gutter (review 4) */
   .s09 .ph { --bw: 337.75; --bh: 433; width: calc(var(--bw) * 1px); height: calc(var(--bh) * 1px); overflow: hidden; background: #000; }
   .s09 .p1 { left: 617px; top: 102.6px; } .s09 .p2 { left: 966.75px; top: 102.6px; }
   .s09 .p3 { left: 617px; top: 547.6px; } .s09 .p4 { left: 966.75px; top: 547.6px; }
@@ -807,8 +829,10 @@
        G2 → VO's lowest ink (O overshoot) at y 1021 = 58 px above the bottom (baseline 1019; v3 1044 on the photo's bottom
             line). The photo box stays on the pin (33.8–1044), so VO now ends 23 px above the photo's bottom edge.
        Inter sets ~2 lines longer than Inter Tight: the rows start at cap top 124 (v3 170, pin 199.1) so the last text line
-       ends at 732 and keeps the pin's ≈ 95-px gap (0.5 × cap) above VO (cap top 823).                                    */
-  .s12 { background: #fff; color: #010101; }
+       ends at 732 and keeps the pin's ≈ 95-px gap (0.5 × cap) above VO (cap top 823).
+     REVIEW 4 2026-09-19 («черный фон + белый текст + VO желтым и все!»): field #0b0b0b (the deck black), labels and
+       paragraphs white #ffffff, giant «VO» deck yellow #f9fe00. Nothing else changes.                                       */
+  .s12 { background: #0b0b0b; color: #ffffff; }
   .s12 .cap { text-box: trim-both cap alphabetic; margin: 0; }
   .s12 .t { font-family: 'Inter', sans-serif; font-weight: 400; font-optical-sizing: none; }
 
@@ -831,7 +855,7 @@
 
   /* giant VO: left edge on the paragraph column (ink 1364), cap 195.6, baseline 1019 → lowest ink 1021 (G2: 58 px clear) */
   .s12 .giant { left: 1361.9px; bottom: calc(1080px - 1019px); font-family: 'Inter Tight', sans-serif; font-size: 269px;
-                font-weight: 600; line-height: 1; letter-spacing: -0.03em; white-space: nowrap; }
+                font-weight: 600; line-height: 1; letter-spacing: -0.03em; white-space: nowrap; color: #f9fe00; }
 
 /* ── s13.html ── */
 /* s13 · thanks — 1:1 on pin d25 «Work / Studio» + portrait, reference = crops/d25-169.png (996×560).
@@ -951,40 +975,41 @@
   </div>
 </section>
 
-<section data-slide="4" style="--w:1920; --h:1080" class="slide s04" id="look-feel" data-ref="3d-ring" data-ref-src="/cases/2026-09-lyapakhin-cloud-ru/deck-danya/_review/r3-3d-ring-ref-169.png" aria-label="LOOK &amp; FEEL: камера передаёт состояние героя">
-  <p class="abs cap kick">POV · пластика камеры</p>
-  <h2 class="abs cap ttl">Look &amp; Feel</h2>
+<section data-slide="4" style="--w:1920; --h:1080" class="slide s04" id="look-feel" data-ref="rebelle" data-ref-src="/cases/2026-09-lyapakhin-cloud-ru/deck-danya/_review/r4-look-rebelle-ref.png" aria-label="LOOK &amp; FEEL: камера передаёт состояние героя">
+  <p class="abs cap lab l1">LOOK &amp; FEEL</p>
+  <p class="abs cap lab l2">POV · пластика камеры</p>
 
-  <div class="abs stage">
-    <div class="drum">
-      <div class="ring" data-sway="3">
-        <div class="pn" data-media="f04-g1" style="--i:-1.5">
-          <video class="loop" muted playsinline loop preload="none" poster="media/fig/f02-g2.jpg" style="--src-w:960; --src-h:540; --pos-x:0.12; --pos-y:0.5" aria-label="Вид сверху: рука героя на тачпаде ноутбука, рядом телефон, мышь и кофе">
-            <source data-src="media/fig/f02-g2.webm" type="video/webm"><source data-src="media/fig/f02-g2.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="pn" data-media="f04-g2" style="--i:-0.5">
-          <video class="loop" muted playsinline loop preload="none" poster="media/fig/f04-g2.jpg" style="--src-w:960; --src-h:540; --pos-x:0.3; --pos-y:0.5" aria-label="Экран с таблицей DEAL MANAGEMENT, камера плывёт вдоль монитора">
-            <source data-src="media/fig/f04-g2.webm" type="video/webm"><source data-src="media/fig/f04-g2.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="pn" data-media="f04-g3" style="--i:0.5">
-          <video class="loop" muted playsinline loop preload="none" poster="media/fig/f04-g3.jpg" style="--src-w:960; --src-h:540; --act-x:94; --act-w:772; --pos-x:0.6; --pos-y:0.5" aria-label="Рука с часами над чертежом">
-            <source data-src="media/fig/f04-g3.webm" type="video/webm"><source data-src="media/fig/f04-g3.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="pn" data-media="f04-g4" style="--i:1.5">
-          <video class="loop" muted playsinline loop preload="none" poster="media/fig/f04-g4.jpg" style="--src-w:786; --src-h:540; --pos-x:0.4; --pos-y:0.5" aria-label="Светлый холл офиса: розовые колонны, люди в креслах">
-            <source data-src="media/fig/f04-g4.webm" type="video/webm"><source data-src="media/fig/f04-g4.mp4" type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
+  <div class="abs ph big" data-media="f04-g4">
+    <video class="loop" muted playsinline loop preload="none" poster="media/fig/f04-g4.jpg" style="--src-w:786; --src-h:540" aria-label="Светлый холл офиса: розовые колонны, люди в креслах, героиня уверенно идёт через зал">
+      <source data-src="media/fig/f04-g4.webm" type="video/webm"><source data-src="media/fig/f04-g4.mp4" type="video/mp4">
+    </video>
   </div>
 
   <div class="abs txt">
-    <p class="p1">В&nbsp;POV-съемке, чтобы пе&shy;ре&shy;дать со&shy;сто&shy;я&shy;ние ге&shy;роя, лицо ко&shy;то&shy;ро&shy;го мы прак&shy;ти&shy;чес&shy;ки не ви&shy;дим, всю эмо&shy;ци&shy;ональ&shy;ную на&shy;груз&shy;ку на себя возь&shy;мут пла&shy;сти&shy;ка ка&shy;ме&shy;ры, ре&shy;ак&shy;ция рук и&nbsp;мон&shy;таж&shy;ная драматургия.</p>
-    <p class="p2">Из&shy;на&shy;чаль&shy;но ка&shy;ме&shy;ра будет ре&shy;аги&shy;ро&shy;вать на мир дер&shy;га&shy;но, нем&shy;но&shy;го ха&shy;отич&shy;но, на&shy;пря&shy;жен&shy;но. Зри&shy;тель будет на фи&shy;зи&shy;оло&shy;ги&shy;чес&shy;ком уров&shy;не ощу&shy;щать па&shy;ни&shy;ку че&shy;ло&shy;ве&shy;ка, на ко&shy;то&shy;ро&shy;го од&shy;но&shy;вре&shy;мен&shy;но ва&shy;лят&shy;ся де&shy;сят&shy;ки кри&shy;ти&shy;чес&shy;ких ре&shy;ше&shy;ний. А&nbsp;в&nbsp;мо&shy;мент пе&shy;ре&shy;хо&shy;да, с&nbsp;по&shy;яв&shy;ле&shy;ни&shy;ем Cloud.ru, ка&shy;ме&shy;ра ус&shy;по&shy;ка&shy;ива&shy;ет&shy;ся, дви&shy;же&shy;ния ста&shy;но&shy;вят&shy;ся ши&shy;ро&shy;ки&shy;ми, сво&shy;бод&shy;ны&shy;ми и&nbsp;уве&shy;рен&shy;ны&shy;ми. Мы бук&shy;валь&shy;но даем зри&shy;те&shy;лю сде&shy;лать глу&shy;бо&shy;кий вдох вме&shy;сте с&nbsp;героем.</p>
+    <p>В&nbsp;POV-съемке, чтобы пе&shy;ре&shy;дать со&shy;сто&shy;я&shy;ние ге&shy;роя, лицо ко&shy;то&shy;ро&shy;го мы прак&shy;ти&shy;чес&shy;ки не ви&shy;дим, всю эмо&shy;ци&shy;ональ&shy;ную на&shy;груз&shy;ку на себя возь&shy;мут пла&shy;сти&shy;ка ка&shy;ме&shy;ры, ре&shy;ак&shy;ция рук и&nbsp;мон&shy;таж&shy;ная дра&shy;ма&shy;тур&shy;гия.</p>
+    <p>Из&shy;на&shy;чаль&shy;но ка&shy;ме&shy;ра будет ре&shy;аги&shy;ро&shy;вать на мир дер&shy;га&shy;но, нем&shy;но&shy;го ха&shy;отич&shy;но, на&shy;пря&shy;жен&shy;но. Зри&shy;тель будет на фи&shy;зи&shy;оло&shy;ги&shy;чес&shy;ком уров&shy;не ощу&shy;щать па&shy;ни&shy;ку че&shy;ло&shy;ве&shy;ка, на ко&shy;то&shy;ро&shy;го од&shy;но&shy;вре&shy;мен&shy;но ва&shy;лят&shy;ся де&shy;сят&shy;ки кри&shy;ти&shy;чес&shy;ких ре&shy;ше&shy;ний. А&nbsp;в&nbsp;мо&shy;мент пе&shy;ре&shy;хо&shy;да, с&nbsp;по&shy;яв&shy;ле&shy;ни&shy;ем Cloud.ru, ка&shy;ме&shy;ра ус&shy;по&shy;ка&shy;ива&shy;ет&shy;ся, дви&shy;же&shy;ния ста&shy;но&shy;вят&shy;ся ши&shy;ро&shy;ки&shy;ми, сво&shy;бод&shy;ны&shy;ми и&nbsp;уве&shy;рен&shy;ны&shy;ми. Мы бук&shy;валь&shy;но даем зри&shy;те&shy;лю сде&shy;лать глу&shy;бо&shy;кий вдох вме&shy;сте с&nbsp;ге&shy;ро&shy;ем.</p>
+  </div>
+
+  <h2 class="abs cap ttl">LOOK &amp; FEEL</h2>
+
+  <p class="abs cap ft f1">Дергано · хаотично · напряженно</p>
+  <p class="abs cap ft f2">Переход — Cloud.ru</p>
+  <p class="abs cap ft f3">Широко · свободно · уверенно</p>
+
+  <div class="abs ph sm sm1" data-media="f04-g1">
+    <video class="loop" muted playsinline loop preload="none" poster="media/fig/f02-g2.jpg" style="--src-w:960; --src-h:540" aria-label="Вид сверху: рука героя на тачпаде ноутбука, рядом телефон, мышь и кофе">
+      <source data-src="media/fig/f02-g2.webm" type="video/webm"><source data-src="media/fig/f02-g2.mp4" type="video/mp4">
+    </video>
+  </div>
+  <div class="abs ph sm sm2" data-media="f04-g2">
+    <video class="loop" muted playsinline loop preload="none" poster="media/fig/f04-g2.jpg" style="--src-w:960; --src-h:540" aria-label="Экран с таблицей DEAL MANAGEMENT, глаз героини, напряжённое лицо">
+      <source data-src="media/fig/f04-g2.webm" type="video/webm"><source data-src="media/fig/f04-g2.mp4" type="video/mp4">
+    </video>
+  </div>
+  <div class="abs ph sm sm3" data-media="f04-g3">
+    <video class="loop" muted playsinline loop preload="none" poster="media/fig/f04-g3.jpg" style="--src-w:960; --src-h:540; --act-x:94; --act-w:772" aria-label="Рука с часами над чертежом, настенные часы, герой за столом в кабинете">
+      <source data-src="media/fig/f04-g3.webm" type="video/webm"><source data-src="media/fig/f04-g3.mp4" type="video/mp4">
+    </video>
   </div>
 </section>
 
@@ -1041,16 +1066,13 @@
 
   <svg class="abs grid" viewBox="0 0 1920 1080" aria-hidden="true">
     <rect x="0" y="275.3" width="1920" height="2" fill="rgba(238,238,232,.5)"/>
-    <rect x="473" y="276.3" width="2" height="803.7" fill="rgba(238,238,232,.5)"/>
-    <rect x="857.8" y="276.3" width="2" height="803.7" fill="rgba(238,238,232,.5)"/>
+    <rect x="473" y="276.3" width="2" height="654.7" fill="rgba(238,238,232,.5)"/>
+    <rect x="857.8" y="276.3" width="2" height="654.7" fill="rgba(238,238,232,.5)"/>
     <rect x="1474" y="0" width="2" height="1080" fill="rgba(238,238,232,.5)"/>
     <rect x="0" y="188.7" width="590" height="2" fill="rgba(238,238,232,.12)"/>
     <rect x="0" y="391.2" width="474" height="2" fill="rgba(238,238,232,.12)"/>
     <!-- the logo's diagonal stroke (the pin's «´» between ME and NU) → between FAC and TORY -->
     <line x1="591.6" y1="108.3" x2="635" y2="71.6" stroke="#f6f7f2" stroke-width="11" stroke-linecap="butt"/>
-    <!-- squiggle under the last line of column 3 (the pin's lavender wave) → yellow -->
-    <path d="M915 1036 q8.5 -15 17 0 t17 0 t17 0 t17 0 t17 0 t17 0 t17 0 t17 0 t17 0 t17 0 t17 0 t17 0"
-          fill="none" stroke="#f9fe00" stroke-width="4.2" stroke-linecap="round"/>
   </svg>
 
   <h2 class="abs" style="left:0;top:0;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);margin:0">SETTING ( PRODUCTION FACTORY )</h2>
@@ -1067,10 +1089,7 @@
   <p class="abs cap mi" style="left:1519px;top:100px" aria-hidden="true">SETTING</p>
   <p class="abs cap mi" style="left:1519px;top:140px" aria-hidden="true">( PRODUCTION FACTORY )</p>
 
-  <p class="abs nav" style="left:133.5px;top:916px">VFX-фон: цех<br>конвейерной сборки.</p>
-  <p class="abs nav" style="left:553.5px;top:916px">Например,<br>автомобильной.</p>
-  <p class="abs nav" style="left:926.6px;top:916px">Широкий проход между станками,<br>уходящий вдаль, слева и&nbsp;справа&nbsp;–<br>два конвейера,</p>
-  <p class="abs nav" style="left:1519px;top:916px">которые передают части<br><span class="y">и собирают автомобиль.</span></p>
+  <p class="abs nav" style="left:210px;bottom:65px">VFX-фон: цех конвейерной сборки. Например, автомобильной. Широкий проход между станками,<br>уходящий вдаль, слева и&nbsp;справа&nbsp;– два конвейера, которые передают части <span class="y">и собирают автомобиль.</span></p>
 </section>
 
 <section data-slide="8" style="--w:1920; --h:1080" class="slide s08" id="cast" data-ref="d21" data-ref-src="/boards/golomazova-danya/design-refs/crops/d21-169.png" aria-label="CAST: никаких заезженных лиц">
@@ -1139,7 +1158,7 @@
   </div>
 
   <p class="abs cap mono blk f1">Каж&shy;дый кадр про&shy;ра&shy;ба&shy;ты&shy;ва&shy;ет&shy;ся через есте&shy;ствен&shy;ные ис&shy;точ&shy;ни&shy;ки света и&nbsp;глу&shy;бо&shy;кий све&shy;то&shy;те&shy;не&shy;вой контраст.</p>
-  <p class="abs cap mono blk f2">Свет под&shy;чер&shy;ки&shy;ва&shy;ет тек&shy;сту&shy;ры, про&shy;стран&shy;ство, от&shy;де&shy;ляя героя от&nbsp;фона и&nbsp;за&shy;да&shy;вая изоб&shy;ра&shy;же&shy;нию глу&shy;би&shy;ну и&nbsp;объем.</p>
+  <p class="abs cap mono blk f2">Свет под&shy;чер&shy;ки&shy;ва&shy;ет тек&shy;сту&shy;ры, про&shy;стран&shy;ство, от&shy;де&shy;ляя ге&shy;роя от&nbsp;фона и&nbsp;за&shy;да&shy;вая изоб&shy;ра&shy;же&shy;нию глу&shy;би&shy;ну и&nbsp;объем.</p>
 </section>
 
 <section data-slide="10" style="--w:1920; --h:1080" class="slide s10" id="color" data-ref="d47" data-ref-src="/boards/golomazova-danya/design-refs/crops/d47-169.png" aria-label="COLOR: плотный, богатый, благородный цвет">
