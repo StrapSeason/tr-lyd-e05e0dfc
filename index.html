@@ -202,33 +202,38 @@
   .s03 .c4 { right: 252.5px; }
 
 /* ── s04.html ── */
-/* s04 · LOOK & FEEL (Figma frame 4) — v6 after the user's reference _review/r4-look-rebelle-ref.png (REBELLE «BEHINDE THE
-     SCENES», a tall phone page 1179×2556): «Лук филл давай так заверстаем». No danya pin → no geometry gate; checked side by
-     side (_qa/s04-side.jpg). The previous 3D-ring version is in _archive-13v5.
-     Reference read at 923 px wide (k = 1920 / 923 = 2.08 horizontally): margins 20 → 40 · labels «REBELLE» x 20, «DESIGN STUDIO»
-     x 300 on the photo's top line · caps paragraph x 20–435, low in the left half · portrait photo x 487–903 · condensed title
-     x 22–898 · footer row left / centre / right · three small photos x 20–618, bottom-left, right third empty.
-     16:9 adaptation: the horizontals follow the reference (photo 1013–1880 = ref 487–903 × 2.08); the tall page's voids are
-     squeezed out vertically, so the big photo turns landscape (867 × 450) and the small ones 16:9.
-       top      labels Inter 400 20 px caps +0.06 em, cap top 40 = the photo's top; «POV · …» right-aligned to the text column (920)
-       left     the full text (577 chars word for word from _plan.json; the plan's trailing space dropped) — Inter 400 22/31 caps
-                +0.02 em, justified, soft hyphens (headless Edge has no ru dictionary), column 40–920, 10 lines, cap top 195,
-                last baseline 490 = the photo's bottom; paragraph 1's last line justified so the block is one rectangle
-                (paragraph 2 still starts on a new line). Of widths 865 / 873 / 880 and tracking .01–.03, 880 / .02 is the only
-                set with 2 hyphens (ХА-ОТИЧНО, ДЕ-СЯТКИ), not stacked, and «ДРАМАТУРГИЯ.» unbroken.
-       right    f04-g4 (786×540, clean) — the calm, wide camera after the transition; box 1013–1880 × 40–490 (1.93),
-                cover-crop 786 × 408 of the source, centred (ceiling / floor trimmed; the walking heroine's head stays in).
-       title    «LOOK & FEEL» Inter Tight 600, 340.7 px, −0.04 em, yellow #f9fe00: ink 40–1880 × 527–781 (cap 248).
-       footer   the arc of the text, Inter 400 20 px caps: «Дергано · хаотично · напряженно» (40) · «Переход — Cloud.ru» (centred
-                on 960) · «Широко · свободно · уверенно» (right on 1880); cap top 810.
-       bottom   f02-g2 · f04-g2 · f04-g3 as three 16:9 boxes 308 × 173, gap 24, 40–1013 (the row ends on the big photo's left
-                edge), 850.6–1024 → lowest ink 56 px above the bottom (G2). f04-g3 is pillarboxed (cropdetect 772:540:94:0)
-                → --act-x 94 / --act-w 772, the bars never show. No tint, no grade, no captions. */
-  .s04 { background: #000; color: #d9d6cf; }
-  .s04 .cap { text-box: trim-both cap alphabetic; line-height: 1; white-space: nowrap; margin: 0; }
-  .s04 .lab { font-family: 'Inter', sans-serif; font-weight: 400; font-size: 20px; letter-spacing: .06em; text-transform: uppercase; }
-  .s04 .l1 { left: 40px; top: 40px; }
-  .s04 .l2 { right: calc(1920px - 920px); top: 40px; }
+/* s04 · LOOK & FEEL — ALT of v7 (August poster, user reference _review/r5-look-august-ref.png): the GIFs as a 2×2 block
+     («…в ряд или квадрат…» — this file is the «квадрат»; the row is the main slides/s04.html). Everything outside the middle
+     band is identical to the main file (field #e5e4e0; «Look & Feel» Inter Tight 600 393 px −0.03 em, ink 40–1880; top word
+     Π-clip cut at 212 = upper 60 %, bottom word U-clip cut at 861 = lower 55 %, end strips x ≤ 92 / x ≥ 1830; lowest ink
+     1021). See the main file's header for the reference measurements.
+     Middle band (212–861):
+       GIFs   2×2 of 16:9 cells 256 × 144, gap 16: x 696–1224 × 297–601 (centre 960 / 449). Order: f02-g2 · f04-g2 (top),
+              f04-g3 · f04-g4 (bottom). f04-g3's pillarbox cropped (act-x 94 / act-w 772); f04-g4 786 × 540 cover-cropped
+              786 × 442. No tint, no captions.
+       text   the full text word for word, Inter 600 20/22 caps +0.01 em, split in two 8-line blocks that flank the block,
+              48 px gutters: left (x ≤ 648, flush right) = paragraph 1 + the first sentence of paragraph 2 (after a blank
+              line), right (x ≥ 1272, flush left) = the rest of paragraph 2. Balanced breaks, widest lines 545 / 543 px.
+              Both blocks cap top 365, last baseline 533.5 (centred on the GIF block).
+       mark   «POV» Inter Tight 600 132 px, ink-centred on 960, cap 680–776 → 85 px above the bottom cut, 79 px below
+              the GIFs, and the GIFs 85 px under the top cut. */
+  .s04 { background: #e5e4e0; color: #000; }
+  .s04 .wd { left: 0; width: 1920px; margin: 0; padding-left: 19.3px; white-space: nowrap;
+             font-family: 'Inter Tight', sans-serif; font-weight: 600; font-size: 393px; letter-spacing: -0.03em;
+             line-height: 1; text-box: trim-both cap alphabetic; }
+  .s04 .w1 { top: 40px;  clip-path: polygon(0 -80px, 1920px -80px, 1920px 320px, 1830px 320px, 1830px 172px, 92px 172px, 92px 320px, 0 320px); }
+  .s04 .w2 { top: 732px; clip-path: polygon(0 -80px, 92px -80px, 92px 129px, 1830px 129px, 1830px -80px, 1920px -80px, 1920px 320px, 0 320px); }
+
+  .s04 .txt { top: 365px; width: 545px; margin: 0;
+              font-family: 'Inter', sans-serif; font-weight: 600; font-size: 20px; line-height: 22px; letter-spacing: .01em;
+              text-transform: uppercase; white-space: nowrap; }
+  .s04 .txt p { margin: 0; }
+  .s04 .txt p + p { margin-top: 22px; }
+  .s04 .txt p:first-child { text-box: trim-start cap alphabetic; }
+  .s04 .txt p:last-child { text-box: trim-end cap alphabetic; }
+  .s04 .tl { left: 103px; text-align: right; }
+  .s04 .tr { left: 1272px; text-align: left; }
+  .s04 .tr p:only-child { text-box: trim-both cap alphabetic; }   /* one paragraph = first and last child at once */
 
   .s04 .ph { overflow: hidden; background: #111; }
   .s04 .ph video { --act-x: 0; --act-y: 0; --act-w: var(--src-w); --act-h: var(--src-h); --pos-x: .5; --pos-y: .5;
@@ -237,27 +242,15 @@
     width: calc(var(--src-w) * var(--k) * 1px); height: calc(var(--src-h) * var(--k) * 1px);
     left: calc((var(--bw) - var(--act-w) * var(--k)) * var(--pos-x) * 1px - var(--act-x) * var(--k) * 1px);
     top:  calc((var(--bh) - var(--act-h) * var(--k)) * var(--pos-y) * 1px - var(--act-y) * var(--k) * 1px); }
-  .s04 .big { --bw: 867; --bh: 450; left: 1013px; top: 40px; width: 867px; height: 450px; }
+  .s04 .g { --bw: 256; --bh: 144; width: 256px; height: 144px; }
+  .s04 .g1 { left: 696px; top: 297px; }
+  .s04 .g2 { left: 968px; top: 297px; }
+  .s04 .g3 { left: 696px; top: 457px; }
+  .s04 .g4 { left: 968px; top: 457px; }
 
-  .s04 .txt { left: 40px; width: 880px; bottom: calc(1080px - 490px); margin: 0;
-              font-family: 'Inter', sans-serif; font-weight: 400; font-size: 22px; line-height: 31px; letter-spacing: .02em;
-              text-transform: uppercase; text-align: justify; hyphens: manual; }
-  .s04 .txt p { margin: 0; }
-  .s04 .txt p:first-child { text-align-last: justify; text-box: trim-start cap alphabetic; }
-  .s04 .txt p:last-child { text-box: trim-end cap alphabetic; }
-
-  .s04 .ttl { left: 21.8px; top: 530px; font-family: 'Inter Tight', sans-serif; font-weight: 600; font-size: 340.7px;
-              letter-spacing: -0.04em; color: #f9fe00; text-transform: uppercase; }
-
-  .s04 .ft { font-family: 'Inter', sans-serif; font-weight: 400; font-size: 20px; letter-spacing: .06em; text-transform: uppercase; top: 810px; }
-  .s04 .f1 { left: 40px; }
-  .s04 .f2 { left: 960px; transform: translateX(-50%); }
-  .s04 .f3 { right: 40px; }
-
-  .s04 .sm { --bw: 308.33; --bh: 173.44; top: 850.56px; width: 308.33px; height: 173.44px; }
-  .s04 .sm1 { left: 40px; }
-  .s04 .sm2 { left: 372.33px; }
-  .s04 .sm3 { left: 704.67px; }
+  .s04 .mk { left: 955px; top: 680px; transform: translateX(-50%); margin: 0; white-space: nowrap;
+             font-family: 'Inter Tight', sans-serif; font-weight: 600; font-size: 132px; letter-spacing: -0.03em;
+             line-height: 1; text-box: trim-both cap alphabetic; }
 
 /* ── s05.html ── */
 /* s05 · HUMOR (Figma frame 6) — 1:1 on pin d19 (album page: header pairs · tracklist · label · two close-ups).
@@ -975,42 +968,41 @@
   </div>
 </section>
 
-<section data-slide="4" style="--w:1920; --h:1080" class="slide s04" id="look-feel" data-ref="rebelle" data-ref-src="/cases/2026-09-lyapakhin-cloud-ru/deck-danya/_review/r4-look-rebelle-ref.png" aria-label="LOOK &amp; FEEL: камера передаёт состояние героя">
-  <p class="abs cap lab l1">LOOK &amp; FEEL</p>
-  <p class="abs cap lab l2">POV · пластика камеры</p>
+<section data-slide="4" style="--w:1920; --h:1080" class="slide s04" id="look-feel" data-ref="august" data-ref-src="/cases/2026-09-lyapakhin-cloud-ru/deck-danya/_review/r5-look-august-ref.png" aria-label="LOOK &amp; FEEL: камера передаёт состояние героя">
+  <h2 class="abs wd w1" aria-hidden="true">Look &amp; Feel</h2>
 
-  <div class="abs ph big" data-media="f04-g4">
+  <div class="abs txt tl">
+    <p>В POV-съемке, чтобы передать состояние<br>героя, лицо которого мы практически не<br>видим, всю эмоциональную нагрузку<br>на себя возьмут пластика камеры,<br>реакция рук и монтажная драматургия.</p>
+    <p>Изначально камера будет реагировать на мир<br>дергано, немного хаотично, напряженно.</p>
+  </div>
+  <div class="abs txt tr">
+    <p>Зритель будет на физиологическом уровне<br>ощущать панику человека, на которого<br>одновременно валятся десятки критических<br>решений. А в момент перехода, с появлением<br>Cloud.ru, камера успокаивается, движения<br>становятся широкими, свободными и<br>уверенными. Мы буквально даем зрителю<br>сделать глубокий вдох вместе с героем.</p>
+  </div>
+
+  <div class="abs ph g g1" data-media="f04-g1">
+    <video class="loop" muted playsinline loop preload="none" poster="media/fig/f02-g2.jpg" style="--src-w:960; --src-h:540" aria-label="Вид сверху: рука героя на тачпаде ноутбука, рядом телефон, мышь и кофе">
+      <source data-src="media/fig/f02-g2.webm" type="video/webm"><source data-src="media/fig/f02-g2.mp4" type="video/mp4">
+    </video>
+  </div>
+  <div class="abs ph g g2" data-media="f04-g2">
+    <video class="loop" muted playsinline loop preload="none" poster="media/fig/f04-g2.jpg" style="--src-w:960; --src-h:540" aria-label="Экран с таблицей DEAL MANAGEMENT, глаз героини, напряжённое лицо">
+      <source data-src="media/fig/f04-g2.webm" type="video/webm"><source data-src="media/fig/f04-g2.mp4" type="video/mp4">
+    </video>
+  </div>
+  <div class="abs ph g g3" data-media="f04-g3">
+    <video class="loop" muted playsinline loop preload="none" poster="media/fig/f04-g3.jpg" style="--src-w:960; --src-h:540; --act-x:94; --act-w:772" aria-label="Рука с часами над чертежом, настенные часы, герой за столом в кабинете">
+      <source data-src="media/fig/f04-g3.webm" type="video/webm"><source data-src="media/fig/f04-g3.mp4" type="video/mp4">
+    </video>
+  </div>
+  <div class="abs ph g g4" data-media="f04-g4">
     <video class="loop" muted playsinline loop preload="none" poster="media/fig/f04-g4.jpg" style="--src-w:786; --src-h:540" aria-label="Светлый холл офиса: розовые колонны, люди в креслах, героиня уверенно идёт через зал">
       <source data-src="media/fig/f04-g4.webm" type="video/webm"><source data-src="media/fig/f04-g4.mp4" type="video/mp4">
     </video>
   </div>
 
-  <div class="abs txt">
-    <p>В&nbsp;POV-съемке, чтобы пе&shy;ре&shy;дать со&shy;сто&shy;я&shy;ние ге&shy;роя, лицо ко&shy;то&shy;ро&shy;го мы прак&shy;ти&shy;чес&shy;ки не ви&shy;дим, всю эмо&shy;ци&shy;ональ&shy;ную на&shy;груз&shy;ку на себя возь&shy;мут пла&shy;сти&shy;ка ка&shy;ме&shy;ры, ре&shy;ак&shy;ция рук и&nbsp;мон&shy;таж&shy;ная дра&shy;ма&shy;тур&shy;гия.</p>
-    <p>Из&shy;на&shy;чаль&shy;но ка&shy;ме&shy;ра будет ре&shy;аги&shy;ро&shy;вать на мир дер&shy;га&shy;но, нем&shy;но&shy;го ха&shy;отич&shy;но, на&shy;пря&shy;жен&shy;но. Зри&shy;тель будет на фи&shy;зи&shy;оло&shy;ги&shy;чес&shy;ком уров&shy;не ощу&shy;щать па&shy;ни&shy;ку че&shy;ло&shy;ве&shy;ка, на ко&shy;то&shy;ро&shy;го од&shy;но&shy;вре&shy;мен&shy;но ва&shy;лят&shy;ся де&shy;сят&shy;ки кри&shy;ти&shy;чес&shy;ких ре&shy;ше&shy;ний. А&nbsp;в&nbsp;мо&shy;мент пе&shy;ре&shy;хо&shy;да, с&nbsp;по&shy;яв&shy;ле&shy;ни&shy;ем Cloud.ru, ка&shy;ме&shy;ра ус&shy;по&shy;ка&shy;ива&shy;ет&shy;ся, дви&shy;же&shy;ния ста&shy;но&shy;вят&shy;ся ши&shy;ро&shy;ки&shy;ми, сво&shy;бод&shy;ны&shy;ми и&nbsp;уве&shy;рен&shy;ны&shy;ми. Мы бук&shy;валь&shy;но даем зри&shy;те&shy;лю сде&shy;лать глу&shy;бо&shy;кий вдох вме&shy;сте с&nbsp;ге&shy;ро&shy;ем.</p>
-  </div>
+  <p class="abs mk">POV</p>
 
-  <h2 class="abs cap ttl">LOOK &amp; FEEL</h2>
-
-  <p class="abs cap ft f1">Дергано · хаотично · напряженно</p>
-  <p class="abs cap ft f2">Переход — Cloud.ru</p>
-  <p class="abs cap ft f3">Широко · свободно · уверенно</p>
-
-  <div class="abs ph sm sm1" data-media="f04-g1">
-    <video class="loop" muted playsinline loop preload="none" poster="media/fig/f02-g2.jpg" style="--src-w:960; --src-h:540" aria-label="Вид сверху: рука героя на тачпаде ноутбука, рядом телефон, мышь и кофе">
-      <source data-src="media/fig/f02-g2.webm" type="video/webm"><source data-src="media/fig/f02-g2.mp4" type="video/mp4">
-    </video>
-  </div>
-  <div class="abs ph sm sm2" data-media="f04-g2">
-    <video class="loop" muted playsinline loop preload="none" poster="media/fig/f04-g2.jpg" style="--src-w:960; --src-h:540" aria-label="Экран с таблицей DEAL MANAGEMENT, глаз героини, напряжённое лицо">
-      <source data-src="media/fig/f04-g2.webm" type="video/webm"><source data-src="media/fig/f04-g2.mp4" type="video/mp4">
-    </video>
-  </div>
-  <div class="abs ph sm sm3" data-media="f04-g3">
-    <video class="loop" muted playsinline loop preload="none" poster="media/fig/f04-g3.jpg" style="--src-w:960; --src-h:540; --act-x:94; --act-w:772" aria-label="Рука с часами над чертежом, настенные часы, герой за столом в кабинете">
-      <source data-src="media/fig/f04-g3.webm" type="video/webm"><source data-src="media/fig/f04-g3.mp4" type="video/mp4">
-    </video>
-  </div>
+  <h2 class="abs wd w2">Look &amp; Feel</h2>
 </section>
 
 <section data-slide="5" style="--w:1920; --h:1080" class="slide s05" id="humor" data-ref="d19" data-ref-src="/boards/golomazova-danya/design-refs/crops/d19-169.png" aria-label="HUMOR: несколько слоев юмора в ролике">
