@@ -49,12 +49,22 @@
     return { media, heads, body };
   }
 
+  // Phones / narrow screens: several scaled-down slides are on screen at once, so time-based entrances all fire
+  // together. There the motion is SCROLL-LINKED instead: each slide's timeline is scrubbed by how far the slide
+  // has travelled into the viewport (smoothed), so its pictures, headings and text arrive one after another as
+  // you scroll. Desktop keeps time-based entrances, but slides that enter together start one after another.
+  const SCRUB = matchMedia('(max-width: 900px), (pointer: coarse)').matches;
+  const SPREAD = SCRUB ? 1.7 : 1;                      // more air between elements when scrubbed
+
   function build(slide) {
     const { media, heads, body } = targets(slide);
     const anims = [];
+    let total = 0;
     const add = (el, kf, delay, dur) => {
-      const a = el.animate(kf, { duration: dur, delay, easing: EASE, fill: 'backwards' });
+      delay *= SPREAD;
+      const a = el.animate(kf, { duration: dur, delay, easing: SCRUB ? 'cubic-bezier(.3,.55,.3,1)' : EASE, fill: 'backwards' });
       a.pause(); a.currentTime = 0; anims.push(a);
+      total = Math.max(total, delay + dur);
     };
     media.forEach((m, i) => {
       const d = i * 90;
@@ -73,26 +83,63 @@
     const bStart = hStart + Math.min(heads.length, 3) * 110 + 250;
     body.forEach((b, i) => add(b.el, [{ translate: '0 24px', opacity: 0 }, { translate: '0 0', opacity: 1 }],
       bStart + Math.min(i, 10) * 55, 800));
-    return anims;
+    return { anims, total };
+  }
+
+  const finish = plan => plan.anims.forEach(a => a.cancel());   // back to the slide's own CSS
+
+  function initTime(slides, plans) {
+    let nextStart = 0;                                  // queue: slides entering together go one by one
+    const io = new IntersectionObserver(entries => {
+      const hits = entries.filter(e => e.isIntersecting && plans.has(e.target))
+        .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
+      for (const e of hits) {
+        const plan = plans.get(e.target);
+        plans.delete(e.target); io.unobserve(e.target);
+        const now = performance.now(), start = Math.max(now, nextStart);
+        nextStart = start + 450;
+        setTimeout(() => plan.anims.forEach(a => { a.play(); a.finished.then(() => a.cancel(), () => {}); }), start - now);
+      }
+    }, { threshold: 0.45, rootMargin: '0px 0px -10% 0px' });
+    slides.forEach(s => io.observe(s));
+  }
+
+  function initScrub(slides, plans) {
+    // progress 0 when the slide's top reaches the bottom of the screen, 1 when it reaches 25 % from the top
+    const state = new Map(slides.map(s => [s, { target: 0, shown: 0 }]));
+    let ticking = false;
+    const measure = () => {
+      const vh = innerHeight;
+      for (const [s, st] of state) {
+        const top = s.getBoundingClientRect().top;
+        const p = Math.min(1, Math.max(0, (vh - top) / (vh * 0.75)));
+        st.target = Math.max(st.target, p);               // never un-reveal on scroll back
+      }
+    };
+    const frame = () => {
+      let busy = false;
+      for (const [s, st] of state) {
+        const plan = plans.get(s);
+        if (!plan) continue;
+        st.shown += (st.target - st.shown) * 0.09;        // smoothing: eases toward the scroll position
+        if (st.target - st.shown < 0.002) st.shown = st.target;
+        plan.anims.forEach(a => { a.currentTime = st.shown * plan.total; });
+        if (st.shown >= 1) { finish(plan); plans.delete(s); state.delete(s); }
+        else if (st.shown !== st.target) busy = true;
+      }
+      ticking = busy;
+      if (busy) requestAnimationFrame(frame);
+    };
+    const kick = () => { measure(); if (!ticking) { ticking = true; requestAnimationFrame(frame); } };
+    addEventListener('scroll', kick, { passive: true });
+    addEventListener('resize', kick);
+    kick();
   }
 
   function init() {
     const slides = [...document.querySelectorAll('section.slide')];
-    const plans = new Map();
-    const io = new IntersectionObserver(entries => {
-      for (const e of entries) {
-        if (!e.isIntersecting) continue;
-        const anims = plans.get(e.target);
-        if (!anims) continue;
-        plans.delete(e.target); io.unobserve(e.target);
-        anims.forEach(a => { a.play(); a.finished.then(() => a.cancel(), () => {}); });
-      }
-    }, { threshold: 0.35 });
-    for (const s of slides) {
-      // slides already on screen at load still animate (they start from their first frame)
-      plans.set(s, build(s));
-      io.observe(s);
-    }
+    const plans = new Map(slides.map(s => [s, build(s)]));   // every slide starts at its first frame
+    (SCRUB ? initScrub : initTime)(slides, plans);
     // 3D rings / strips marked data-sway drift slowly left↔right around the vertical axis, forever.
     // `rotate` composes with the element's own transform (its 3D placement stays intact).
     for (const el of document.querySelectorAll('[data-sway]')) {
