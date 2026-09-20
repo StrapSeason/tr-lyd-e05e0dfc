@@ -230,16 +230,17 @@
   .s04 .w1 { top: 40px;  clip-path: polygon(0 -80px, 1920px -80px, 1920px 320px, 1830px 320px, 1830px 172px, 92px 172px, 92px 320px, 0 320px); }
   .s04 .w2 { top: 732px; clip-path: polygon(0 -80px, 92px -80px, 92px 129px, 1830px 129px, 1830px -80px, 1920px -80px, 1920px 320px, 0 320px); }
 
-  .s04 .txt { top: 365px; width: 545px; margin: 0;
+  /* Review 2026-09-20: the left text loses its paragraph break («без отбивки») and BOTH blocks line up with the
+     square of GIFs — their cap tops sit on the square's top edge (297), their inner edges 48 px off its sides. */
+  .s04 .txt { top: 297px; width: 545px; margin: 0;
               font-family: 'Inter', sans-serif; font-weight: 600; font-size: 20px; line-height: 22px; letter-spacing: .01em;
               text-transform: uppercase; white-space: nowrap; }
   .s04 .txt p { margin: 0; }
-  .s04 .txt p + p { margin-top: 22px; }
   .s04 .txt p:first-child { text-box: trim-start cap alphabetic; }
   .s04 .txt p:last-child { text-box: trim-end cap alphabetic; }
   .s04 .tl { left: 103px; text-align: right; }
   .s04 .tr { left: 1272px; text-align: left; }
-  .s04 .tr p:only-child { text-box: trim-both cap alphabetic; }   /* one paragraph = first and last child at once */
+  .s04 .txt p:only-child { text-box: trim-both cap alphabetic; }   /* one paragraph = first and last child at once */
 
   .s04 .ph { overflow: hidden; background: #111; }
   .s04 .ph video { --act-x: 0; --act-y: 0; --act-w: var(--src-w); --act-h: var(--src-h); --pos-x: .5; --pos-y: .5;
@@ -474,6 +475,9 @@
   .s07 .nav { margin: 0; font-family: 'Inter', sans-serif; font-weight: 400; font-size: 23px; line-height: 31px;
               color: #f6f7f2; white-space: nowrap; text-box: trim-both cap alphabetic; }
   .s07 .nav .y { color: #f9fe00; }
+  /* review 2026-09-20 («го в черную плашку»): the caption sat straight on the busy aisle — it now has its own
+     black plate, 26 px of padding round the ink (210–1311 × 962–1021), the slide's own field colour. */
+  .s07 .plate { left: 184px; top: 936px; width: 1153px; height: 111px; background: #0b100d; }
 
 /* ── s08.html ── */
 /* s08 · CAST (Figma frame 72) — pin d21 SIGNATURE, reference = crops/d21-169.png (832×468), k = 1920 / 832 = 2.30769.
@@ -518,12 +522,12 @@
   .s08 { --L: 1037px; --cw: 391px; --cg: 60px; --fs: 25px; --lh: 31px; background: #f9fe00; color: #070205; }
   .s08 .cap { text-box: trim-both cap alphabetic; line-height: 1; white-space: nowrap; margin: 0; }
 
-  .s08 .ph { --g: 12; --bw: calc((977.1 - var(--g)) / 2); --bh: calc((1080 - var(--g)) / 2);
+  .s08 .ph { --g: 12; --m: 40; --bw: calc((977.1 - var(--m) - var(--g)) / 2); --bh: calc((1080 - 2 * var(--m) - var(--g)) / 2);
              width: calc(var(--bw) * 1px); height: calc(var(--bh) * 1px); overflow: hidden; }
-  .s08 .p1, .s08 .p3 { left: 0; }
-  .s08 .p2, .s08 .p4 { left: calc((var(--bw) + var(--g)) * 1px); }
-  .s08 .p1, .s08 .p2 { top: 0; }
-  .s08 .p3, .s08 .p4 { top: calc((var(--bh) + var(--g)) * 1px); }
+  .s08 .p1, .s08 .p3 { left: calc(var(--m) * 1px); }
+  .s08 .p2, .s08 .p4 { left: calc((var(--m) + var(--bw) + var(--g)) * 1px); }
+  .s08 .p1, .s08 .p2 { top: calc(var(--m) * 1px); }
+  .s08 .p3, .s08 .p4 { top: calc((var(--m) + var(--bh) + var(--g)) * 1px); }
   .s08 .ph video { --act-x: 0; --act-y: 0; --act-w: var(--src-w); --act-h: var(--src-h); --pos-x: .5; --pos-y: .5;
     --k: max(var(--bw) / var(--act-w), var(--bh) / var(--act-h));
     position: absolute; display: block; max-width: none; object-fit: fill;
@@ -972,11 +976,10 @@
   <h2 class="abs wd w1" aria-hidden="true" data-tb-mt="-53.078" data-tb-mb="-54.000" data-tb-y="-55.078" data-tb-clip="polygon(0px -26.922px, 1920px -26.922px, 1920px 373.078px, 1830px 373.078px, 1830px 225.078px, 92px 225.078px, 92px 373.078px, 0px 373.078px)" style="white-space: nowrap;">Look &amp; Feel</h2>
 
   <div class="abs txt tl">
-    <p data-tb-mt="-3.453" data-tb-mb="0.000" data-tb-y="360.547" style="hyphens: manual;"><span class="ln" style="display:block;white-space:nowrap;">В POV-съемке, чтобы передать состояние</span><span class="ln" style="display:block;white-space:nowrap;text-indent:0;">героя, лицо которого мы практически не</span><span class="ln" style="display:block;white-space:nowrap;text-indent:0;">видим, всю эмоциональную нагрузку</span><span class="ln" style="display:block;white-space:nowrap;text-indent:0;">на себя возьмут пластика камеры,</span><span class="ln" style="display:block;white-space:nowrap;text-indent:0;">реакция рук и монтажная драматургия.</span></p>
-    <p data-tb-mt="22.000" data-tb-mb="-4.000" data-tb-y="492.547" style="hyphens: manual;"><span class="ln" style="display:block;white-space:nowrap;">Изначально камера будет реагировать на мир</span><span class="ln" style="display:block;white-space:nowrap;text-indent:0;">дергано, немного хаотично, напряженно.</span></p>
+    <p data-tb-mt="-3.453" data-tb-mb="-4.000" data-tb-y="292.547" style="hyphens: manual;"><span class="ln" style="display:block;white-space:nowrap;">В POV-съемке, чтобы передать состояние</span><span class="ln" style="display:block;white-space:nowrap;text-indent:0;">героя, лицо которого мы практически не</span><span class="ln" style="display:block;white-space:nowrap;text-indent:0;">видим, всю эмоциональную нагрузку</span><span class="ln" style="display:block;white-space:nowrap;text-indent:0;">на себя возьмут пластика камеры,</span><span class="ln" style="display:block;white-space:nowrap;text-indent:0;">реакция рук и монтажная драматургия.</span><span class="ln" style="display:block;white-space:nowrap;text-indent:0;">Изначально камера будет реагировать на мир</span><span class="ln" style="display:block;white-space:nowrap;text-indent:0;">дергано, немного хаотично, напряженно.</span></p>
   </div>
   <div class="abs txt tr">
-    <p data-tb-mt="-3.453" data-tb-mb="-4.000" data-tb-y="360.547" style="hyphens: manual;"><span class="ln" style="display:block;white-space:nowrap;">Зритель будет на физиологическом уровне</span><span class="ln" style="display:block;white-space:nowrap;text-indent:0;">ощущать панику человека, на которого</span><span class="ln" style="display:block;white-space:nowrap;text-indent:0;">одновременно валятся десятки критических</span><span class="ln" style="display:block;white-space:nowrap;text-indent:0;">решений. А в момент перехода, с появлением</span><span class="ln" style="display:block;white-space:nowrap;text-indent:0;">Cloud.ru, камера успокаивается, движения</span><span class="ln" style="display:block;white-space:nowrap;text-indent:0;">становятся широкими, свободными и</span><span class="ln" style="display:block;white-space:nowrap;text-indent:0;">уверенными. Мы буквально даем зрителю</span><span class="ln" style="display:block;white-space:nowrap;text-indent:0;">сделать глубокий вдох вместе с героем.</span></p>
+    <p data-tb-mt="-3.453" data-tb-mb="-4.000" data-tb-y="292.547" style="hyphens: manual;"><span class="ln" style="display:block;white-space:nowrap;">Зритель будет на физиологическом уровне</span><span class="ln" style="display:block;white-space:nowrap;text-indent:0;">ощущать панику человека, на которого</span><span class="ln" style="display:block;white-space:nowrap;text-indent:0;">одновременно валятся десятки критических</span><span class="ln" style="display:block;white-space:nowrap;text-indent:0;">решений. А в момент перехода, с появлением</span><span class="ln" style="display:block;white-space:nowrap;text-indent:0;">Cloud.ru, камера успокаивается, движения</span><span class="ln" style="display:block;white-space:nowrap;text-indent:0;">становятся широкими, свободными и</span><span class="ln" style="display:block;white-space:nowrap;text-indent:0;">уверенными. Мы буквально даем зрителю</span><span class="ln" style="display:block;white-space:nowrap;text-indent:0;">сделать глубокий вдох вместе с героем.</span></p>
   </div>
 
   <div class="abs ph g g1" data-media="f04-g1">
@@ -1079,6 +1082,7 @@
   <p class="abs cap mi" style="left: 1519px; top: 100px; white-space: nowrap;" aria-hidden="true" data-tb-mt="-4.172" data-tb-mb="-4.000" data-tb-y="92.828">SETTING</p>
   <p class="abs cap mi" style="left: 1519px; top: 140px; white-space: nowrap;" aria-hidden="true" data-tb-mt="-4.172" data-tb-mb="-4.000" data-tb-y="132.828">( PRODUCTION FACTORY )</p>
 
+  <div class="abs plate" aria-hidden="true"></div>
   <p class="abs nav" style="left: 210px; bottom: 65px; hyphens: manual;" data-tb-mt="-6.266" data-tb-mb="-8.000" data-tb-y="962.000"><span class="ln" style="display:block;white-space:nowrap;">VFX-фон: цех конвейерной сборки. Например, автомобильной. Широкий проход между станками,</span><span class="ln" style="display:block;white-space:nowrap;text-indent:0;">уходящий вдаль, слева и&nbsp;справа&nbsp;– два конвейера, которые передают части <span class="y">и собирают автомобиль.</span></span></p>
 </section>
 
