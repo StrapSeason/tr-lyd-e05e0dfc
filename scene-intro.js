@@ -29,8 +29,12 @@
 
   const style = document.createElement('style');
   style.textContent = `
-  .scene { position: relative; }
-  .scene > .slide-frame { position: sticky; scroll-snap-align: none !important; }
+  /* On phones the page snaps slide by slide (gate.js: scroll-snap-type: y mandatory). The scene is taller than
+     the screen, so giving IT the snap point — and taking it off the pinned frame — makes it an oversized snap
+     area: every position inside it is a valid resting place, i.e. the scene scrolls freely instead of being
+     skipped, and a fling still stops on it. */
+  .scene { position: relative; scroll-snap-align: center; scroll-snap-stop: always; }
+  .scene > .slide-frame { position: sticky; scroll-snap-align: none !important; scroll-snap-stop: normal !important; }
   .s02-cards { position: absolute; inset: 0; z-index: 3; pointer-events: none; }
   .s02-card { position: absolute; background: #16171b center / cover no-repeat; opacity: 0;
     box-shadow: 0 18px 50px rgba(0,0,0,.45); will-change: transform, opacity; }
@@ -119,9 +123,11 @@
     });
   }
 
+  const PHONE = matchMedia('(pointer: coarse)').matches;
   function layout() {
     const vh = innerHeight, fh = frame.getBoundingClientRect().height;
-    scene.style.height = Math.round(vh + Math.max(vh * 2, 1400)) + 'px';   // ~3 screens of scroll
+    const travel = PHONE ? vh * 1.6 : Math.max(vh * 2, 1400);   // a thumb-length of drag on phones, ~3 screens on desktop
+    scene.style.height = Math.round(vh + travel) + 'px';
     frame.style.top = Math.max(0, Math.round((vh - fh) / 2)) + 'px';
   }
 
