@@ -137,7 +137,7 @@
   }
 
   function init() {
-    const slides = [...document.querySelectorAll('section.slide')];
+    const slides = [...document.querySelectorAll('section.slide')].filter(s => !s.dataset.scene);   // scene-driven slides animate themselves
     const plans = new Map(slides.map(s => [s, build(s)]));   // every slide starts at its first frame
     (SCRUB ? initScrub : initTime)(slides, plans);
     // 3D rings / strips marked data-sway drift slowly left↔right around the vertical axis, forever.
