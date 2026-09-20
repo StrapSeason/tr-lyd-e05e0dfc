@@ -1,6 +1,8 @@
 /* Deck runtime styles — plumbing only, no case design. */
 *, *::before, *::after { box-sizing: border-box; }
 html, body { margin: 0; background: #111; }
+/* phones: never let the browser inflate text (Android font boosting, iOS landscape text-size-adjust) */
+html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
 body { -webkit-font-smoothing: antialiased; text-rendering: geometricPrecision; }
 
 .slide-frame { position: relative; overflow: hidden; margin: 0 auto; }
