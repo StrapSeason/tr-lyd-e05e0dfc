@@ -9,7 +9,6 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@100..900&family=Inter:opsz,wght@14..32,100..900&display=swap">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&family=Inter+Tight:wght@100..900&display=swap">
 <link rel="stylesheet" href="deck.css">
 <style>
@@ -57,80 +56,87 @@
   .s01 .g2 { right: 34px; top: 821px; }
 
 /* ── s02.html ── */
-/* s02 · INTRO (Figma frame 2) — VARIANT C on pin d71 «KOMBO23» (brief v5, 2026-09-19).
-     Reference = /boards/golomazova-danya/design-refs/crops/d71-169.png (1067×600), k = 1.79944. Geometry source: Oblako
-     deck-v2 s19 («ПОРТАЛ») + _qa/s19.json, re-measured on the crop at canvas scale (white glyph ink):
-       row 1  K 9–213 × 19–287 · O 817–1027 × 15–290 · © 1689–1902 × 18–281
-       row 2  M 370–652 × 395–666 · B 1326–1498 × 395–663
-       row 3  O 13–222 × 767–1042 · 2 842–989 × 767–1039 · 3 1729–1885 × 770–1043
-       inset 1352.5–1532.5 × 856–1057, corner radius ≈ 5 · micro blocks A 394 / 22 · B 1324 / 31 · C 14 / 400 · D 1704 / 400 ·
-       E 387 / …1044 · F 1114 / …1040.
-     Photo: f02-g1 (720×540, no bars) full-bleed — the colleagues staring into the lens (the hero's POV). Cover = ×2.6667
-       (1920 × 1440); rows 230 … 1310 shown (--t 230): every face keeps its eyes, the light ceiling becomes the pin's light
-       field at the top and the dark clothes its dark field at the bottom. Never tinted, blurred or darkened.
-     Giant letters I · N · T · R · O — Inter Tight 600 (G1), cap 270 = the pin's, yellow #f9fe00 (deck accent), read row by
-       row like K O © / M B / O 2 3:
-         I  K slot, row 1 (cap 18–287 = the pin's 19–287), left ink 40 (review: 40-px margins)
-         N  row 2 (394–663 = the pin's 395–663), ink 580–800: the M slot (370–652) would sit on the girl in the hijab's face,
-            so the letter slides right into the gap between faces (the bald colleague's shirt and the braids)
-         T  row 2, ink 1548–1762: the B slot (1326–1498) is the tilted girl's face; moved right onto her grey sweater
-         R  O slot, row 3, left ink 40; O  «2» slot, row 3, centred on 916 (pin 915.5). Row 3 raised to baseline 1024 (G2).
-       Measured contrast of the letters over the frame (median / share ≥ 3:1): I 14 · N 9 / 71 % · T 4.9 / 69 % · R 17 · O 15;
-       white would read the same (the ceiling is #929797: white 2.96, yellow 2.76), yellow carries the deck accent.
-     Windows (the other three GIFs, never repeated), radius 5 like the pin's inset:
-         w1  the top «O» slot (INTRO has 5 letters for the pin's 7 slots), 790–1005 × 18–288, over the bare ceiling: f02-g4
-             (the team, thumbs-up; pillarbox 122 px a side cropped, --fx .5 on the man with the thumbs-up)
-         w2  the © slot, 1664–1880 × 18–283: f02-g2 (top view, hand on the trackpad)
-         w3  the inset, 180 × 202 as the pin's, moved to the «3» corner 1700–1880 × 822–1024: at the pin's 1353 it would cover
-             the front girl's eyes: f02-g3 (laptop with code, --fx .1)
-     Micro text (G1: Inter 400 24 px / 31, ragged like the pin's blocks), all of frame 2 in reading order, no word repeated:
-         A  greeting        322–517, cap top 25 — on the ceiling between two heads (pin A 394 needs 195 px there)
-         B  sentence 1       1192–1510, cap top 25 — on the ceiling and the right lamp (pin B 1324)
-         E  sentence 2       290–760 (7 lines, ≥ 40 px clear of the O and under the hijab girl's chin), last baseline 1019
-                             (pin E 387, bottom-aligned like the pin)
-         F  sentence 3       1082–1332 (7 lines), last baseline 1019 (pin F 1114)
-       The type takes the colour that reads on the footage under it: #111 on the light ceiling (A, B), white on the dark
-       clothes (E, F) — the pin's white micro text would be 2.96:1 on this ceiling. Measured median / 5th percentile:
-       A 6.9 / 5.5 · B 8.0 / 6.5 · E 18.8 / 14.4 · F 18.4 / 12.9 (all ≥ 4.5:1). Lowest text ink 1018 (G2).
-       Pin blocks C and D are left out: their places are faces and the letter T; every word is already on the slide. */
-  .s02 { background: #111; color: #fff; }
-  .s02 .cap { text-box: trim-both cap alphabetic; margin: 0; }
+/* s02 · INTRO (Figma frame 2) — VARIANT on pin d42 «PD … PAOLA».
+     Reference = /boards/golomazova-danya/design-refs/crops/d42-169.png (1095×616), k = 1.7534.
+     Geometry source: Oblako deck-v2/s15 + _qa/s15.json (same pin, gate-passed) — every value RE-MEASURED on the crop
+     at canvas scale (scratch measure.mjs, luminance bands):
+       field   #a4a39b · ink #000 (giant word) / #050505 (quote)
+       nav     one row, cap top 33, baseline 51, cap 18 (font ≈ 24.5). Ink: n1 43–203 · n2 274–357 ·
+               n3 739–1179 (centre 959) · n4 1595–1683 · n5 1755–1874.
+       card    533–972 × 397–1061 → 440 × 665; paper #d6d3cc…#e8e6e0 with a darker left edge (paper curl) and a
+               1-px shadow line on the right and bottom.
+       photo   563–942 × 477–952 → 380 × 476, inset 30 / 80 / 30 / 109 in the card.
+       quote   6 justified caps lines, ink 920–1216 (297 wide), cap tops 343 · 362 · 382 · 401 · 420 · 440 (pitch 19.4),
+               cap ≈ 16 → font ≈ 22; hangs 54 px above the card's top-right corner; last baseline 456 = photo top − 21.
+       big     cap 271, cap top 798, baseline 1069; «PD» ink 47–364, «PAOLA» ink 1145–1877; gaps to the card 169 / 170.
+     Content (frame 2, every word, all 4 GIFs, each once):
+       • Giant word «IN» | card | «TRO» — the pin's split device. Inter Tight 600 (G1), 372.8 px, −0.03 em, cap 273.8.
+         Measured ink: IN 304.5, TRO 694.5 wide → with the pin's outer ink edges (47 and 1877) the card and the two
+         gaps get 831 px.
+       • G2 — the pin's baseline 1069 would put the O/R overshoot 6 px off the bottom edge: baseline 1016. Measured on
+         the shot: IN ink 49–349 × 742–1012, TRO ink 1185–1876 × 738–1016 → lowest ink 1016, 64 px clear, and the cap
+         is 271 rows, exactly the pin's. The card keeps the pin's «bottom = baseline − 7» relation (1009 measured 1008).
+       • Card × 1.2 (528 × 798, photo inset 36 / 96, photo area 456 × 571.2): at the pin's size the four cells would be
+         185 × 232 and the faces unreadable at 640 px. At × 1.2 the cells are 222 × 279.6 — the same 0.79 portrait as
+         the pin's single photo — and the gaps to the word are 154 / 155 (pin 169 / 170), so the split still reads.
+         Measured card 503–1030 × 211–1008, centre x 767 (pin 752).
+       • 2×2 in reading order of the text: f02-g1 (colleagues in the lens, the strongest — top left, first) ·
+         f02-g3 (laptop with code) · f02-g2 (hand on the trackpad) · f02-g4 (team, thumbs-up — the relief, last).
+         Cover crops, no tint / blur / darkening, gutter 12 (the pin has one photo and no gutter, paper shows through).
+         cropdetect on the .mp4s: g1 720×540 clean · g2, g3 960×540 clean · g4 960×540 pillarbox 122 px a side
+         (active 716) → --act-x 122 --act-w 716, bars never show.
+       • Quote block = the three long sentences, word for word, in the pin's justified caps block: Inter 400 (G1)
+         24 px / 28, −0.01 em, soft hyphens (headless Edge has no Russian dictionary). Legibility (user rule): the pin's
+         ≈ 22 px block of 297 px would need 26 lines and run down over the photo, so it keeps the pin's TOP anchor
+         (cap top = card top − 65, the pin's 54 × 1.2) and grows right: left = the card's right edge 1031, right ink
+         edge 1877 = «TRO»'s. Measured ink 1032–1877 × 145–415: 10 lines, pitch 28, last line ragged left, leaving the
+         pin's own empty field (≈ 330 px) between the block and the word.
+       • Micro rows = the frame's two short opening lines, in reading order, plus the client: «ПРИВЕТ!» on the pin's
+         n1 ink-left 43, «СПАСИБО ЗА КЛАССНЫЙ РЕЖИССЕРСКИЙ ЧЕЛЛЕНДЖ!» centred on the pin's 959, «CLOUD.RU» on the pin's
+         n5 ink-right 1877. Inter 500 24.5 px caps = the pin's row (G1 allows 500 for a label that must stand out).
+         The pin's n2 and n4 (STORES / SEARCH) are UI debris — dropped, no filler invented for them.
+     Contrast: #000 on #a4a39b = 8.9 : 1 (word), #050505 on the field 8.7 : 1 (quote and rows), on the paper ≈ 17 : 1.
+     No yellow on this slide: the pin is a grey-paper-black pin with no accent field, and #f9fe00 reaches only 2.3 : 1
+     on #a4a39b and 1.1 : 1 on the paper — every place an accent could go fails contrast. Flagged in the report. */
+  .s02 { background: #0b0b0b; color: #e8e8e2; }   /* review: black field, like the scroll scene it grows out of */
+  .s02 .cap { text-box: trim-both cap alphabetic; line-height: 1; margin: 0; }
 
-  /* full-bleed photo: cover width, rows --t … --t+1080 */
-  .s02 .bg { left: 0; top: 0; width: 1920px; height: 1080px; overflow: hidden; }
-  .s02 .bg video { --t: 230; position: absolute; left: 0; top: calc(var(--t) * -1px); width: 1920px; height: 1440px;
-                   object-fit: fill; display: block; max-width: none; }
+  /* micro rows (G1: Inter, 500 for the row labels) */
+  .s02 .nav { top: 33px; font-family: 'Inter', sans-serif; font-weight: 500; font-size: 24.5px; white-space: nowrap; }
+  .s02 .n1 { left: 42px; }
+  .s02 .n3 { left: 0; width: 1918px; text-align: center; }
+  .s02 .n5 { left: 1754.9px; }
 
-  /* windows: the video is sized so its ACTIVE picture (bars excluded) covers the window, placed by --fx / --fy */
-  .s02 .win { position: absolute; overflow: hidden; border-radius: 5px; width: calc(var(--bw) * 1px); height: calc(var(--bh) * 1px); }
-  .s02 .win > video {
-    --cx: 0; --cy: 0; --cw: var(--sw); --ch: var(--sh); --fx: .5; --fy: .5;
-    --k: max(calc(var(--bw) / var(--cw)), calc(var(--bh) / var(--ch)));
-    position: absolute; display: block; max-width: none; margin: 0; object-fit: fill;
-    width: calc(var(--sw) * var(--k) * 1px); height: calc(var(--sh) * var(--k) * 1px);
-    left: calc((var(--cx) * var(--k) + (var(--cw) * var(--k) - var(--bw)) * var(--fx)) * -1px);
-    top:  calc((var(--cy) * var(--k) + (var(--ch) * var(--k) - var(--bh)) * var(--fy)) * -1px);
-  }
-  .s02 .w1 { left: 790px;  top: 18px;  --bw: 215; --bh: 270; }
-  .s02 .w2 { left: 1664px; top: 18px;  --bw: 216; --bh: 265; }
-  .s02 .w3 { left: 1700px; top: 822px; --bw: 180; --bh: 202; }
+  /* the pin's paper card, × 1.2 */
+  .s02 .card { left: 503px; top: 211px; width: 528px; height: 798px;
+               background: linear-gradient(90deg, #d6d3cc 0, #e2dfd8 6px, #e7e5df 14px, #eae8e2 60%, #e8e6e0);
+               box-shadow: 1.9px 1.9px 0 #898880, 3.6px 3.6px 4px rgba(0,0,0,.10); }
 
-  /* giant letters (G1: Inter Tight 600) */
-  .s02 .gl { font: 600 371px/1 'Inter Tight', sans-serif; color: #f9fe00; letter-spacing: -0.02em; white-space: nowrap; }
-  .s02 .gI { left: 20px;  top: 18px; }
-  .s02 .gN { left: 560px; top: 394px; }
-  .s02 .gT { left: 1540px; top: 394px; }
-  .s02 .gR { left: 20px;  top: 754px; }
-  .s02 .gO { left: 780px; top: 750px; }
+  /* photo area = 2×2 cells; the video is sized so its ACTIVE picture (bars excluded) covers the cell */
+  .s02 .ph { --g: 12; --bw: calc((456 - var(--g)) / 2); --bh: calc((571.2 - var(--g)) / 2);
+             width: calc(var(--bw) * 1px); height: calc(var(--bh) * 1px); overflow: hidden; background: #15161a; }
+  .s02 .p1, .s02 .p3 { left: 539px; }
+  .s02 .p2, .s02 .p4 { left: calc(539px + (var(--bw) + var(--g)) * 1px); }
+  .s02 .p1, .s02 .p2 { top: 307px; }
+  .s02 .p3, .s02 .p4 { top: calc(307px + (var(--bh) + var(--g)) * 1px); }
+  .s02 .ph video { --act-x: 0; --act-y: 0; --act-w: var(--src-w); --act-h: var(--src-h); --pos-x: .5; --pos-y: .5;
+    --k: max(var(--bw) / var(--act-w), var(--bh) / var(--act-h));
+    position: absolute; display: block; max-width: none; object-fit: fill;
+    width: calc(var(--src-w) * var(--k) * 1px); height: calc(var(--src-h) * var(--k) * 1px);
+    left: calc((var(--bw) - var(--act-w) * var(--k)) * var(--pos-x) * 1px - var(--act-x) * var(--k) * 1px);
+    top:  calc((var(--bh) - var(--act-h) * var(--k)) * var(--pos-y) * 1px - var(--act-y) * var(--k) * 1px); }
 
-  /* micro text blocks (G1: Inter 400) */
-  .s02 .mt { font: 400 24px/31px 'Inter', sans-serif; margin: 0; }
-  .s02 .mt.on-light { color: #111; }
-  .s02 .mt.on-dark { color: #fff; }
-  .s02 .mA { left: 322px;  top: 25px;    width: 195px; }
-  .s02 .mB { left: 1192px; top: 25px;    width: 318px; }
-  .s02 .mE { left: 290px;  bottom: 61px; width: 470px; }
-  .s02 .mF { left: 1082px; bottom: 61px; width: 250px; }
+  /* the pin's justified caps block (G1: Inter 400) */
+  .s02 .q { left: 1046px; top: 146px; width: 831px;   /* review: 15 px further from the card */
+            font-family: 'Inter', sans-serif; font-weight: 400; font-size: 24px; line-height: 28px;
+            letter-spacing: -0.01em; text-align: justify; text-align-last: left; hyphens: manual; }
+
+  /* the split giant word (G1: Inter Tight 600) */
+  .s02 .gl { top: 742.2px; font-family: 'Inter Tight', sans-serif; font-weight: 600; font-size: 372.8px;
+             letter-spacing: -0.03em; color: #f9fe00; white-space: nowrap; }   /* review: yellow, as on the other slides */
+  .s02 .gIN  { left: 29.5px; }
+  .s02 .gTRO { left: 1176.8px; }
+
   .s02 .vh { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); margin: 0; }
 
 /* ── s03.html ── */
@@ -906,40 +912,39 @@
   </h1>
 </section>
 
-<section data-slide="2" style="--w:1920; --h:1080" class="slide s02" id="intro" data-ref="d71" data-ref-src="/boards/golomazova-danya/design-refs/crops/d71-169.png" aria-label="INTRO: привет и задача ролика — коллеги героя смотрят прямо в камеру" data-compat="baked">
-  <div class="abs bg" data-media="f02-g1">
-    <video class="loop" muted="" playsinline="" loop="" preload="none" poster="media/fig/f02-g1.jpg" data-crop="0 0 720 540" aria-label="Коллеги героя столпились и смотрят прямо в камеру — взгляд героя, POV">
+<section data-slide="2" style="--w:1920; --h:1080" class="slide s02" id="intro" data-ref="d42" data-ref-src="/boards/golomazova-danya/design-refs/crops/d42-169.png" aria-label="INTRO: привет, задача ролика и четыре кадра из референса" data-compat="baked">
+  <p class="abs cap mt nav n1" data-tb-mt="-3.172" data-tb-mb="-3.500" data-tb-y="26.828" style="white-space: nowrap;">ПРИВЕТ!</p>
+  <p class="abs cap mt nav n3" data-tb-mt="-3.172" data-tb-mb="-3.500" data-tb-y="26.828" style="white-space: nowrap;">СПАСИБО ЗА КЛАССНЫЙ РЕЖИССЕРСКИЙ ЧЕЛЛЕНДЖ!</p>
+  <p class="abs cap mt nav n5" data-tb-mt="-3.172" data-tb-mb="-3.500" data-tb-y="26.828" style="white-space: nowrap;">CLOUD.RU</p>
+
+  <div class="abs card" aria-hidden="true"></div>
+
+  <div class="abs ph p1 bg" data-media="f02-g1">
+    <video class="loop" muted="" playsinline="" loop="" preload="none" poster="media/fig/f02-g1.jpg" style="--src-w:720; --src-h:540; --pos-x:.5" aria-label="Коллеги героя столпились и смотрят прямо в камеру — взгляд героя, POV">
       <source data-src="media/fig/f02-g1.webm" type="video/webm"><source data-src="media/fig/f02-g1.mp4" type="video/mp4">
     </video>
   </div>
-
-  <div class="win w1" data-media="f02-g4">
-    <video class="loop" muted="" playsinline="" loop="" preload="none" poster="media/fig/f02-g4.jpg" data-crop="122 0 716 540" style="--sw:960; --sh:540; --cx:122; --cw:716; --fx:.5" aria-label="Улыбающаяся команда в офисе, мужчина в очках показывает большой палец">
-      <source data-src="media/fig/f02-g4.webm" type="video/webm"><source data-src="media/fig/f02-g4.mp4" type="video/mp4">
-    </video>
-  </div>
-  <div class="win w2" data-media="f02-g2">
-    <video class="loop" muted="" playsinline="" loop="" preload="none" poster="media/fig/f02-g2.jpg" data-crop="0 0 960 540" style="--sw:960; --sh:540; --fx:.5" aria-label="Вид сверху: рука героя на тачпаде ноутбука">
-      <source data-src="media/fig/f02-g2.webm" type="video/webm"><source data-src="media/fig/f02-g2.mp4" type="video/mp4">
-    </video>
-  </div>
-  <div class="win w3" data-media="f02-g3">
-    <video class="loop" muted="" playsinline="" loop="" preload="none" poster="media/fig/f02-g3.jpg" data-crop="0 0 960 540" style="--sw:960; --sh:540; --fx:.1" aria-label="Ноутбук с кодом и 3D-моделью на экране, офис смазан в движении">
+  <div class="abs ph p2 win w1" data-media="f02-g3">
+    <video class="loop" muted="" playsinline="" loop="" preload="none" poster="media/fig/f02-g3.jpg" style="--src-w:960; --src-h:540; --pos-x:.25" aria-label="Ноутбук с кодом и 3D-моделью на экране, офис смазан в движении">
       <source data-src="media/fig/f02-g3.webm" type="video/webm"><source data-src="media/fig/f02-g3.mp4" type="video/mp4">
     </video>
   </div>
+  <div class="abs ph p3 win w2" data-media="f02-g2">
+    <video class="loop" muted="" playsinline="" loop="" preload="none" poster="media/fig/f02-g2.jpg" style="--src-w:960; --src-h:540; --pos-x:.5" aria-label="Вид сверху: рука героя на тачпаде ноутбука, рядом телефон, мышь и кофе">
+      <source data-src="media/fig/f02-g2.webm" type="video/webm"><source data-src="media/fig/f02-g2.mp4" type="video/mp4">
+    </video>
+  </div>
+  <div class="abs ph p4 win w3" data-media="f02-g4">
+    <video class="loop" muted="" playsinline="" loop="" preload="none" poster="media/fig/f02-g4.jpg" style="--src-w:960; --src-h:540; --act-x:122; --act-w:716; --pos-x:.5" aria-label="Улыбающаяся команда в офисе, мужчина в очках показывает большой палец">
+      <source data-src="media/fig/f02-g4.webm" type="video/webm"><source data-src="media/fig/f02-g4.mp4" type="video/mp4">
+    </video>
+  </div>
+
+  <p class="abs cap mt q" lang="ru" data-tb-mt="-4.531" data-tb-mb="-6.000" data-tb-y="140.469" style="hyphens: manual;"><span class="ln" style="display:block;white-space:nowrap;text-align-last:justify;">СНЯТЬ РОЛИК ЦЕ­ЛИ­КОМ В&nbsp;ФОР­МА­ТЕ POV И&nbsp;ПРИ ЭТОМ НЕ ПРОС­ТО</span><span class="ln" style="display:block;white-space:nowrap;text-indent:0;text-align-last:justify;">ЗАВ­ЛЕЧЬ ЗРИ­ТЕ­ЛЯ, А&nbsp;ПО­БУ­ДИТЬ ФИ­ЗИ­ЧЕС­КИ СО­ПЕ­РЕ­ЖИ­ВАТЬ ГЕРОЮ</span><span class="ln" style="display:block;white-space:nowrap;text-indent:0;text-align-last:justify;">– ЭТО ЗА­ДА­ЧА НА ТОН­КУЮ РА­БО­ТУ С&nbsp;РИТ­МОМ, МИ­ЗАН­СЦЕ­НОЙ И&nbsp;ДЕ-</span><span class="ln" style="display:block;white-space:nowrap;text-indent:0;text-align-last:justify;">ТА­ЛЯ­МИ. Я&nbsp;ХОЧУ СДЕ­ЛАТЬ ТАК, ЧТОБЫ КАЖ­ДЫЙ IT-РУКОВОДИТЕЛЬ</span><span class="ln" style="display:block;white-space:nowrap;text-indent:0;text-align-last:justify;">И&nbsp;РАЗ­РА­БОТ­ЧИК УЗНАЛ В&nbsp;ЭТОМ СУ­МАС­ШЕД­ШЕМ СПРИН­ТЕ СЕБЯ,</span><span class="ln" style="display:block;white-space:nowrap;text-indent:0;text-align-last:justify;">УЛЫБ­НУЛ­СЯ ОТ ТО­ЧЕЧ­НЫХ ПАС­ХА­ЛОК И&nbsp;ПО­ЧУВС­ТВО­ВАЛ ФИ­ЗИ­ЧЕС-</span><span class="ln" style="display:block;white-space:nowrap;text-indent:0;text-align-last:justify;">КОЕ ОБ­ЛЕГ­ЧЕ­НИЕ, КОГДА В&nbsp;КАДРЕ ПО­ЯВ­ЛЯ­ЕТ­СЯ РЕ­ШЕ­НИЕ ОТ</span><span class="ln" style="display:block;white-space:nowrap;text-indent:0;text-align-last:justify;">CLOUD.RU. МЫ СОЗ­ДА­ДИМ СТИЛЬ­НЫЙ, ИРО­НИЧ­НЫЙ И&nbsp;НЕ­ВЕ­РО­ЯТ­НО</span><span class="ln" style="display:block;white-space:nowrap;text-indent:0;text-align-last:justify;">ЖИВОЙ РОЛИК, КО­ТО­РЫЙ ЗА­ХО­ЧЕТ­СЯ РАЗ­БИ­РАТЬ НА КАДРЫ И&nbsp;ШЕ-</span><span class="ln" style="display:block;white-space:nowrap;text-indent:0;">РИТЬ В&nbsp;ПРО­ФИЛЬ­НЫХ ЧАТАХ.</span></p>
 
   <h2 class="vh" style="white-space: nowrap;">INTRO</h2>
-  <div class="abs cap gl gI" aria-hidden="true" data-tb-mt="-50.078" data-tb-mb="-51.000" data-tb-y="-71.078" style="white-space: nowrap;">I</div>
-  <div class="abs cap gl gN" aria-hidden="true" data-tb-mt="-50.078" data-tb-mb="-51.000" data-tb-y="304.922" style="white-space: nowrap;">N</div>
-  <div class="abs cap gl gT" aria-hidden="true" data-tb-mt="-50.078" data-tb-mb="-51.000" data-tb-y="304.922" style="white-space: nowrap;">T</div>
-  <div class="abs cap gl gR" aria-hidden="true" data-tb-mt="-50.078" data-tb-mb="-51.000" data-tb-y="664.922" style="white-space: nowrap;">R</div>
-  <div class="abs cap gl gO" aria-hidden="true" data-tb-mt="-50.078" data-tb-mb="-51.000" data-tb-y="660.922" style="white-space: nowrap;">O</div>
-
-  <p class="abs cap mt on-light mA" data-tb-mt="-6.531" data-tb-mb="-7.000" data-tb-y="19.469" style="hyphens: manual;"><span class="ln" style="display:block;white-space:nowrap;">Привет!</span><span class="ln" style="display:block;white-space:nowrap;text-indent:0;">Спасибо за</span><span class="ln" style="display:block;white-space:nowrap;text-indent:0;">классный</span><span class="ln" style="display:block;white-space:nowrap;text-indent:0;">режиссерский</span><span class="ln" style="display:block;white-space:nowrap;text-indent:0;">челлендж!</span></p>
-  <p class="abs cap mt on-light mB" data-tb-mt="-6.531" data-tb-mb="-7.000" data-tb-y="19.469" style="hyphens: manual;"><span class="ln" style="display:block;white-space:nowrap;">Снять ролик целиком</span><span class="ln" style="display:block;white-space:nowrap;text-indent:0;">в&nbsp;формате POV и&nbsp;при этом</span><span class="ln" style="display:block;white-space:nowrap;text-indent:0;">не просто завлечь зрителя,</span><span class="ln" style="display:block;white-space:nowrap;text-indent:0;">а&nbsp;побудить физически</span><span class="ln" style="display:block;white-space:nowrap;text-indent:0;">сопереживать герою&nbsp;— это</span><span class="ln" style="display:block;white-space:nowrap;text-indent:0;">задача на тонкую работу</span><span class="ln" style="display:block;white-space:nowrap;text-indent:0;">с&nbsp;ритмом, мизансценой</span><span class="ln" style="display:block;white-space:nowrap;text-indent:0;">и&nbsp;деталями.</span></p>
-  <p class="abs cap mt on-dark mE" data-tb-mt="-6.531" data-tb-mb="-7.000" data-tb-y="810.000" style="hyphens: manual;"><span class="ln" style="display:block;white-space:nowrap;">Я&nbsp;хочу сделать так, чтобы каждый IT-</span><span class="ln" style="display:block;white-space:nowrap;text-indent:0;">руководитель и&nbsp;разработчик узнал</span><span class="ln" style="display:block;white-space:nowrap;text-indent:0;">в&nbsp;этом сумасшедшем спринте себя,</span><span class="ln" style="display:block;white-space:nowrap;text-indent:0;">улыбнулся от точечных пасхалок</span><span class="ln" style="display:block;white-space:nowrap;text-indent:0;">и&nbsp;почувствовал физическое облегчение,</span><span class="ln" style="display:block;white-space:nowrap;text-indent:0;">когда в&nbsp;кадре появляется решение</span><span class="ln" style="display:block;white-space:nowrap;text-indent:0;">от&nbsp;Cloud.ru.</span></p>
-  <p class="abs cap mt on-dark mF" data-tb-mt="-6.531" data-tb-mb="-7.000" data-tb-y="810.000" style="hyphens: manual;"><span class="ln" style="display:block;white-space:nowrap;">Мы создадим</span><span class="ln" style="display:block;white-space:nowrap;text-indent:0;">стильный, ироничный</span><span class="ln" style="display:block;white-space:nowrap;text-indent:0;">и&nbsp;невероятно живой</span><span class="ln" style="display:block;white-space:nowrap;text-indent:0;">ролик, который</span><span class="ln" style="display:block;white-space:nowrap;text-indent:0;">захочется разбирать</span><span class="ln" style="display:block;white-space:nowrap;text-indent:0;">на кадры и&nbsp;шерить</span><span class="ln" style="display:block;white-space:nowrap;text-indent:0;">в&nbsp;профильных чатах.</span></p>
+  <div class="abs cap gl gIN" aria-hidden="true" data-tb-mt="-49.766" data-tb-mb="-51.797" data-tb-y="652.422" style="white-space: nowrap;">IN</div>
+  <div class="abs cap gl gTRO" aria-hidden="true" data-tb-mt="-49.766" data-tb-mb="-51.797" data-tb-y="652.422" style="white-space: nowrap;">TRO</div>
 </section>
 
 <section data-slide="3" style="--w:1920; --h:1080" class="slide s03" id="approach" data-ref="d65" data-ref-src="/boards/golomazova-danya/design-refs/crops/d65-169.png" aria-label="APPROACH: крафтовый подход, VFX и AI как усилитель" data-compat="baked">
