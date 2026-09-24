@@ -53,7 +53,7 @@
   // together. There the motion is SCROLL-LINKED instead: each slide's timeline is scrubbed by how far the slide
   // has travelled into the viewport (smoothed), so its pictures, headings and text arrive one after another as
   // you scroll. Desktop keeps time-based entrances, but slides that enter together start one after another.
-  const SCRUB = matchMedia('(max-width: 900px), (pointer: coarse)').matches;
+  const SCRUB = !document.documentElement.classList.contains('rg-rot') && matchMedia('(max-width: 900px), (pointer: coarse)').matches;
   const SPREAD = SCRUB ? 1.7 : 1;                      // more air between elements when scrubbed
 
   function build(slide) {

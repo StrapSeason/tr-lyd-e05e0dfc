@@ -23,6 +23,14 @@
   let cmp = qs.get('cmp') || 'off';
   const op = qs.get('op') || '0.5';
   const raw = qs.has('raw') && !!solo;
+  // Rotated mode — for phones that never turn the page (rotation lock on, or a portrait-only in-app browser):
+  // gate.js offers it and remembers it for the tab. The deck is laid out landscape and turned 90° inside a
+  // sideways scroller, so the phone held on its side reads it upright. In real landscape it is the normal site.
+  const ROT = !solo && matchMedia('(pointer: coarse)').matches && (() => {
+    try { if (sessionStorage.getItem('rg-rot') === '1') return true; } catch (e) {}
+    return location.hash === '#rot';
+  })();
+  if (ROT) root.classList.add('rg-rot');
 
   const sizeOf = s => { const cs = getComputedStyle(s);
     return [parseFloat(cs.getPropertyValue('--w')) || 1920, parseFloat(cs.getPropertyValue('--h')) || 1080]; };
@@ -44,9 +52,19 @@
     s.replaceWith(wrap);
     wrap.appendChild(s);
   });
+  if (ROT && slides.length) {
+    const sc = document.createElement('div'); sc.className = 'rg-rot-scroll';
+    const pg = document.createElement('div'); pg.className = 'rg-rot-page';
+    sc.appendChild(pg);
+    slides[0].parentElement.before(sc);
+    slides.forEach(s => pg.appendChild(s.parentElement));
+  }
 
   function fit() {
-    const vw = innerWidth, vh = innerHeight;
+    // rotated mode held upright-portrait: the logical page is the screen turned on its side
+    const rotP = ROT && matchMedia('(orientation: portrait)').matches;
+    const vw = rotP ? innerHeight : innerWidth, vh = rotP ? innerWidth : innerHeight;
+    if (ROT) root.style.setProperty('--rg-lw', vw + 'px');
     slides.forEach((s, i) => {
       const frame = s.parentElement;
       const on = !solo || solo === i + 1;
@@ -56,7 +74,7 @@
       const sideBySide = solo && cmp === 'side';
       const availW = sideBySide ? vw / 2 : vw;
       // phones held sideways: each slide fits the screen whole (the site snaps slide by slide, see gate.js)
-      const phoneLand = !solo && matchMedia('(pointer: coarse) and (orientation: landscape)').matches;
+      const phoneLand = !solo && (rotP || matchMedia('(pointer: coarse) and (orientation: landscape)').matches);
       const k = raw ? 1 : solo ? Math.min(availW / W, vh / H) : phoneLand ? Math.min(vw / W, vh / H) : vw / W;
       s.style.transform = `scale(${k})`;
       frame.style.width = W * k + 'px';
@@ -107,6 +125,6 @@
     const p = v.play(); if (p) p.catch(() => {});
   };
   if (!('IntersectionObserver' in window)) { vids.forEach(start); return; }
-  const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) start(e.target); else e.target.pause(); }), { rootMargin: '300px 0px' });
+  const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) start(e.target); else e.target.pause(); }), { rootMargin: '300px' });
   vids.forEach(v => io.observe(v));
 })();
