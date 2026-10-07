@@ -31,6 +31,14 @@
     return location.hash === '#rot';
   })();
   if (ROT) root.classList.add('rg-rot');
+  // Vertical mode (2026-10-07, «забыли вертикальный скролл»): the phone stays upright, the gate is skipped and the slides
+  // are fitted to the screen width one under another with the page's own vertical scroll — like «Смотреть вертикально»
+  // on the other treatment sites. Remembered for the tab; in real landscape it is the normal site.
+  const VERT = !solo && !ROT && matchMedia('(pointer: coarse)').matches && (() => {
+    try { if (sessionStorage.getItem('rg-vert') === '1') return true; } catch (e) {}
+    return location.hash === '#vert';
+  })();
+  if (VERT) root.classList.add('rg-vert');
 
   const sizeOf = s => { const cs = getComputedStyle(s);
     return [parseFloat(cs.getPropertyValue('--w')) || 1920, parseFloat(cs.getPropertyValue('--h')) || 1080]; };

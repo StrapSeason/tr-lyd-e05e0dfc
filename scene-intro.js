@@ -13,6 +13,7 @@
   const q = new URLSearchParams(location.search);
   if (['solo', 'cmp', 'raw', 'noscene'].some(k => q.has(k))) return;
   if (document.documentElement.classList.contains('rg-rot')) return;   // rotated mode (gate.js): slide shown as is
+  if (document.documentElement.classList.contains('rg-vert')) return;  // vertical mode: a quarter-screen slide pinned for 1.6 screens is mostly empty — shown as is
   const sec = document.querySelector('section.slide.s02');
   const frame = sec && sec.parentElement;
   if (!sec || !frame || !frame.classList.contains('slide-frame')) return;

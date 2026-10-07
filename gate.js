@@ -3,7 +3,9 @@
  *    outline turns on its side, big ROTATE TO VIEW in the deck's yellow. The deck is hidden behind it.
  *  - Landscape → every slide fits the screen whole (deck.js) and the page snaps slide by slide.
  *  - Phones that never turn the page (rotation lock on, portrait-only in-app browsers like Instagram's): the opener
- *    offers «Экран не поворачивается?». A tap switches the tab to ROTATED MODE (deck.js): the deck is laid out
+ *    offers «Смотреть вертикально» (2026-10-07): VERTICAL MODE (deck.js) — the gate is skipped and the slides, fitted to
+ *    the screen width, scroll vertically like a normal page. The small link under it keeps the older choice,
+ *    «Экран не поворачивается?». A tap switches the tab to ROTATED MODE (deck.js): the deck is laid out
  *    landscape and turned 90° inside a sideways scroller, so the phone held on its side (top to the right, as the
  *    icon shows) reads it upright. On Android a phone held that way for 1.5 s while the page stays portrait switches
  *    by itself (iOS gives motion data only after a permission prompt, so there it is the tap).
@@ -13,7 +15,8 @@
   if (['solo', 'cmp', 'raw'].some(k => q.has(k))) return;
   const phone = matchMedia('(pointer: coarse)').matches;
   if (!phone) return;
-  const ROT = document.documentElement.classList.contains('rg-rot');   // set by deck.js
+  const root = document.documentElement;
+  const ROT = root.classList.contains('rg-rot');   // set by deck.js
 
   // one frame per slide: the poster of its first loop (or its first image), no repeats
   const frames = [];
@@ -30,8 +33,8 @@
     background: radial-gradient(120% 70% at 50% 45%, #1b1c1f 0%, #0b0b0b 62%); color: #f9fe00; overflow: hidden;
     font-family: 'Inter', sans-serif; -webkit-font-smoothing: antialiased; }
   @media (orientation: portrait) {
-    html:not(.rg-rot) .rot-gate { display: flex; }
-    html.rg-on, html.rg-on body { overflow: hidden; height: 100%; }
+    html:not(.rg-rot):not(.rg-vert) .rot-gate { display: flex; }
+    html.rg-on:not(.rg-vert), html.rg-on:not(.rg-vert) body { overflow: hidden; height: 100%; }
     /* rotated mode: a sideways scroller; the page inside is the landscape deck turned 90° clockwise-to-read
        (content rotated -90°, so the phone's top goes to the right). Its logical width = the screen height. */
     html.rg-rot .rg-rot-scroll { position: fixed; inset: 0; overflow-x: auto; overflow-y: hidden; background: #111;
@@ -70,6 +73,8 @@
     background: transparent; color: #f9fe00; font: 500 14px/1.2 'Inter', sans-serif; letter-spacing: .01em;
     -webkit-tap-highlight-color: transparent; cursor: pointer; }
   .rg-lock:active { background: rgba(249,254,0,.14); }
+  .rg-alt { margin-top: -4px; padding: 6px 4px; border: 0; background: none; color: #a9a9a2; font: 400 13px/1.3 'Inter', sans-serif;
+    text-decoration: underline; text-underline-offset: 3px; -webkit-tap-highlight-color: transparent; cursor: pointer; }
   @media (prefers-reduced-motion: reduce) { .rg-ring, .rg-phone { animation: none; } }`;
   const style = document.createElement('style');
   style.textContent = css;
@@ -79,9 +84,15 @@
   // after turning the phone, re-fit (deck.js listens to resize) and land on the nearest slide
   addEventListener('orientationchange', () => setTimeout(() => dispatchEvent(new Event('resize')), 250));
   if (ROT) return;                                      // rotated mode: no opener, the deck is already sideways
+  if (root.classList.contains('rg-vert')) return;      // vertical mode: no opener, the page simply scrolls
 
   const enterRotated = () => {
-    try { sessionStorage.setItem('rg-rot', '1'); } catch (e) { location.hash = 'rot'; }
+    try { sessionStorage.removeItem('rg-vert'); sessionStorage.setItem('rg-rot', '1'); } catch (e) { location.hash = 'rot'; }
+    scrollTo(0, 0);
+    location.reload();
+  };
+  const enterVertical = () => {
+    try { sessionStorage.removeItem('rg-rot'); sessionStorage.setItem('rg-vert', '1'); } catch (e) { location.hash = 'vert'; }
     scrollTo(0, 0);
     location.reload();
   };
@@ -101,10 +112,12 @@
       <div class="rg-phone" aria-hidden="true"></div>
       <p class="rg-title">Rotate<br>to view</p>
       <p class="rg-sub">Поверните телефон горизонтально</p>
-      <button class="rg-lock" type="button">Экран не поворачивается? Нажмите</button>
+      <button class="rg-lock" type="button">Смотреть вертикально</button>
+      <button class="rg-alt" type="button">Экран не поворачивается? Читать боком</button>
     </div>`;
   document.body.appendChild(gate);
-  gate.querySelector('.rg-lock').addEventListener('click', enterRotated);
+  gate.querySelector('.rg-lock').addEventListener('click', enterVertical);
+  gate.querySelector('.rg-alt').addEventListener('click', enterRotated);
 
   // Android: held on its side (top to the right) for 1.5 s while the page is still portrait = the screen is locked
   if (/Android/i.test(navigator.userAgent) && 'DeviceMotionEvent' in window) {

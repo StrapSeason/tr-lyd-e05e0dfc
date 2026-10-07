@@ -108,11 +108,14 @@
     // progress 0 when the slide's top reaches the bottom of the screen, 1 when it reaches 25 % from the top
     const state = new Map(slides.map(s => [s, { target: 0, shown: 0 }]));
     let ticking = false;
+    // vertical mode (gate.js «Смотреть вертикально»): the slides are a quarter of the screen tall and the last ones can never
+    // climb to 25 %, so there a slide is fully revealed once 90 % of it has come into view
+    const VERT = document.documentElement.classList.contains('rg-vert');
     const measure = () => {
       const vh = innerHeight;
       for (const [s, st] of state) {
-        const top = s.getBoundingClientRect().top;
-        const p = Math.min(1, Math.max(0, (vh - top) / (vh * 0.75)));
+        const r = s.getBoundingClientRect(), top = r.top;
+        const p = Math.min(1, Math.max(0, (vh - top) / (VERT ? r.height * 0.9 : vh * 0.75)));
         st.target = Math.max(st.target, p);               // never un-reveal on scroll back
       }
     };
